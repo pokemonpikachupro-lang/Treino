@@ -115,15 +115,36 @@ h2{font-family:var(--fd);font-weight:600;font-size:24px;margin:26px 0 10px}
 .add svg{width:22px;height:22px;stroke:var(--ok);fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
 .chev{color:var(--muted);font-size:22px}
 .fig{display:block;width:100%;height:auto}
-.fig .floor{stroke:var(--line);stroke-width:2}
-.fig .scene line{stroke:var(--muted);stroke-width:3;stroke-linecap:round;opacity:.55}
-.fig .limb{fill:none;stroke:var(--ink);stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
-.fig .limb.far{opacity:.4}
-.fig .limb.arm{stroke:var(--blue)}
-.fig .head{fill:var(--card);stroke:var(--ink);stroke-width:4.5}
-.fig .plate{fill:var(--plate);fill-opacity:.16;stroke:var(--plate);stroke-width:3}
-.fig .hub{fill:var(--plate)}
-.fig .db{fill:var(--plate)}
+.fig .floor{stroke:#2A2A30;stroke-width:2}
+.fig .mat{fill:#0C2347;stroke:#1B4A94;stroke-width:1.2}
+.fig line{stroke-linecap:round;fill:none}
+.fig line.out{stroke:#050506}
+.fig line.trunk,.fig line.leg{stroke:#CFC9C4}
+.fig line.shoe{stroke:#E0202B}
+.fig line.far{stroke:#7A7673}
+.fig line.farshoe{stroke:#8E1119}
+.fig line.arm{stroke:#F3EEEA}
+.fig line.hl{stroke:#E0202B;stroke-opacity:.62}
+.fig circle.hlc{fill:#E0202B;fill-opacity:.6}
+.fig circle.head{fill:#E6E0DB;stroke:#050506;stroke-width:2}
+.fig circle.hand{fill:#F3EEEA;stroke:#050506;stroke-width:1.2}
+.fig line.fr1{stroke:#6D6D78;stroke-width:3.2}
+.fig line.fr2{stroke:#45454E;stroke-width:3.2}
+.fig line.mt{stroke:#9A9AA4}
+.fig circle.mtc{fill:#9A9AA4;stroke:#050506;stroke-width:1}
+.fig line.padb{stroke:#5A5A66}
+.fig line.padf{stroke:#2B2B32}
+.fig circle.padf{fill:#2B2B32;stroke:#5A5A66;stroke-width:1.5}
+.fig line.cab{stroke:#B0B0BA;stroke-width:1.3}
+.fig circle.pull{fill:#17171A;stroke:#9A9AA4;stroke-width:1.6}
+.fig rect.stkf{fill:#101012;stroke:#4A4A55;stroke-width:1.2}
+.fig rect.stp{fill:#2A2A31}
+.fig rect.pinp{fill:#E0202B}
+.fig circle.plate{fill:#6F0E15;stroke:#E0202B;stroke-width:2}
+.fig circle.plate2{fill:none;stroke:#FF5A62;stroke-opacity:.55;stroke-width:1}
+.fig circle.hub{fill:#050506}
+.fig rect.dbh{fill:#3A3A44;stroke:#050506;stroke-width:1}
+.fig rect.dbp{fill:#E0202B;stroke:#050506;stroke-width:1}
 .frames{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:4px 0 14px}
 .frame{background:var(--bg);border-radius:14px;padding:6px 6px 8px;text-align:center}
 .frame span{display:block;font-size:13px;color:var(--muted);margin-top:2px}
@@ -227,6 +248,66 @@ h2{font-family:var(--fd);font-weight:600;font-size:24px;margin:26px 0 10px}
 .lk-btn{width:100%;max-width:320px}
 .lk-warn{color:#FFB3B7;text-align:center;max-width:300px;margin:12px 0}
 @media (max-height:700px){.key{width:64px;height:64px;font-size:28px}.pad{grid-template-columns:repeat(3,64px);gap:10px 18px}.bell{max-width:270px;margin:8px 0 0}.lk-t{font-size:38px}}
+
+.lk-lang{display:flex;gap:6px;margin-top:10px;justify-content:center}
+.lk-lang button{min-width:44px;min-height:30px;border-radius:15px;border:1px solid var(--line);color:var(--muted);font-size:13px;font-weight:600}
+.lk-lang button[aria-pressed="true"]{color:#fff;border-color:var(--plate);background:rgba(224,32,43,.18)}
+html{background:#060607}
+body{min-height:100vh;min-height:100dvh}
+.tabbar{bottom:-48px;padding-bottom:calc(54px + env(safe-area-inset-bottom,0px));background:#060607}
+.lock{bottom:-48px;padding-bottom:calc(env(safe-area-inset-bottom,0px) + 68px)}
+
+.todaycard{background:linear-gradient(135deg,#0F2D5C,#0A1D3D);border-color:var(--navy2)}
+.todaycard .meta{display:block;color:#9DB8E8}
+.tname{display:block;font-family:var(--fd);font-weight:700;font-size:30px;line-height:1.1;margin:2px 0 6px}
+.todaycard .btn{margin-top:10px}
+.sched{padding:4px 14px}
+.srow{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}
+.srow:last-child{border-bottom:0}
+.srow.today .sd{font-weight:600}
+.sd em{font-style:normal;font-size:12px;background:var(--plate);color:#fff;border-radius:8px;padding:1px 7px;margin-left:8px}
+.srow select{min-width:150px;max-width:56%;min-height:42px;border-radius:10px;border:1.5px solid var(--line);background:var(--bg);padding:0 8px;font-size:16px}
+.prow{background:var(--bg);border-radius:12px;padding:10px;margin:0 0 8px}
+.ptop{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.pbtns{display:flex;flex:none}
+.icon.sm{width:36px;height:36px}
+.pin{display:flex;gap:10px;margin-top:8px}
+.pin label{flex:1;font-size:13px;color:var(--muted)}
+.pin input{width:100%;height:40px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);text-align:center;font-size:18px;margin-top:2px}
+.tab span{font-size:11.5px}
+
+.ch{font-family:var(--fd);font-weight:600;font-size:22px;margin:0 0 10px}
+.tri{display:flex;gap:8px}
+.tri label{flex:1;display:flex;align-items:center;gap:6px;background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:0 10px}
+.tri input{width:100%;min-width:0;height:46px;background:none;border:0;text-align:center;font-family:var(--fd);font-weight:600;font-size:24px}
+.tri input:focus{outline:none}
+.tri em{font-style:normal;color:var(--muted);font-size:14px}
+.rprev{background:var(--navy);border:1px solid var(--navy2);border-radius:14px;padding:12px;margin:0 0 12px;text-align:center;min-height:56px;color:#EAF1FF}
+.rprev .rp{font-family:var(--fd);font-weight:700;font-size:44px;line-height:1}
+.rprev .meta{display:block;color:#9DB8E8}
+.cv{display:grid;grid-template-columns:1fr;gap:0}
+.runrow{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.chartbox .bar{fill:var(--plate)}
+.tblwrap{max-height:430px;overflow:auto;border:1px solid var(--line);border-radius:14px;background:var(--card);margin-bottom:8px}
+.ptable{width:100%;border-collapse:collapse;font-size:15px;text-align:center}
+.ptable th{position:sticky;top:0;background:var(--navy);color:#EAF1FF;font-weight:600;padding:8px 6px;font-size:13px}
+.ptable td{padding:7px 6px;border-top:1px solid var(--line);font-variant-numeric:tabular-nums}
+.ptable td:first-child{font-weight:600}
+.ptable tr.hit td{background:rgba(224,32,43,.2)}
+.rtab .rec b{font-weight:500}
+.pname{display:block;font-family:var(--fd);font-weight:700;font-size:24px;line-height:1.1}
+.pgoal{margin:6px 0 10px;color:var(--muted);font-size:15px}
+.activeplan{background:linear-gradient(135deg,#0F2D5C,#0A1D3D);border-color:var(--navy2)}
+.activeplan .meta{display:block;color:#9DB8E8}
+.pbar{height:8px;border-radius:4px;background:rgba(255,255,255,.12);margin:8px 0 6px;overflow:hidden}
+.pbar i{display:block;height:100%;background:var(--plate)}
+.wknav{display:flex;align-items:center;justify-content:space-between;margin:10px 0 6px}
+.sess{display:flex;gap:10px;align-items:flex-start;padding:8px;border-radius:12px;margin-bottom:6px;background:rgba(255,255,255,.05)}
+.sess .chk{flex:none}
+.sess.done{background:var(--okbg);box-shadow:inset 0 0 0 1px var(--okline)}
+.sess.done .chk{background:var(--ok);border-color:var(--ok);color:#04150E}
+.sdesc .meta{display:block;color:#9DB8E8}
+.tab span{white-space:nowrap;font-size:11px}
 </style>
 </head>
 <body>
@@ -239,12 +320,13 @@ h2{font-family:var(--fd);font-weight:600;font-size:24px;margin:26px 0 10px}
 <script>
 (function(){
 'use strict';
+var LANG='pt',LOC='pt-PT';
 var $=function(s){return document.querySelector(s)};
 var esc=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]})};
 var norm=function(s){return String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')};
 var num=function(v){var n=parseFloat(String(v).replace(',','.'));return isNaN(n)?0:n};
 var uid=function(){return Math.random().toString(36).slice(2,8)+Date.now().toString(36)};
-var fmtKg=function(n){return String(Math.round(n*10)/10).replace('.',',')};
+var fmtKg=function(n){return String(Math.round(n*10)/10).replace('.',LANG==='en'?'.':',')};
 var round1=function(n){return Math.round(n*10)/10};
 var est1rm=function(kg,reps){return reps<=1?kg:kg*(1+reps/30)};
 
@@ -259,6 +341,8 @@ var ICON={
   tTreino:'<svg viewBox="0 0 24 24"><path d="M3 9v6M6 7v10M18 7v10M21 9v6M6 12h12"/></svg>',
   tEx:'<svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.2"/><path d="M12 8v6M12 10l-4 3M12 10l4 3M12 14l-3 6M12 14l3 6"/></svg>',
   tHist:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>',
+  tPlan:'<svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg>',
+  tRun:'<svg viewBox="0 0 24 24"><circle cx="12" cy="13.5" r="7"/><path d="M12 13.5V9.5M10 3h4M12 3v3M18.5 6.5l1.5-1.5"/></svg>',
   tProg:'<svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M7 15l4-4 3 3 5-6"/></svg>'
 };
 
@@ -275,31 +359,90 @@ function joints(p){
   return r;
 }
 function pt(a){return a[0].toFixed(1)+' '+a[1].toFixed(1)}
-function figSVG(ex,i){
-  var j=joints(ex.frames[i]),labels=ex.labels||['Posição inicial','Posição final'];
-  var s='<svg class="fig" viewBox="0 -34 200 180" role="img" aria-label="'+esc(ex.name+' – '+labels[i])+'">';
-  s+='<line class="floor" x1="8" y1="132" x2="192" y2="132"/>';
-  if(ex.scene==='bench')s+='<g class="scene"><line x1="50" y1="113" x2="124" y2="113" style="stroke-width:7"/><line x1="64" y1="116" x2="64" y2="132"/><line x1="112" y1="116" x2="112" y2="132"/></g>';
-  if(ex.scene==='pullbar')s+='<g class="scene"><line x1="68" y1="-6" x2="150" y2="-6" style="stroke-width:4"/><line x1="68" y1="-6" x2="68" y2="132"/><line x1="150" y1="-6" x2="150" y2="132"/></g>';
-  if(ex.scene==='incline')s+='<g class="scene"><line x1="116" y1="108" x2="92" y2="74" style="stroke-width:7"/><line x1="112" y1="110" x2="142" y2="110" style="stroke-width:6"/><line x1="126" y1="113" x2="126" y2="132"/></g>';
-  if(ex.scene==='seat')s+='<g class="scene"><line x1="84" y1="106" x2="128" y2="106" style="stroke-width:7"/><line x1="91" y1="106" x2="91" y2="54" style="stroke-width:7"/><line x1="104" y1="110" x2="104" y2="132"/></g>';
-  if(ex.scene==='hipbench')s+='<g class="scene"><line x1="34" y1="113" x2="84" y2="113" style="stroke-width:7"/><line x1="42" y1="116" x2="42" y2="132"/><line x1="76" y1="116" x2="76" y2="132"/></g>';
-  if(ex.scene==='dips')s+='<g class="scene"><line x1="'+j.W[0].toFixed(1)+'" y1="'+(j.W[1]+3).toFixed(1)+'" x2="'+j.W[0].toFixed(1)+'" y2="132"/></g>';
-  if(j.K2)s+='<path class="limb far" d="M'+pt(j.P)+' L'+pt(j.K2)+' L'+pt(j.A2)+' L'+pt(j.T2)+'"/>';
-  s+='<path class="limb" d="M'+pt(j.P)+' L'+pt(j.K)+' L'+pt(j.A)+' L'+pt(j.T)+'"/>';
-  s+='<path class="limb" d="M'+pt(j.P)+' L'+pt(j.N)+'"/>';
-  s+='<path class="limb arm" d="M'+pt(j.N)+' L'+pt(j.E)+' L'+pt(j.W)+'"/>';
-  s+='<circle class="head" cx="'+j.H[0].toFixed(1)+'" cy="'+j.H[1].toFixed(1)+'" r="8"/>';
-  var q=ex.eq;
-  if(q){
-    if(q.k==='bar'){s+='<circle class="plate" cx="'+j.W[0].toFixed(1)+'" cy="'+j.W[1].toFixed(1)+'" r="'+q.r+'"/><circle class="hub" cx="'+j.W[0].toFixed(1)+'" cy="'+j.W[1].toFixed(1)+'" r="3"/>'}
-    else if(q.k==='neck'){var c=[j.N[0]-4,j.N[1]+2];s+='<circle class="plate" cx="'+c[0].toFixed(1)+'" cy="'+c[1].toFixed(1)+'" r="'+q.r+'"/><circle class="hub" cx="'+c[0].toFixed(1)+'" cy="'+c[1].toFixed(1)+'" r="3"/>'}
-    else if(q.k==='db'){s+='<rect class="db" x="'+(j.W[0]-8).toFixed(1)+'" y="'+(j.W[1]-4).toFixed(1)+'" width="16" height="8" rx="3"/>'}
-    else if(q.k==='dbv'){s+='<rect class="db" x="'+(j.W[0]-4).toFixed(1)+'" y="'+(j.W[1]-9).toFixed(1)+'" width="8" height="18" rx="3"/>'}
-    else if(q.k==='front'){var c3=[j.N[0]+6,j.N[1]+3];s+='<circle class="plate" cx="'+c3[0].toFixed(1)+'" cy="'+c3[1].toFixed(1)+'" r="'+q.r+'"/><circle class="hub" cx="'+c3[0].toFixed(1)+'" cy="'+c3[1].toFixed(1)+'" r="3"/>'}
-    else if(q.k==='hip'){s+='<circle class="plate" cx="'+j.P[0].toFixed(1)+'" cy="'+j.P[1].toFixed(1)+'" r="'+q.r+'"/><circle class="hub" cx="'+j.P[0].toFixed(1)+'" cy="'+j.P[1].toFixed(1)+'" r="3"/>'}
+function f1(n){return n.toFixed(1)}
+function lerp(a,b,t){return [a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t]}
+function ln(cls,a,b,w){return '<line class="'+cls+'" x1="'+f1(a[0])+'" y1="'+f1(a[1])+'" x2="'+f1(b[0])+'" y2="'+f1(b[1])+'"'+(w?' style="stroke-width:'+w+'"':'')+'/>'}
+function cir(cls,c,r){return '<circle class="'+cls+'" cx="'+f1(c[0])+'" cy="'+f1(c[1])+'" r="'+r+'"/>'}
+function chain(pts,ws,cs){
+  var s='',i;
+  for(i=0;i<ws.length;i++)s+=ln('out',pts[i],pts[i+1],ws[i]+4);
+  for(i=0;i<ws.length;i++)s+=ln(cs[i],pts[i],pts[i+1],ws[i]);
+  return s;
+}
+function pad(a,b,w){return ln('padb',a,b,w+2.5)+ln('padf',a,b,w)}
+function stackSVG(x,y,w,h,sel){
+  var n=Math.max(4,Math.round(h/9)),ph=(h-4)/n,s='<rect class="stkf" x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="2"/>';
+  for(var i=0;i<n;i++)s+='<rect class="'+(i===sel?'pinp':'stp')+'" x="'+(x+2)+'" y="'+(y+2+i*ph).toFixed(1)+'" width="'+(w-4)+'" height="'+(ph-1.4).toFixed(1)+'" rx="1"/>';
+  return s;
+}
+function sceneSVG(ex,j){
+  var sc=ex.scene,W=j.W,m,s='<line class="floor" x1="8" y1="132" x2="192" y2="132"/>';
+  if(!sc)return s;
+  var seat=function(){return pad([84,106],[128,106],8)+pad([91,106],[91,54],9)+ln('fr1',[104,111],[104,131])};
+  if(sc==='mat'){s+='<rect class="mat" x="14" y="132" width="172" height="5" rx="2.5"/>'}
+  else if(sc==='bench'){s+=ln('fr1',[66,118],[66,131])+ln('fr1',[112,118],[112,131])+ln('fr2',[56,132],[78,132])+ln('fr2',[100,132],[124,132])+pad([52,113],[124,113],9)}
+  else if(sc==='incline'){s+=ln('fr1',[126,114],[126,131])+ln('fr1',[98,92],[104,131])+ln('fr2',[92,132],[140,132])+pad([112,111],[142,111],8)+pad([116,108],[92,74],9)}
+  else if(sc==='seatback'){s+=ln('fr2',[84,132],[124,132])+seat()}
+  else if(sc==='hipbench'){s+=ln('fr1',[44,118],[44,131])+ln('fr1',[76,118],[76,131])+ln('fr2',[34,132],[86,132])+pad([34,113],[86,113],9)}
+  else if(sc==='pullbar'){s+=ln('fr2',[58,132],[78,132])+ln('fr2',[140,132],[160,132])+ln('fr1',[68,-6],[68,131])+ln('fr1',[150,-6],[150,131])+ln('mt',[64,-6],[154,-6],4)}
+  else if(sc==='dips'){s+=ln('fr2',[W[0]-16,132],[W[0]+16,132])+ln('fr1',[W[0],W[1]+4],[W[0],131])+cir('mtc',W,3.6)}
+  else if(sc==='rack'){s+=ln('fr1',[134,16],[134,131])+ln('fr2',[124,132],[152,132])+ln('mt',[134,40],[116,40],3.2)+ln('mt',[134,104],[114,104],3.2)}
+  else if(sc==='smith'){var c=[j.N[0]-4,j.N[1]+2];s+=ln('fr1',[118,-22],[118,131])+ln('fr2',[108,132],[130,132])+ln('mt',c,[118,c[1]],3)}
+  else if(sc.indexOf('mach:')===0){
+    m=sc.slice(5);
+    s+=stackSVG(16,22,20,100,3)+ln('fr2',[44,12],[44,131])+ln('fr2',[12,132],[154,132])+ln('cab',[36,26],[44,12]);
+    if(m==='calf')s+=pad([84,106],[128,106],8)+ln('fr1',[104,111],[104,131]);else s+=seat();
+    if(m==='fly'){var pv=[96,44];s+=ln('cab',[44,12],pv)+ln('fr1',pv,W,4)+pad(j.E,W,7)+cir('mtc',pv,3.5)}
+    else if(m==='press'){var pv2=[84,80];s+=ln('cab',[44,12],pv2)+ln('fr1',pv2,W,4)+cir('mtc',W,3.2)}
+    else if(m==='shoulder'){var pv3=[86,50];s+=ln('cab',[44,12],pv3)+ln('fr1',pv3,W,4)+cir('mtc',W,3.2)}
+    else if(m==='pulldown'){s+=ln('fr1',[44,-16],[96,-16])+cir('pull',[96,-16],5)+ln('cab',[96,-16],W)+ln('mt',[W[0]-7,W[1]],[W[0]+7,W[1]],3)+pad([118,88],[142,88],5)}
+    else if(m==='legext'||m==='legcurl'){s+=ln('cab',[44,12],[112,104])+ln('fr1',[112,104],j.A,3.5)+cir('padf',j.A,5.5)}
+    else if(m==='calf'){s+=pad([122,86],[142,86],6)+ln('fr1',[124,127],[154,127],5)+ln('fr2',[140,128],[140,131])}
   }
-  return s+'</svg>';
+  else if(sc.indexOf('cable:')===0){
+    m=sc.slice(6);
+    var pl={high:[160,-14],face:[160,22],low:[160,116],top:[156,-22],row:[160,116]}[m]||[160,0];
+    s+=stackSVG(172,-20,18,128,4)+ln('fr2',[168,-26],[168,131])+ln('fr2',[160,132],[194,132])+cir('pull',pl,5)+ln('cab',pl,W)+cir('mtc',W,2.8);
+    if(m==='row')s+=ln('fr1',[152,100],[152,130],4)+pad([56,124],[100,124],8)+ln('fr1',[70,128],[70,131]);
+  }
+  return s;
+}
+function hlSVG(ex,j,fr){
+  var g=ex.group,r=fr.t*Math.PI/180,n=[-Math.cos(r),Math.sin(r)],s='';
+  var off=function(a,k){return [a[0]+n[0]*k,a[1]+n[1]*k]};
+  if(g==='Peito')s=ln('hl',off(lerp(j.N,j.P,.1),3.5),off(lerp(j.N,j.P,.5),3.5),10);
+  else if(g==='Costas')s=ln('hl',off(lerp(j.N,j.P,.06),-3.5),off(lerp(j.N,j.P,.78),-3.5),10);
+  else if(g==='Core')s=ln('hl',off(lerp(j.N,j.P,.5),3.5),off(lerp(j.N,j.P,.95),3.5),10);
+  else if(g==='Ombros')s=cir('hlc',j.N,7);
+  else if(g==='Braços')s=ln('hl',j.N,j.E,6)+ln('hl',j.E,j.W,5);
+  else if(g==='Pernas')s=ln('hl',j.P,j.K,8)+ln('hl',j.K,j.A,6);
+  return s;
+}
+function bodySVG(ex,j,fr){
+  var s='',hd=fr.hd!=null?fr.hd:fr.t;
+  if(j.K2)s+=chain([j.P,j.K2,j.A2,j.T2],[11,8.5,6],['far','far','farshoe']);
+  s+=chain([j.P,j.N],[15],['trunk']);
+  s+=chain([j.P,j.K,j.A,j.T],[11,8.5,6],['leg','leg','shoe']);
+  s+=chain([j.N,add(j.N,7,hd)],[6],['trunk']);
+  s+=cir('head',j.H,8);
+  s+=chain([j.N,j.E,j.W],[8,7],['arm','arm'])+cir('hand',j.W,3.6);
+  return s+hlSVG(ex,j,fr);
+}
+function eqSVG(ex,j){
+  var q=ex.eq,s='';
+  if(!q)return s;
+  var plate=function(c,r){return cir('plate',c,r)+cir('plate2',c,Math.round(r*0.55))+cir('hub',c,2.6)};
+  if(q.k==='bar')s=plate(j.W,q.r);
+  else if(q.k==='neck')s=plate([j.N[0]-4,j.N[1]+2],q.r);
+  else if(q.k==='front')s=plate([j.N[0]+6,j.N[1]+3],q.r);
+  else if(q.k==='hip')s=plate(j.P,q.r);
+  else if(q.k==='db'){var x=j.W[0]-8,y=j.W[1]-4.5;s='<rect class="dbh" x="'+f1(x)+'" y="'+f1(y)+'" width="16" height="9" rx="2.5"/><rect class="dbp" x="'+f1(x)+'" y="'+f1(y)+'" width="4.5" height="9" rx="1.5"/><rect class="dbp" x="'+f1(x+11.5)+'" y="'+f1(y)+'" width="4.5" height="9" rx="1.5"/>'}
+  else if(q.k==='dbv'){var x2=j.W[0]-4.5,y2=j.W[1]-8;s='<rect class="dbh" x="'+f1(x2)+'" y="'+f1(y2)+'" width="9" height="16" rx="2.5"/><rect class="dbp" x="'+f1(x2)+'" y="'+f1(y2)+'" width="9" height="4.5" rx="1.5"/><rect class="dbp" x="'+f1(x2)+'" y="'+f1(y2+11.5)+'" width="9" height="4.5" rx="1.5"/>'}
+  return s;
+}
+function figSVG(ex,i){
+  var fr=ex.frames[i],j=joints(fr),labels=ex.labels||['Posição inicial','Posição final'];
+  return '<svg class="fig" viewBox="0 -34 200 180" role="img" aria-label="'+esc(ex.name+' – '+labels[i])+'">'+sceneSVG(ex,j)+bodySVG(ex,j,fr)+eqSVG(ex,j)+'</svg>';
 }
 
 /* ---------- biblioteca de exercícios ---------- */
@@ -418,9 +561,16 @@ function eqOf(c){
   if(c==='dv')return {k:'dbv'};
   return {k:{b:'bar',n:'neck',f:'front',h:'hip'}[k],r:r};
 }
+function sceneFor(tpl,eq,id){
+  var M={seatfly:'mach:fly',seatrev:'mach:fly',seatpress:'mach:press',pulldown:'mach:pulldown',legext:'mach:legext',legcurl:'mach:legcurl',seatcalf:'mach:calf',fly:'cable:high',facepull:'cable:face',pushdown:'cable:top',straightarm:'cable:top',seatedrow:'cable:row',situp:'mat',legraise:'mat',floor:'mat',bridge:'mat',revcrunch:'mat',mountain:'mat',birddog:'mat',hollow:'mat',superman:'mat',wheel:'mat',pushup:'mat',front:'rack',gm:'rack',squat:'rack',hipthrust:'hipbench'};
+  if(id==='agach-smith')return 'smith';
+  if(tpl==='seatohpress')return eq?'seatback':'mach:shoulder';
+  if(tpl==='curl')return eq?null:'cable:low';
+  return M[tpl]||TP[tpl].scene;
+}
 function X(id,name,group,muscles,tpl,eq,steps,tips,labels){
   var o={id:id,name:name,group:group,muscles:muscles,scene:null,eq:eqOf(eq),steps:steps.split('|'),tips:tips.split('|')};
-  if(tpl&&TP[tpl]){o.scene=TP[tpl].scene;o.frames=TP[tpl].frames;o.labels=labels||TP[tpl].labels}
+  if(tpl&&TP[tpl]){o.scene=sceneFor(tpl,eq,id);o.frames=TP[tpl].frames;o.labels=labels||TP[tpl].labels}
   return o;
 }
 var NEWX=[
@@ -531,12 +681,290 @@ X('prancha-toque','Prancha com toque no ombro','Core','Core, ombros','','','Em p
 X('windshield','Limpa-para-brisas','Core','Oblíquos, abdominais','','','Deita-te de costas com os braços abertos e as pernas na vertical.|Leva as pernas para um lado sem tocar no chão.|Volta ao centro e passa para o outro lado.','Se for difícil, dobra os joelhos.')
 ];
 EXS=EXS.concat(NEWX);
+EXS.forEach(function(x){if(x.id==='flexoes'||x.id==='prancha'||x.id==='abdominais')x.scene='mat';if(x.id==='agachamento')x.scene='rack'});
+/* ---------- inglês (English) ---------- */
+var EXEN={
+'supino-barra':['Barbell bench press','Chest, triceps, front deltoid','Lie on the bench with your eyes under the bar, feet flat on the floor, shoulder blades together and down.|Grip the bar slightly wider than shoulder width and unrack it with straight arms.|Lower the bar under control until it lightly touches the middle of your chest, with your elbows at about 45° from your torso.|Press the bar up until your arms are straight, without lifting your back or hips off the bench.','Keep your wrists in line with your forearms.|With heavy loads, train with a spotter or use safety bars.|Do not bounce the bar off your chest.'],
+'supino-halt':['Dumbbell bench press','Chest, triceps, front deltoid','Sit on the bench with the dumbbells resting on your thighs and lie back, bringing them to chest height.|With your palms facing your feet, press the dumbbells up until your arms are straight.|Lower slowly until your elbows are a little below the bench line and you feel your chest stretch.|Press back up without clanging the dumbbells together at the top.','Keep your shoulder blades together throughout the movement.|Dumbbells allow a longer range of motion than the barbell: start with a lighter load.'],
+'flexoes':['Push-ups','Chest, triceps, shoulders, core','Place your hands on the floor, slightly wider than your shoulders, with your body in a straight line from head to heels.|Brace your abs and glutes so your hips neither sag nor rise.|Lower until your chest is close to the floor, with your elbows at about 45° from your torso.|Push the floor away until your arms are straight.','If it is too hard, rest your knees on the floor while keeping your body in a line.|Look at a point slightly ahead of your hands without letting your neck drop.'],
+'remada-barra':['Barbell bent-over row','Lats, trapezius, rhomboids, biceps','Feet hip-width apart, knees slightly bent, and lean your torso forward (about 45°) with a neutral spine.|Grip the bar slightly wider than shoulder width with your arms straight.|Pull the bar towards your abdomen, driving your elbows back and squeezing your shoulder blades together.|Pause briefly, then lower the bar slowly.','Do not round your spine or swing your torso to lift the weight.|Look at the floor, a little ahead, to keep your neck aligned.'],
+'barra-fixa':['Pull-up','Lats, biceps, forearms, core','Grip the bar with your palms facing forward, slightly wider than shoulder width, and hang with straight arms.|Pull your shoulders away from your ears, engaging your back before you pull.|Drive your elbows down and back until your chin passes the bar.|Lower under control until your arms are straight.','Avoid swinging your body for momentum.|If you cannot do full reps yet, use a resistance band or the assisted machine.'],
+'terra':['Deadlift','Hamstrings, glutes, lower back, trapezius','Feet hip-width apart with the bar over the middle of your foot, close to your shins.|Grip the bar with straight arms, chest open and spine neutral.|Push the floor away with your feet, extending your hips and knees together, keeping the bar close to your legs.|At the top, stand tall without leaning back. Lower by sending your hips back first and then bending your knees.','Never round your lower back.|Increase the load gradually and ask a coach to review your technique.'],
+'agachamento':['Barbell squat','Quads, glutes, hamstrings, core','Place the bar on your upper back (over your trapezius), with feet shoulder-width apart and toes slightly turned out.|Take a deep breath, brace your abs, and descend by sending your hips back and down.|Keep your knees in line with your toes and go down until your thighs are parallel to the floor, or as far as you can keep a neutral spine.|Stand up by pushing the floor away with your whole foot.','Keep your heels on the floor.|Train inside a rack with safety bars.'],
+'afundo':['Dumbbell lunge','Quads, glutes, hamstrings','Stand with a dumbbell in each hand at your sides.|Take a big step forward and lower straight down until both knees are at about 90°.|Your back knee gets close to the floor and your torso stays upright.|Push off your front foot to return to the start and alternate legs.','Keep your front knee in line with your foot, not collapsing inwards.'],
+'gemeos':['Calf raise','Gastrocnemius and soleus','Stand with feet hip-width apart (you can place the balls of your feet on a step).|Rise as high as you can, pushing through the balls of your feet.|Pause for one second at the top.|Lower slowly until you feel your calf stretch.','Keep your knees almost straight and your body upright.|Use the full range of motion: the stretch at the bottom counts.'],
+'press-ombros':['Dumbbell shoulder press','Deltoids, triceps, upper trapezius','Standing or seated, hold the dumbbells at shoulder height with your elbows slightly in front of your body.|Brace your abs and glutes.|Press the dumbbells overhead until your arms are straight.|Lower under control back to the start.','Do not arch your lower back too much to press.'],
+'curl':['Dumbbell biceps curl','Biceps and brachialis','Stand with the dumbbells at your sides and your palms facing forward.|Keep your elbows against your torso and bend them, curling the dumbbells up to your shoulders.|Squeeze your biceps at the top for a moment.|Lower slowly until your arms are straight.','Do not swing your torso to lift the weight: if needed, reduce the load.'],
+'triceps-halter':['Dumbbell triceps extension','Triceps','Standing or seated, hold a dumbbell with both hands overhead.|Bend your elbows to lower the dumbbell behind your head, with your elbows pointing up.|Extend your arms to return to the start.','Keep your elbows fixed and close together.|Use a moderate load to protect your elbows.'],
+'prancha':['Plank','Abs, glutes, shoulders','Rest your forearms on the floor with your elbows under your shoulders and the balls of your feet on the floor.|Form a straight line from head to heels, bracing your abs and glutes.|Breathe normally and hold for 20 to 60 seconds.','Avoid letting your hips sag or rise too high.|Stop when you lose position, even if you have not reached the time.'],
+'abdominais':['Crunches','Rectus abdominis','Lie on your back with your knees bent and feet on the floor.|Place your hands by your temples or crossed on your chest.|Brace your abs and lift your shoulders and upper back off the floor.|Lower under control, without dropping your head down suddenly.','The movement is short: do not pull on your neck with your hands.'],
+'supino-inc-barra':['Incline barbell bench press','Upper chest, front deltoid, triceps','Set the bench between 30° and 45° and lie back with your feet flat on the floor.|Unrack the bar and lower it under control to your upper chest.|Press the bar up until your arms are straight, keeping your shoulder blades on the bench.','Above 45° the shoulders work more than the chest.|Keep your wrists in line with your forearms.'],
+'supino-inc-halt':['Incline dumbbell bench press','Upper chest, front deltoid, triceps','With the bench at 30°–45°, bring the dumbbells to chest height with your palms facing forward.|Press them up until your arms are straight, without clanging them together.|Lower slowly until you feel your chest stretch.','Choose a load you can control without swinging the dumbbells.'],
+'supino-fechado':['Close-grip bench press','Triceps, chest, front deltoid','Lie on the bench and grip the bar with your hands shoulder-width apart (or slightly closer).|Lower the bar to your chest with your elbows close to your torso.|Press up until your arms are straight.','Do not bring your hands too close together: it overloads the wrists.|Keep your shoulder blades together and your back on the bench.'],
+'press-neutro':['Neutral-grip dumbbell press','Chest, triceps','Lie back with the dumbbells by your chest and your palms facing each other.|Press up until your arms are straight.|Lower under control, keeping your elbows close to your body.','A good option if the standard grip bothers your shoulders.'],
+'floor-press':['Dumbbell floor press','Chest, triceps','Lie on the floor with your knees bent and the dumbbells beside your chest.|Press them up until your arms are straight.|Lower until your elbows lightly touch the floor and repeat.','The floor limits the range of motion and protects your shoulders.|Do not let your elbows fully rest on the floor between reps.'],
+'crucifixo':['Dumbbell fly','Chest','Lie on the bench with the dumbbells above your chest and your elbows slightly bent.|Open your arms in an arc, lowering the dumbbells until you feel your chest stretch.|Close the arc, bringing the dumbbells back above your chest.','Use light weight and controlled movement: it is an isolation exercise.|Keep the same elbow angle throughout.'],
+'crucifixo-inc':['Incline dumbbell fly','Upper chest','With the bench inclined, hold the dumbbells above your chest with your elbows slightly bent.|Open your arms in an arc until you feel the stretch.|Bring the dumbbells back together at the top.','Do not go too low: your limit is shoulder comfort.'],
+'pullover':['Dumbbell pullover','Chest, lats, triceps (long head)','Lie on your back on the bench and hold a dumbbell with both hands above your chest.|With your arms almost straight, lower the dumbbell in an arc behind your head.|Return to the start using your chest and back.','Keep your hips low and your abs braced.'],
+'flexoes-diamante':['Diamond push-ups','Triceps, chest, shoulders','Place your hands together under your chest, with your thumbs and index fingers forming a diamond.|Lower your chest to your hands, keeping your elbows close to your body.|Push the floor away until your arms are straight.','If it is too hard, do them on your knees.'],
+'flexoes-largas':['Wide-grip push-ups','Chest, shoulders','Place your hands wider than your shoulders and keep your body in a straight line.|Lower your chest to the floor under control.|Push the floor away to return to the start.','Do not let your hips sag or rise.'],
+'flexoes-declinadas':['Decline push-ups','Upper chest, shoulders','Rest your feet on a bench and your hands on the floor, with your body in a straight line.|Lower your chest towards the floor with your elbows at about 45°.|Push the floor away until your arms are straight.','The higher the foot support, the more load on the shoulders.'],
+'fundos-paralelas':['Parallel bar dips','Lower chest, triceps, front deltoid','Support yourself on the bars with straight arms and your torso leaning slightly forward.|Bend your elbows and lower until you feel your chest stretch.|Push the bars away to straighten your arms again.','Do not go lower than your shoulders comfortably allow.|If it is too hard, use the assisted machine.'],
+'crossover':['Cable crossover','Chest','Stand between two high pulleys, holding a handle in each hand with your elbows slightly bent.|Bring your hands together in front of your chest in an arc.|Return slowly until you feel your chest stretch.','Lean your torso slightly forward and keep it still.|Control the return: do not let the weights slam.'],
+'peck-deck':['Pec deck (machine fly)','Chest','Sit with your back against the pad and your forearms resting on the arm pads.|Bring your arms together in front of your chest without shrugging your shoulders.|Open slowly until you feel your chest stretch.','Adjust the seat so your hands are at chest height.'],
+'press-maq-peito':['Machine chest press','Chest, triceps','Sit with your back well supported and the handles at chest height.|Press the handles forward until your arms are straight.|Return slowly until you feel your chest stretch.','Do not lock your elbows hard at the end.'],
+'supino-declinado':['Decline barbell bench press','Lower chest, triceps','Lie on a decline bench with your feet secured and grip the bar at shoulder width or slightly wider.|Lower the bar to your lower chest.|Press up until your arms are straight.','Get a spotter to unrack and rack the bar with heavy loads.'],
+'remada-halt':['Dumbbell bent-over row','Lats, trapezius, rhomboids, biceps','With your knees slightly bent, lean your torso forward and hold a dumbbell in each hand.|Pull the dumbbells towards your hips, driving your elbows back.|Lower slowly until your arms are straight.','Keep a neutral spine and your neck aligned.'],
+'remada-t':['T-bar row','Lats, trapezius, rhomboids','Stand over the bar with your knees bent and your torso leaning forward, and grip the handle.|Pull the bar towards your chest, squeezing your shoulder blades together.|Lower under control.','Do not swing your torso to lift the weight.'],
+'remada-unilateral':['One-arm dumbbell row','Lats, rhomboids, biceps','Rest one hand and the knee on the same side on a bench, with your back straight.|With the other hand, pull the dumbbell towards your hip, driving your elbow back.|Lower slowly and repeat, switching sides at the end of the set.','Keep your shoulders parallel to the floor, without rotating your torso.'],
+'remada-sentada':['Seated cable row','Lats, rhomboids, trapezius','Sit with your feet braced and your knees slightly bent, and grab the handle with straight arms.|Pull the handle to your abdomen, squeezing your shoulder blades together.|Return slowly until your arms are straight.','Keep your torso upright, without leaning back.'],
+'chin-up':['Chin-up','Lats, biceps, forearms','Grip the bar with your palms facing you, shoulder-width apart, and hang.|Pull your elbows down until your chin passes the bar.|Lower under control until your arms are straight.','This grip works the biceps more than the standard one.'],
+'barra-assistida':['Assisted pull-up','Lats, biceps','Use the assisted machine or a band and grab the bar.|Pull your elbows down until your chin passes the bar.|Lower slowly until your arms are straight.','Reduce the assistance over time.'],
+'puxada-alta':['Lat pulldown','Lats, biceps, teres major','Sit with your thighs secured under the pad and grip the bar slightly wider than your shoulders.|Pull the bar to your chest, driving your elbows down and back.|Return slowly until your arms are straight.','Lean your torso slightly back, without swinging.'],
+'puxada-neutra':['Neutral-grip pulldown','Lats, biceps','Sit and grab the handle with your palms facing each other.|Pull to your chest, keeping your elbows close to your body.|Return slowly until your arms are straight.','A good option if the wide grip bothers your shoulders.'],
+'puxada-bracos-retos':['Straight-arm cable pulldown','Lats, triceps (long head)','Standing facing the high pulley, hold the bar with straight arms and your torso leaning slightly forward.|Pull the bar down to your thighs, keeping your arms almost straight.|Return slowly to the start.','Do not bend your elbows: the movement comes from the shoulder.'],
+'good-morning':['Good morning','Lower back, hamstrings, glutes','With the bar on your back, feet shoulder-width apart and knees slightly bent.|Send your hips back and lean your torso forward, keeping a neutral spine.|Return to the start by driving your hips forward.','Use light weight: technique comes first.|Go down only as far as you can keep your back straight.'],
+'remada-invertida':['Inverted row','Lats, rhomboids, biceps','Lie under a low bar and grip it with your hands shoulder-width apart.|With your body in a straight line, pull your chest to the bar.|Lower slowly until your arms are straight.','The more horizontal your body, the harder it is.'],
+'hiperextensao':['Back extensions','Lower back, glutes, hamstrings','Position yourself on the bench with your hips supported and your ankles secured.|Lower your torso under control, with your back straight.|Raise until your body is in a straight line, without over-arching.','Do not go above the line of your body.'],
+'encolhimentos':['Dumbbell shrugs','Upper trapezius','Stand holding a dumbbell in each hand at your sides.|Raise your shoulders towards your ears without bending your elbows.|Pause, then lower slowly.','Do not roll your shoulders: the movement is only up and down.'],
+'remada-apoiada':['Chest-supported row','Lats, rhomboids, trapezius','Lie face down on an incline bench, holding a dumbbell in each hand.|Pull the dumbbells towards your ribs, squeezing your shoulder blades together.|Lower slowly until your arms are straight.','The bench support prevents swinging your torso.'],
+'terra-sumo':['Sumo deadlift','Glutes, thighs, lower back, trapezius','Place your feet wider than your shoulders, toes turned out, and grip the bar inside your legs.|Push the floor away with your feet and extend your hips and knees together.|Stand tall at the top and lower under control.','Keep your knees in line with your toes.|Increase the load gradually.'],
+'remada-pendlay':['Pendlay row','Lats, trapezius, lower back','With your torso parallel to the floor, grip the bar resting on the floor.|Pull the bar explosively to your abdomen.|Set it back on the floor and repeat.','Keep your torso parallel to the floor on every rep.'],
+'agach-frontal':['Front squat','Quads, glutes, core','Rest the bar across the front of your shoulders, with your elbows high.|Descend under control with an upright torso until your thighs are parallel to the floor.|Stand up by pushing the floor away with your whole foot.','Keep your elbows high so the bar does not roll.'],
+'goblet':['Goblet squat','Quads, glutes, core','Hold a dumbbell against your chest with both hands.|Descend between your knees, keeping your torso upright.|Stand up by pushing through your heels.','A great exercise for learning the squat.'],
+'sumo-halt':['Dumbbell sumo squat','Glutes, adductors, quads','With your feet wide and toes turned out, hold a dumbbell in front of you.|Descend with an upright torso and your knees in line with your toes.|Stand up squeezing your glutes.','Do not let your knees cave inwards.'],
+'avanco-reverso':['Reverse lunge','Quads, glutes, hamstrings','Standing with a dumbbell in each hand, step back with one leg.|Lower until your back knee almost touches the floor.|Return to the start and alternate legs.','It is easier on the knees than the forward lunge.'],
+'passada':['Walking lunge with dumbbells','Quads, glutes, hamstrings','Take a big step forward and lower until both knees are at 90°.|Push off your front foot to take the next step.|Alternate legs as you walk.','Keep your torso upright and your steps long.'],
+'bulgaro':['Bulgarian split squat','Quads, glutes','Rest the top of your back foot on a bench and step the other leg forward.|Lower straight down until your front thigh is parallel to the floor.|Stand up by pushing through your front foot.','Complete all reps on one side before switching.'],
+'step-up':['Step-up','Quads, glutes','Facing a bench, place one whole foot on top.|Step up by pushing through the top leg until you stand tall.|Lower under control and repeat.','Avoid pushing off with the bottom leg.'],
+'terra-romeno':['Romanian deadlift','Hamstrings, glutes, lower back','Standing with the bar in front of your thighs and your knees slightly bent.|Send your hips back and lower the bar close to your legs.|Return to the start by extending your hips.','Keep a neutral spine.|Go down only until you feel your hamstrings stretch.'],
+'stiff-halt':['Dumbbell stiff-leg deadlift','Hamstrings, glutes','Standing with a dumbbell in each hand in front of your thighs.|Send your hips back and lower the dumbbells close to your legs.|Rise squeezing your glutes.','Keep your knees almost straight but not locked.'],
+'hip-thrust':['Hip thrust','Glutes, hamstrings','Rest your upper back on a bench, with the bar across your hips and your feet on the floor.|Push the floor away with your feet and raise your hips until your body forms a straight line.|Squeeze your glutes at the top and lower under control.','Use a pad on the bar so it does not hurt your hips.'],
+'ponte':['Glute bridge','Glutes, hamstrings','Lie on your back with your knees bent and your feet on the floor.|Raise your hips until your body forms a line from shoulders to knees.|Squeeze your glutes and lower slowly.','Do not over-arch your lower back at the top.'],
+'ext-pernas':['Leg extension','Quads','Sit in the machine with the pad over your ankles.|Extend your legs until they are almost fully straight.|Lower slowly back to the start.','Control the lowering: do not let the weight drop.'],
+'flexao-pernas':['Seated leg curl','Hamstrings','Sit in the machine with the pad over your ankles.|Bend your knees, bringing your heels down and back.|Return slowly to the start.','Keep your back against the seat.'],
+'prensa':['Leg press','Quads, glutes','Sit with your back supported and your feet on the platform, shoulder-width apart.|Push the platform until your legs are almost straight.|Return slowly until your knees are at about 90°.','Do not lock your knees at the top and do not let your hips lift off the seat.'],
+'gemeos-sentado':['Seated calf raise','Soleus (calves)','Sit with your knees at 90° and the balls of your feet on the platform.|Raise your heels as high as you can.|Lower slowly until you feel the stretch.','Pause at the top to work the muscle well.'],
+'abdutores':['Hip abduction machine','Gluteus medius, abductors','Sit in the machine with your back supported and your legs against the pads.|Open your legs against the resistance.|Return slowly to the start.','Keep your torso against the pad and the movement controlled.'],
+'agach-smith':['Smith machine squat','Quads, glutes','Stand under the bar with your feet slightly in front of your body.|Descend under control until your thighs are parallel to the floor.|Stand up by pushing the floor away with your whole foot.','The fixed path helps you keep good technique.'],
+'press-militar':['Barbell overhead press','Deltoids, triceps, trapezius','Standing, with the bar at shoulder height and your elbows slightly in front.|Brace your abs and press the bar overhead, passing it close to your face.|Lower under control back to your shoulders.','Do not arch your back to press.'],
+'arnold':['Arnold press','Deltoids, triceps','Hold the dumbbells in front of your chest with your palms facing you.|Raise them, rotating your palms forward, until your arms are straight.|Lower, rotating your palms back towards you.','Use light weight at first: the movement is more complex.'],
+'press-sentado':['Seated dumbbell shoulder press','Deltoids, triceps','Sit with your back supported and the dumbbells at shoulder height.|Press them up until your arms are straight.|Lower slowly to ear level.','Back support reduces torso swing.'],
+'press-maq-ombros':['Machine shoulder press','Deltoids, triceps','Sit with your back supported and the handles at shoulder height.|Press the handles up until your arms are straight.|Lower slowly.','Adjust the seat so the handles are at shoulder height.'],
+'push-press':['Push press','Deltoids, triceps, legs','With the bar at shoulder height, bend your knees slightly.|Extend your legs and drive the bar overhead in one motion.|Lower under control back to your shoulders.','Use leg drive to help the bar up.'],
+'elev-frontal':['Dumbbell front raise','Front deltoid','Standing with the dumbbells in front of your thighs.|Raise your straight arms to shoulder height.|Lower slowly.','Do not swing your torso to help the lift.'],
+'elev-frontal-barra':['Barbell front raise','Front deltoid','Standing, hold the bar in front of your thighs.|Raise it with almost-straight arms to shoulder height.|Lower under control.','Use light weight and clean form.'],
+'remada-alta':['Barbell upright row','Deltoids, trapezius','Standing, hold the bar in front of your thighs with your hands shoulder-width apart.|Pull it up close to your body to chest height, with your elbows above your hands.|Lower under control.','Do not go above chest height if your shoulders bother you.'],
+'remada-alta-halt':['Dumbbell upright row','Deltoids, trapezius','Standing, hold a dumbbell in each hand in front of your thighs.|Raise them close to your body to chest height, with your elbows above your hands.|Lower slowly.','Keep the dumbbells close to your body.'],
+'face-pull':['Face pull','Rear deltoid, trapezius, rhomboids','With a rope on the pulley at face height, pull it towards your face.|Drive your elbows back and up, pulling your hands apart.|Return slowly with your arms straight.','Keep your torso upright and the weight light.'],
+'crucifixo-inv':['Reverse fly machine','Rear deltoid, rhomboids','Sit facing the machine with your chest supported and the handles in front.|Open your arms backwards, squeezing your shoulder blades together.|Return slowly to the start.','Do not shrug your shoulders.'],
+'elev-lateral':['Dumbbell lateral raise','Side deltoid','Standing, with a dumbbell in each hand at your sides.|Raise your arms out to the sides to shoulder height, with your elbows slightly bent.|Lower slowly.','Use light weight: the side deltoid is a small muscle.'],
+'elev-lateral-cabo':['Cable lateral raise','Side deltoid','Stand sideways to the low pulley and grab the cable with your far hand.|Raise your arm out to the side to shoulder height.|Lower slowly.','The cable keeps tension on the muscle through the whole movement.'],
+'elev-posterior':['Dumbbell rear delt raise','Rear deltoid, rhomboids','Lean your torso forward with a straight back and the dumbbells hanging.|Open your arms out to the sides to shoulder height.|Lower slowly.','Do not use torso swing.'],
+'elev-posterior-cabo':['Cable rear delt fly','Rear deltoid','Standing, cross your arms and grab the opposite cables of the high pulleys.|Open your arms out to the sides, keeping them straight.|Return slowly.','Keep the weight light and the movement clean.'],
+'pike-pushup':['Pike push-ups','Deltoids, triceps','Get into an inverted V, with your hands and feet on the floor and your hips high.|Bend your elbows and lower your head towards the floor.|Push back up to the start.','The more vertical your back, the more your shoulders work.'],
+'curl-barra':['Barbell curl','Biceps, brachialis','Standing, grip the bar with your palms facing forward, shoulder-width apart.|Bend your elbows and curl the bar to your shoulders without moving your elbows.|Lower slowly until your arms are straight.','Do not swing your torso to lift the weight.'],
+'curl-martelo':['Hammer curl','Brachialis, brachioradialis, biceps','Standing, with the dumbbells at your sides and your palms facing each other.|Bend your elbows and curl the dumbbells to your shoulders.|Lower slowly.','Keep your elbows close to your torso.'],
+'curl-alternado':['Alternating dumbbell curl','Biceps, brachialis','Standing, with a dumbbell in each hand at your sides.|Curl one dumbbell to your shoulder, slightly rotating your wrist.|Lower and repeat with the other arm.','Avoid swinging your torso.'],
+'curl-cabo':['Cable curl','Biceps, brachialis','Facing the low pulley, grip the bar with your palms facing up.|Curl the bar to your shoulders without moving your elbows.|Lower slowly.','The cable keeps tension on the biceps through the whole movement.'],
+'curl-inverso':['Reverse curl','Brachioradialis, forearms','Standing, grip the bar with your palms facing down.|Bend your elbows and curl the bar to your shoulders.|Lower slowly.','Use a lighter load than for the regular curl.'],
+'curl-concentrado':['Concentration curl','Biceps','Sit with your legs apart and rest your elbow on the inside of your thigh.|Curl the dumbbell to your shoulder, squeezing your biceps.|Lower slowly.','Keep your upper arm still: only the forearm moves.'],
+'curl-scott':['Preacher curl','Biceps (short head)','Rest your arms on the angled pad and grip the bar.|Curl the bar to your shoulders.|Lower slowly, without fully straightening your elbows at the bottom.','Not fully locking out your elbows protects the tendons.'],
+'curl-inclinado':['Incline dumbbell curl','Biceps (long head)','Sit on a bench inclined at 45° with your arms hanging.|Curl the dumbbells up to your shoulders, alternating or together.|Lower slowly.','The extra stretch recruits more of the long head of the biceps.'],
+'curl-spider':['Spider curl','Biceps','Lie face down on an incline bench with your arms hanging.|Bend your elbows and curl the dumbbells up.|Lower slowly.','The bench prevents any body swing.'],
+'triceps-corda':['Rope triceps pushdown','Triceps','Facing the high pulley, hold the rope with your elbows close to your torso.|Push down until your arms are straight, spreading the rope slightly.|Return slowly until your elbows are at 90°.','Keep your elbows fixed against your body.'],
+'triceps-barra':['Bar triceps pushdown','Triceps','Facing the high pulley, hold the bar with your hands shoulder-width apart.|Push down until your arms are straight.|Return slowly until your elbows are at 90°.','Do not lean your body over the bar.'],
+'frances':['Barbell skull crusher','Triceps','Lie on the bench with the bar above your chest and your arms straight.|Bend your elbows to bring the bar close to your forehead.|Extend your arms to return to the start.','Keep your elbows pointing at the ceiling.'],
+'frances-halt':['Dumbbell skull crusher','Triceps','Lie on the bench with a dumbbell in each hand and your arms straight.|Bend your elbows to bring the dumbbells close to your head.|Extend your arms to return to the start.','Keep your elbows fixed and the load controlled.'],
+'kickback':['Triceps kickback','Triceps','Lean your torso forward and bring your elbow back, close to your body.|Extend your forearm backwards until your arm is straight.|Return slowly to 90°.','Use light weight and keep your upper arm still.'],
+'fundos-banco':['Bench dips','Triceps, front deltoid','Rest your hands on a bench behind you, with your legs straight out in front.|Bend your elbows and lower your hips towards the floor.|Push up to straighten your arms again.','Keep your hips close to the bench.'],
+'fundos-triceps':['Parallel bar dips (triceps)','Triceps, chest','Support yourself on the bars with an upright torso.|Bend your elbows close to your body and lower.|Push up to straighten your arms again.','Keep your torso upright and your elbows close to your body.'],
+'ext-cabo-acima':['Overhead cable triceps extension','Triceps (long head)','Facing away from the pulley, hold the rope behind your head with your elbows pointing up.|Extend your arms forward and overhead.|Return slowly.','Keep your elbows fixed and close together.'],
+'situp':['Sit-ups','Rectus abdominis, hip flexors','Lie on your back with your knees bent and your feet on the floor.|Raise your torso until you are sitting.|Lower slowly until your back touches the floor.','Do not pull on your neck with your hands.'],
+'elev-pernas':['Lying leg raise','Lower abs, hip flexors','Lie on your back with your hands at your sides.|Raise your straight legs until they are vertical.|Lower slowly, without letting them touch the floor.','Keep your lower back pressed into the floor.'],
+'elev-pernas-barra':['Hanging leg raise','Lower abs, hip flexors','Hang from a bar with straight arms.|Raise your legs until they are parallel to the floor or higher.|Lower slowly.','Avoid swinging your body.'],
+'prancha-lateral':['Side plank','Obliques, core','Lie on your side and rest your forearm on the floor, with your elbow under your shoulder.|Lift your hips until your body forms a straight line.|Hold the position and repeat on the other side.','Do not let your hips sag.'],
+'crunch-bicicleta':['Bicycle crunch','Obliques, rectus abdominis','Lie on your back with your hands behind your head and your legs raised.|Bring your elbow to the opposite knee, extending the other leg.|Alternate sides in a continuous motion.','Move slowly and with control.'],
+'russian-twist':['Russian twist','Obliques, rectus abdominis','Sit with your knees bent and your torso leaning back.|Rotate your torso to one side, bringing your hands near the floor.|Rotate to the other side.','Keep your chest open and your spine straight.'],
+'mountain':['Mountain climbers','Core, shoulders, hip flexors','Get into a push-up position with your body in a straight line.|Bring one knee to your chest.|Switch legs quickly, keeping your hips low.','Keep your shoulders over your hands.'],
+'dead-bug':['Dead bug','Deep abs, core','Lie on your back with your arms up and your knees at 90°.|Extend one arm and the opposite leg without arching your back.|Return to the start and alternate.','Keep your lower back pressed into the floor.'],
+'birddog':['Bird dog','Core, lower back, glutes','Get on all fours, with your hands under your shoulders and your knees under your hips.|Extend one arm and the opposite leg, keeping your back straight.|Return to the start and alternate.','Avoid rotating your hips.'],
+'hollow':['Hollow hold','Rectus abdominis, core','Lie on your back with your arms extended overhead.|Lift your shoulders and legs, keeping your lower back pressed into the floor.|Hold the position for the set time.','If it is too hard, bend your knees a little.'],
+'roda':['Ab wheel rollout','Rectus abdominis, shoulders, core','Kneeling, hold the wheel with your arms straight in front of you.|Roll forward slowly, keeping your body in a straight line.|Return to the start, bracing your abs.','Only go as far as you can keep your lower back straight.'],
+'crunch-cabo':['Cable crunch','Rectus abdominis','Kneeling facing the high pulley, hold the rope near your head.|Curl your torso down, contracting your abs.|Return slowly.','The movement comes from your abs, not your hips.'],
+'reverse-crunch':['Reverse crunch','Lower abs','Lie on your back with your knees bent over your hips.|Lift your hips off the floor, bringing your knees towards your chest.|Lower slowly.','Avoid swinging your legs for momentum.'],
+'pallof':['Pallof press','Obliques, core (anti-rotation)','Stand sideways to the pulley, holding the handle at your chest.|Extend your arms forward without letting your torso rotate.|Return slowly.','The goal is to resist rotation.'],
+'superman':['Superman','Lower back, glutes','Lie face down with your arms extended in front.|Lift your chest, arms and legs at the same time.|Pause and lower slowly.','Keep your eyes on the floor so your neck stays neutral.'],
+'prancha-toque':['Plank shoulder taps','Core, shoulders','In a push-up position, with your feet slightly apart.|Bring one hand to the opposite shoulder without rotating your hips.|Alternate sides.','The wider your feet, the easier it is to balance.'],
+'windshield':['Windshield wipers','Obliques, abs','Lie on your back with your arms out to the sides and your legs vertical.|Lower your legs to one side without touching the floor.|Return to the centre and go to the other side.','If it is too hard, bend your knees.']
+};
+var EN={
+ /* grupos e filtros */
+ 'Peito':'Chest','Costas':'Back','Pernas':'Legs','Ombros':'Shoulders','Braços':'Arms','Core':'Core','Todos':'All','Meus':'Mine',
+ /* separadores e cabeçalhos */
+ 'Treino':'Workout','Exercícios':'Exercises','Histórico':'History','Progresso':'Progress','Secções':'Sections','Ajustes':'Settings',
+ 'Regista exercícios, cargas e repetições.':'Log exercises, weights and reps.','atleta':'athlete',
+ 'Esta semana':'This week','Começar treino':'Start workout','Modelos':'Templates','Começar':'Start','Apagar modelo':'Delete template',
+ 'Ao terminares um treino, podes guardá-lo como modelo para o repetires.':'When you finish a workout, you can save it as a template to repeat it.',
+ 'Duração':'Duration','Nome do treino':'Workout name','Adiciona o primeiro exercício para começares.':'Add your first exercise to get started.',
+ '+ Adicionar exercício':'+ Add exercise','Terminar treino':'Finish workout','Descartar':'Discard',
+ 'Primeira vez':'First time','Remover exercício':'Remove exercise','Série':'Set','Anterior':'Previous','Usar valores anteriores':'Use previous values',
+ 'Série feita':'Set done','+ Série':'+ Set','Remover última':'Remove last',
+ 'Toca num exercício para veres como se faz.':'Tap an exercise to see how it is done.','Procurar exercício':'Search exercises','Filtrar por grupo':'Filter by group',
+ '+ Novo exercício':'+ New exercise','Nenhum exercício encontrado.':'No exercises found.',
+ 'Ainda não tens treinos guardados.':'You have no saved workouts yet.','Termina um treino para ele aparecer aqui.':'Finish a workout and it will appear here.',
+ 'Repetir treino':'Repeat workout','Apagar':'Delete',
+ 'O gráfico e os recordes aparecem depois do teu primeiro treino guardado.':'The chart and records appear after your first saved workout.',
+ 'Exercício':'Exercise','Medida':'Metric','Peso máximo':'Max weight','1RM estimado':'Estimated 1RM','Volume total':'Total volume','Repetições (melhor série)':'Reps (best set)',
+ 'Gráfico de progressão':'Progress chart','Sem dados para esta medida neste exercício.':'No data for this metric on this exercise.','Recordes':'Records',
+ 'Peso corporal':'Bodyweight','Sem recordes ainda.':'No records yet.',
+ /* detalhe do exercício */
+ 'Ilustrações esquemáticas, só para perceberes a posição.':'Schematic illustrations, just to show the position.',
+ 'Este exercício ainda não tem ilustração.':'This exercise does not have an illustration yet.',
+ 'Músculos':'Muscles','Como fazer':'How to do it','Dicas':'Tips',
+ 'Se tiveres dores ou uma lesão, pede orientação a um profissional antes de treinar.':'If you have pain or an injury, ask a professional for guidance before training.',
+ 'Apagar exercício':'Delete exercise','Adicionar exercício':'Add exercise','Concluir':'Done','Ver como se faz':'See how it is done',
+ 'Fechar':'Close','Novo exercício':'New exercise','Nome':'Name','Ex.: Remada na máquina':'e.g. Machine row','Grupo muscular':'Muscle group','Guardar exercício':'Save exercise',
+ /* ajustes */
+ 'Bloquear agora':'Lock now','Tempo de descanso entre séries':'Rest time between sets','Cópia de segurança':'Backup',
+ 'Os dados ficam guardados neste dispositivo e neste browser. Exporta de vez em quando para não os perderes.':'Your data is stored on this device and in this browser. Export from time to time so you do not lose it.',
+ 'Exportar (JSON)':'Export (JSON)','Exportar (CSV)':'Export (CSV)','Importar':'Import',
+ 'Ficheiro JSON exportado antes (junta aos dados atuais)':'JSON file exported before (merged with current data)',
+ 'Ou cola aqui o conteúdo do JSON':'Or paste the JSON content here','Importar texto colado':'Import pasted text',
+ 'Ícone no iPhone':'iPhone icon','No Safari: Partilhar, depois Adicionar ao ecrã principal.':'In Safari: Share, then Add to Home Screen.',
+ 'Apagar tudo':'Delete everything','Apagar todos os dados da app':'Delete all app data',
+ /* resumo, confirmação, texto */
+ 'Treino guardado':'Workout saved','minutos':'minutes','séries':'sets','kg de volume':'kg of volume','Novos recordes':'New records',
+ 'Guardar como modelo':'Save as template','Guardar modelo':'Save template',
+ 'Confirmar':'Confirm','Cancelar':'Cancel','Remover':'Remove',
+ 'Apagar este modelo?':'Delete this template?','Remover este exercício do treino?':'Remove this exercise from the workout?',
+ 'Descartar este treino? Os dados que registaste agora perdem-se.':'Discard this workout? What you have logged now will be lost.',
+ 'Apagar este exercício? O histórico mantém o nome.':'Delete this exercise? History keeps the name.',
+ 'Apagar este treino do histórico?':'Delete this workout from history?',
+ 'Apagar todos os treinos, modelos e exercícios criados? Não dá para desfazer.':'Delete all workouts, templates and created exercises? This cannot be undone.',
+ 'Conteúdo':'Content','Copiar':'Copy',
+ 'Não foi possível guardar o ficheiro daqui. Copia o texto e guarda-o num ficheiro ou numa nota tua.':'Could not save the file from here. Copy the text and save it in a file or a note of your own.',
+ /* avisos */
+ 'Não foi possível guardar neste browser.':'Could not save in this browser.','Marca pelo menos uma série como feita.':'Mark at least one set as done.',
+ 'Indica as repetições.':'Enter the reps.','Ficheiro guardado.':'File saved.','Ficheiro inválido: usa um JSON exportado por esta app.':'Invalid file: use a JSON exported by this app.',
+ 'Não foi possível ler o ficheiro.':'Could not read the file.','Escreve o nome do exercício.':'Enter the exercise name.','Exercício criado.':'Exercise created.',
+ 'Termina ou descarta o treino atual primeiro.':'Finish or discard the current workout first.','Dados apagados.':'Data deleted.','Modelo guardado.':'Template saved.',
+ 'Copiado.':'Copied.','Seleciona o texto e copia manualmente.':'Select the text and copy it manually.',
+ /* descanso */
+ 'Descanso':'Rest','Descanso terminado':'Rest over','Próxima série':'Next set','Saltar':'Skip','Menos 15 segundos':'Minus 15 seconds','Mais 15 segundos':'Plus 15 seconds',
+ /* login */
+ 'Entrar':'Sign in','Bem-vindo':'Welcome','Vamos criar o teu acesso. Como te devo chamar?':'Let us set up your access. What should I call you?','O teu nome':'Your name','Continuar':'Continue',
+ 'Repor acesso':'Reset access','O PIN só existe neste dispositivo e não dá para o recuperar. Para criares um novo, é preciso apagar todos os treinos guardados na app.':'The PIN only exists on this device and cannot be recovered. To create a new one, all workouts saved in the app must be deleted.',
+ 'Apagar tudo e repor':'Delete everything and reset','Voltar':'Back','Cria o teu PIN':'Create your PIN','Repete o PIN':'Repeat your PIN',
+ 'Carrega a barra com o teu PIN.':'Load the bar with your PIN.','4 dígitos para entrares na app.':'4 digits to get into the app.','Escreve o mesmo PIN outra vez.':'Enter the same PIN again.',
+ 'Esqueci o PIN':'I forgot my PIN','Apagar último dígito':'Delete last digit','Os PINs não coincidem. Tenta outra vez.':'The PINs do not match. Try again.',
+ 'Cria um PIN novo.':'Create a new PIN.','PIN errado.':'Wrong PIN.','Demasiadas tentativas. Espera 30 segundos.':'Too many attempts. Wait 30 seconds.',
+ /* legendas das ilustrações */
+ 'Em baixo':'Bottom','Em cima':'Top','Cotovelos no chão':'Elbows on the floor','Braços esticados':'Arms straight','Haltere sobre o peito':'Dumbbell above chest',
+ 'Haltere atrás da cabeça':'Dumbbell behind head','Braços atrás':'Arms back','Braços à frente':'Arms forward','Braços abertos':'Arms open','Braços juntos':'Arms together',
+ 'Halteres juntos':'Dumbbells together','Início':'Start','Fim':'End','Peso junto ao abdómen':'Weight at your abdomen','Suspenso':'Hanging','Queixo acima da barra':'Chin over the bar',
+ 'Barra junto ao peito':'Bar at your chest','Puxar ao abdómen':'Pull to abdomen','Braços acima':'Arms overhead','Braços junto às coxas':'Arms by your thighs',
+ 'Barra no chão':'Bar on the floor','De pé':'Standing','Tronco inclinado':'Torso leaning forward','Anca em baixo':'Hips low','Anca em cima':'Hips high','Deitado':'Lying down',
+ 'Anca elevada':'Hips raised','Joelho fletido':'Knee bent','Perna esticada':'Leg straight','Perna fletida':'Leg curled','Calcanhares em baixo':'Heels down','Em pontas':'On tiptoes',
+ 'Pesos nos ombros':'Weights at shoulders','Braços em baixo':'Arms down','À altura dos ombros':'At shoulder height','Junto às coxas':'By your thighs','Cotovelos acima':'Elbows up',
+ 'Cotovelos atrás':'Elbows back','Peso junto à testa':'Weight near forehead','Cotovelo a 90°':'Elbow at 90°','Braço esticado':'Arm straight','Sentado':'Sitting',
+ 'Pernas em baixo':'Legs down','Pernas a 90°':'Legs at 90°','Pernas à horizontal':'Legs horizontal','Joelhos sobre a anca':'Knees over hips','Anca levantada':'Hips lifted',
+ 'Primeiro joelho ao peito':'First knee to chest','Segundo joelho ao peito':'Second knee to chest','Quatro apoios':'All fours','Braço e perna opostos esticados':'Opposite arm and leg extended',
+ 'Posição oca':'Hollow position','Deitado de barriga para baixo':'Lying face down','Peito e pernas elevados':'Chest and legs raised','De joelhos':'Kneeling','Rolar para a frente':'Roll forward',
+ 'Início (braços esticados)':'Start (arms straight)','Fim (barra no abdómen)':'End (bar at abdomen)','Início (suspenso)':'Start (hanging)','Fim (queixo acima da barra)':'End (chin over the bar)',
+ 'Início (barra no chão)':'Start (bar on the floor)','Fim (de pé)':'End (standing)','Início (de pé)':'Start (standing)','Calcanhares no chão':'Heels on the floor',
+ 'Halteres nos ombros':'Dumbbells at shoulders','Cotovelos fletidos':'Elbows bent','Posição correta':'Correct position','Erro: anca demasiado alta':'Mistake: hips too high',
+ 'Corrida':'Running','Substituir':'Replace','Terminar':'End','Posição inicial':'Start position','Posição final':'End position',
+ 'Planos':'Plans','Planeia os treinos e escolhe o plano de cada dia da semana.':'Plan your workouts and choose a plan for each day of the week.','Semana':'Week','Hoje':'Today','Sem plano (descanso)':'No plan (rest day)','Os teus planos':'Your plans','+ Novo plano':'+ New plan','Editar':'Edit','Novo plano':'New plan','Editar plano':'Edit plan','Nome do plano':'Plan name','Ex.: Dia de pernas':'e.g. Leg day','Séries':'Sets','Ainda sem exercícios. Adiciona o primeiro.':'No exercises yet. Add the first one.','Guardar plano':'Save plan','Apagar plano':'Delete plan','Subir':'Move up','Descer':'Move down','Escreve o nome do plano.':'Enter the plan name.','Adiciona pelo menos um exercício.':'Add at least one exercise.','Plano guardado.':'Plan saved.','Apagar este plano?':'Delete this plan?','Criar plano':'Create plan','Gerir planos':'Manage plans','Guardar como plano':'Save as plan','Escolher plano':'Choose a plan','Começar este plano':'Start this plan',
+ 'Ainda não tens planos. Cria o primeiro, por exemplo "Dia de pernas".':'You have no plans yet. Create the first one, for example "Leg day".',
+ 'Cria planos no separador Planos para treinares por dia (por exemplo, dia de pernas) ou guarda um treino terminado como plano.':'Create plans in the Plans tab to train by day (for example, leg day) or save a finished workout as a plan.'
+};
+var WD={'segunda-feira':'Monday','terça-feira':'Tuesday','quarta-feira':'Wednesday','quinta-feira':'Thursday','sexta-feira':'Friday','sábado':'Saturday','domingo':'Sunday'};
+function dotNum(x){return String(x).replace(',','.')}
+var RULES=[
+ [/^Olá, (.*)$/,function(m){return 'Hi, '+m[1]}],
+ [/^Último treino: (.*), (hoje|ontem|há (\d+) dias)$/,function(m){return 'Last workout: '+trText(m[1])+', '+(m[2]==='hoje'?'today':m[2]==='ontem'?'yesterday':m[3]+' days ago')}],
+ [/^(\d+) exercícios?$/,function(m){return m[1]+(m[1]==='1'?' exercise':' exercises')}],
+ [/^Plano: (.+)$/,function(m){return 'Plan: '+m[1]}],
+ [/^(\d+) treinos? registados?$/,function(m){return m[1]+(m[1]==='1'?' workout logged':' workouts logged')}],
+ [/^(\d+) treinos?$/,function(m){return m[1]+(m[1]==='1'?' workout':' workouts')}],
+ [/^Treino de (.+)$/,function(m){return (WD[m[1]]||m[1])+' workout'}],
+ [/^Última vez: (.*)$/,function(m){return 'Last time: '+m[1]}],
+ [/^Peso em kg, série (\d+)$/,function(m){return 'Weight in kg, set '+m[1]}],
+ [/^Repetições, série (\d+)$/,function(m){return 'Reps, set '+m[1]}],
+ [/^(.+) · meu$/,function(m){return trText(m[1])+' · mine'}],
+ [/^Pontos verdes: novo máximo \((.+)\)(\.?)$/,function(m){return 'Green dots: new best ('+m[1]+')'+m[2]}],
+ [/^1RM est\. (.*)$/,function(m){return 'Est. 1RM '+m[1]}],
+ [/^: peso máximo de (.+) kg$/,function(m){return ': max weight of '+dotNum(m[1])+' kg'}],
+ [/^: 1RM estimado de (.+) kg$/,function(m){return ': estimated 1RM of '+dotNum(m[1])+' kg'}],
+ [/^: (\d+) repetições \(antes: (\d+)\)$/,function(m){return ': '+m[1]+' reps (before: '+m[2]+')'}],
+ [/^(\d+) treinos? importados?\.$/,function(m){return m[1]+(m[1]==='1'?' workout imported.':' workouts imported.')}],
+ [/^Exercício criado por ti \((.+)\)\. Não tem ilustração\.$/,function(m){return 'Exercise you created ('+trText(m[1])+'). No illustration.'}],
+ [/^(.+) – (.+)$/,function(m){return trText(m[1])+' – '+trText(m[2])}]
+];
+function trText(s){
+  if(Object.prototype.hasOwnProperty.call(EN,s))return EN[s];
+  for(var i=0;i<RULES.length;i++){var m=RULES[i][0].exec(s);if(m)return RULES[i][1](m)}
+  return s;
+}
+function buildDict(){
+  EXS.forEach(function(x){
+    var e=EXEN[x.id];if(!e)return;
+    EN[x.name]=e[0];EN[x.muscles]=e[1];
+    var s=e[2].split('|'),t=e[3].split('|');
+    x.steps.forEach(function(p,i){if(s[i])EN[p]=s[i]});
+    x.tips.forEach(function(p,i){if(t[i])EN[p]=t[i]});
+  });
+}
+function trNode(root){
+  if(!root)return;
+  if(root.nodeType===3){trOne(root);return}
+  var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,null),n,list=[];
+  while((n=w.nextNode()))list.push(n);
+  list.forEach(trOne);
+  var els=root.querySelectorAll?root.querySelectorAll('[placeholder],[aria-label],[title]'):[];
+  Array.prototype.forEach.call(els,trAttrs);
+  if(root.nodeType===1)trAttrs(root);
+}
+function trOne(n){
+  var p=n.parentNode;
+  if(p&&(p.nodeName==='TEXTAREA'||p.nodeName==='SCRIPT'||p.nodeName==='STYLE'))return;
+  var v=n.nodeValue,core=v.trim();
+  if(!core)return;
+  var out=trText(core);
+  if(out!==core)n.nodeValue=v.replace(core,out);
+}
+function trAttrs(el){
+  ['placeholder','aria-label','title'].forEach(function(a){
+    if(el.hasAttribute&&el.hasAttribute(a)){var v=el.getAttribute(a),o=trText(v);if(o!==v)el.setAttribute(a,o)}
+  });
+}
+var moOn=false;
+function startTranslator(){
+  if(moOn||!window.MutationObserver)return;moOn=true;
+  new MutationObserver(function(muts){
+    if(LANG!=='en')return;
+    muts.forEach(function(m){
+      if(m.type==='characterData'){trOne(m.target)}
+      else Array.prototype.forEach.call(m.addedNodes,function(n){if(n.nodeType===3)trOne(n);else if(n.nodeType===1)trNode(n)});
+    });
+  }).observe(document.body,{childList:true,subtree:true,characterData:true});
+}
+function setLang(l){
+  LANG=(l==='en')?'en':'pt';LOC=LANG==='en'?'en-GB':'pt-PT';
+  S.settings.lang=LANG;save();
+  document.documentElement.lang=LANG==='en'?'en':'pt-PT';
+  var tb=document.querySelector('.tabbar');if(tb)tb.setAttribute('aria-label',LANG==='en'?'Sections':'Secções');
+  renderApp();renderRest();if(modal)renderModal();renderLock();
+  if(LANG==='en')trNode(document.body);
+}
+
 
 /* ---------- estado ---------- */
 var KEY='gymlog.v1';
-var S={workouts:[],templates:[],custom:[],settings:{rest:90},active:null};
+var S={workouts:[],templates:[],plans:[],schedule:{},runs:[],run:{ref:null,plan:null},custom:[],settings:{rest:90},active:null};
 function load(){
-  try{var r=localStorage.getItem(KEY);if(r){var o=JSON.parse(r);S.workouts=o.workouts||[];S.templates=o.templates||[];S.custom=o.custom||[];S.active=o.active||null;S.settings=Object.assign({rest:90},o.settings||{})}}catch(e){}
+  try{var r=localStorage.getItem(KEY);if(r){var o=JSON.parse(r);S.workouts=o.workouts||[];S.runs=Array.isArray(o.runs)?o.runs:[];S.run=Object.assign({ref:null,plan:null},o.run||{});S.plans=Array.isArray(o.plans)?o.plans:[];S.schedule=(o.schedule&&typeof o.schedule==='object')?o.schedule:{};S.templates=o.templates||[];if(!Array.isArray(o.plans)&&S.templates.length){S.plans=S.templates.map(tplToPlan);S.templates=[]};S.custom=o.custom||[];S.active=o.active||null;S.settings=Object.assign({rest:90},o.settings||{})}}catch(e){}
   sortW();
 }
 var saveTimer=null;
@@ -545,6 +973,8 @@ function saveSoon(){clearTimeout(saveTimer);saveTimer=setTimeout(save,350)}
 function sortW(){S.workouts.sort(function(a,b){return new Date(a.date)-new Date(b.date)})}
 function allEx(){return EXS.concat(S.custom.map(function(c){return {id:c.id,name:c.name,group:c.group,muscles:c.group,custom:true}}))}
 function exById(id){var a=allEx();for(var i=0;i<a.length;i++)if(a[i].id===id)return a[i];return null}
+function tplToPlan(t){return {id:t.id,name:t.name,items:(t.exIds||[]).map(function(id){return {exId:id,sets:3,reps:''}})}}
+function exNameL(id){var x=exById(id);if(!x)return '?';return LANG==='en'&&EXEN[id]?EXEN[id][0]:x.name}
 function exName(id,fallback){var x=exById(id);return x?x.name:(fallback||'Exercício')}
 function lastSets(exId){
   for(var i=S.workouts.length-1;i>=0;i--){var e=S.workouts[i].exs.filter(function(x){return x.exId===exId})[0];if(e&&e.sets.length)return e.sets}
@@ -552,7 +982,7 @@ function lastSets(exId){
 }
 function fmtSet(s){return s.kg>0?fmtKg(s.kg)+'×'+s.reps:s.reps+' reps'}
 function fmtDur(ms){var t=Math.max(0,Math.floor(ms/1000)),h=Math.floor(t/3600),m=Math.floor(t%3600/60),s=t%60;return (h?h+':'+String(m).padStart(2,'0'):m)+':'+String(s).padStart(2,'0')}
-function fmtDate(iso){return new Date(iso).toLocaleDateString('pt-PT',{weekday:'short',day:'numeric',month:'short'})}
+function fmtDate(iso){return new Date(iso).toLocaleDateString(LOC,{weekday:'short',day:'numeric',month:'short'})}
 function ago(iso){var d=Math.round((Date.now()-new Date(iso))/864e5);return d<=0?'hoje':d===1?'ontem':'há '+d+' dias'}
 function prevFor(ei,si){
   var ex=S.active.exs[ei],last=lastSets(ex.exId);
@@ -563,7 +993,7 @@ function prevFor(ei,si){
 function newSets(n){var a=[];for(var i=0;i<n;i++)a.push({kg:'',reps:'',done:false});return a}
 function startWorkout(exIds){
   var d=new Date();
-  S.active={id:uid(),start:d.toISOString(),name:'Treino de '+d.toLocaleDateString('pt-PT',{weekday:'long'}),exs:(exIds||[]).map(function(id){return {exId:id,name:exName(id),sets:newSets(3)}})};
+  S.active={id:uid(),start:d.toISOString(),name:(LANG==='en'?'Workout on ':'Treino de ')+d.toLocaleDateString(LOC,{weekday:'long'}),exs:(exIds||[]).map(function(id){return {exId:id,name:exName(id),sets:newSets(3)}})};
   save();tab='treino';renderApp();window.scrollTo(0,0);
 }
 
@@ -577,20 +1007,328 @@ function treinoHTML(){
   var last=S.workouts[S.workouts.length-1];
   var h=hdr('Olá, '+esc(A&&A.name?A.name:'atleta'),last?'Último treino: '+esc(last.name)+', '+ago(last.date):'Regista exercícios, cargas e repetições.');
   h+=weekHTML();
+  h+=todayHTML();
   h+='<button class="btn hero" style="width:100%" data-act="start-empty">Começar treino</button>';
-  if(S.templates.length){
-    h+='<h2>Modelos</h2>';
-    S.templates.forEach(function(t){
-      h+='<div class="card tpl"><div><b>'+esc(t.name)+'</b><span class="meta">'+t.exIds.map(function(id){return esc(exName(id,'?'))}).join(', ')+'</span></div><div class="acts"><button class="btn small primary" data-act="start-tpl" data-id="'+esc(t.id)+'">Começar</button><button class="icon" data-act="del-tpl" data-id="'+esc(t.id)+'" aria-label="Apagar modelo">'+ICON.trash+'</button></div></div>';
+  if(S.plans.length){
+    h+='<h2>Planos</h2>';
+    S.plans.forEach(function(p){
+      h+='<div class="card tpl"><div><b>'+esc(p.name)+'</b><span class="meta">'+p.items.length+(p.items.length===1?' exercício':' exercícios')+'</span></div><div class="acts"><button class="btn small primary" data-act="start-plan" data-id="'+esc(p.id)+'">Começar</button></div></div>';
     });
-  }else h+='<p class="hint">Ao terminares um treino, podes guardá-lo como modelo para o repetires.</p>';
+    h+='<button class="btn ghost" data-act="go-plans">Gerir planos</button>';
+  }else h+='<p class="hint">Cria planos no separador Planos para treinares por dia (por exemplo, dia de pernas) ou guarda um treino terminado como plano.</p>';
   return h;
 }
+
+var WDP=['Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado','Domingo'],WDE=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+function todayIdx(){return (new Date().getDay()+6)%7}
+function planById(id){return S.plans.filter(function(x){return x.id===id})[0]}
+function planNames(p){return p.items.map(function(it){return exNameL(it.exId)}).join(', ')}
+function nEx(n){return n+(n===1?' exercício':' exercícios')}
+function todayHTML(){
+  var p=planById(S.schedule[todayIdx()]);
+  if(p)return '<section class="card todaycard"><span class="meta">Hoje</span><b class="tname">'+esc(p.name)+'</b><span class="meta">'+nEx(p.items.length)+'</span><span class="meta">'+esc(planNames(p))+'</span><button class="btn primary big" data-act="start-plan" data-id="'+esc(p.id)+'">Começar este plano</button></section>';
+  return '<section class="card todaycard"><span class="meta">Hoje</span><b class="tname">Sem plano (descanso)</b><button class="btn small" data-act="choose-plan">Escolher plano</button></section>';
+}
+function planosHTML(){
+  var h=hdr('Planos','Planeia os treinos e escolhe o plano de cada dia da semana.');
+  var WD=LANG==='en'?WDE:WDP,td=todayIdx();
+  h+='<h2>Semana</h2><div class="card sched">';
+  for(var i=0;i<7;i++){
+    var cur=S.schedule[i];
+    h+='<label class="srow'+(i===td?' today':'')+'"><span class="sd">'+WD[i]+(i===td?'<em>Hoje</em>':'')+'</span><select data-f="sched" data-d="'+i+'" aria-label="'+WD[i]+'"><option value="">Sem plano (descanso)</option>'+S.plans.map(function(p){return '<option value="'+esc(p.id)+'"'+(cur===p.id?' selected':'')+'>'+esc(p.name)+'</option>'}).join('')+'</select></label>';
+  }
+  h+='</div><h2>Os teus planos</h2>';
+  if(!S.plans.length)h+='<p class="hint">Ainda não tens planos. Cria o primeiro, por exemplo "Dia de pernas".</p>';
+  S.plans.forEach(function(p){
+    h+='<div class="card"><div class="tpl"><div><b>'+esc(p.name)+'</b><span class="meta">'+nEx(p.items.length)+'</span><span class="meta">'+esc(planNames(p))+'</span></div></div><div class="rowbtns"><button class="btn small primary" data-act="start-plan" data-id="'+esc(p.id)+'">Começar</button><button class="btn small" data-act="edit-plan" data-id="'+esc(p.id)+'">Editar</button></div></div>';
+  });
+  return h+'<button class="btn ghost big" data-act="new-plan">+ Novo plano</button>';
+}
+var planDraft=null;
+function startFromPlan(id){
+  if(S.active){toast('Termina ou descarta o treino atual primeiro.');return}
+  var p=planById(id);if(!p)return;
+  S.active={id:uid(),start:new Date().toISOString(),name:p.name,exs:p.items.map(function(it){var n=Math.max(1,parseInt(it.sets,10)||3);return {exId:it.exId,name:exName(it.exId),sets:newSets(n),plan:{sets:n,reps:it.reps||''}}})};
+  save();tab='treino';modal=null;renderModal();renderApp();window.scrollTo(0,0);
+}
+function planFromWorkout(){}
+/* ---------- corrida ---------- */
+function TT(pt,en){return LANG==='en'?en:pt}
+function pad2(n){return (n<10?'0':'')+n}
+function fmtPace(sec){sec=Math.round(sec);return Math.floor(sec/60)+':'+pad2(sec%60)}
+function fmtHMS(sec){sec=Math.round(sec);var h=Math.floor(sec/3600),m=Math.floor(sec%3600/60),s=sec%60;return h>0?h+':'+pad2(m)+':'+pad2(s):m+':'+pad2(s)}
+function fmtKm(k){return String(Math.round(k*100)/100).replace('.',LANG==='en'?'.':',')}
+function fmtSpd(v){return (Math.round(v*10)/10).toFixed(1).replace('.',LANG==='en'?'.':',')}
+var RB=[3,5,10,15,21.0975,42.195];
+function rbName(k){return k===21.0975?TT('Meia maratona','Half marathon'):k===42.195?TT('Maratona','Marathon'):fmtKm(k)+' km'}
+function bucketOf(km){for(var i=0;i<RB.length;i++){if(Math.abs(km-RB[i])/RB[i]<=0.05)return RB[i]}return 0}
+function riegel(t,d1,d2){return t*Math.pow(d2/d1,1.06)}
+function sortedRuns(){return S.runs.slice().sort(function(a,b){return new Date(a.date)-new Date(b.date)})}
+function todayISODate(){var d=new Date();return d.getFullYear()+'-'+pad2(d.getMonth()+1)+'-'+pad2(d.getDate())}
+var runView='log',runBucket='all',rWeek=0;
+var runDraft={date:todayISODate(),km:'',h:'',m:'',s:''};
+var refDraft=null;
+function WDAB(){return LANG==='en'?['Mon','Tue','Wed','Thu','Fri','Sat','Sun']:['Seg','Ter','Qua','Qui','Sex','Sáb','Dom']}
+function prevHTML(km,sec){
+  if(!(km>0&&sec>0))return '<span class="meta">'+TT('O pace médio e a velocidade aparecem aqui.','Average pace and speed appear here.')+'</span>';
+  return '<b class="rp">'+fmtPace(sec/km)+'</b><span> /km</span><span class="meta">'+fmtSpd(km/(sec/3600))+' km/h</span>';
+}
+function draftSec(){return num(runDraft.h)*3600+num(runDraft.m)*60+num(runDraft.s)}
+function updRunPrev(){var el=$('#rprev');if(el)el.innerHTML=prevHTML(num(runDraft.km),draftSec())}
+function hdrRun(){return hdr(TT('Corrida','Running'),TT('Regista a distância e o tempo: o pace médio é calculado automaticamente.','Log distance and time: your average pace is calculated automatically.'))}
+
+/* gráficos */
+function paceChartSVG(pts){
+  var W=340,H=170,Lm=46,R=12,T=14,B=26;
+  var xs=pts.map(function(p){return p.t}),vs=pts.map(function(p){return p.v});
+  var x0=Math.min.apply(0,xs),x1=Math.max.apply(0,xs);if(x0===x1){x0-=864e5*3;x1+=864e5*3}
+  var v0=Math.min.apply(0,vs),v1=Math.max.apply(0,vs),pd=(v1-v0)*.25||12;v0-=pd;v1+=pd;
+  var X=function(t){return Lm+(t-x0)/(x1-x0)*(W-Lm-R)},Y=function(v){return T+(v-v0)/(v1-v0)*(H-T-B)};
+  var s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+TT('Gráfico de pace','Pace chart')+'">';
+  for(var i=0;i<3;i++){var v=v0+(v1-v0)*i/2,y=Y(v);s+='<line class="gl" x1="'+Lm+'" x2="'+(W-R)+'" y1="'+y.toFixed(1)+'" y2="'+y.toFixed(1)+'"/><text class="tx2" x="'+(Lm-6)+'" y="'+(y+3).toFixed(1)+'" text-anchor="end">'+fmtPace(v)+'</text>'}
+  if(pts.length>1)s+='<path class="ln" d="'+pts.map(function(p,i){return (i?'L':'M')+X(p.t).toFixed(1)+' '+Y(p.v).toFixed(1)}).join(' ')+'"/>';
+  pts.forEach(function(p){s+='<circle class="'+(p.pr?'ptpr':'pt')+'" cx="'+X(p.t).toFixed(1)+'" cy="'+Y(p.v).toFixed(1)+'" r="4.5"/>'});
+  var dl=function(t){return new Date(t).toLocaleDateString(LOC,{day:'numeric',month:'short'})};
+  s+='<text class="tx2" x="'+Lm+'" y="'+(H-8)+'">'+dl(Math.min.apply(0,xs))+'</text><text class="tx2" x="'+(W-R)+'" y="'+(H-8)+'" text-anchor="end">'+dl(Math.max.apply(0,xs))+'</text></svg>';
+  return s;
+}
+function weekBarsSVG(vals,labels){
+  var W=340,H=150,Lm=8,R=8,T=18,B=24,n=vals.length,mx=Math.max.apply(0,vals)||1,bw=(W-Lm-R)/n;
+  var s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+TT('Quilómetros por semana','Kilometres per week')+'">';
+  for(var i=0;i<n;i++){
+    var h=vals[i]/mx*(H-T-B),x=Lm+i*bw+bw*.18,w=bw*.64,y=H-B-h;
+    s+='<rect class="bar" x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" width="'+w.toFixed(1)+'" height="'+Math.max(h,1).toFixed(1)+'" rx="3"/>';
+    if(vals[i]>0)s+='<text class="tx2" x="'+(x+w/2).toFixed(1)+'" y="'+(y-4).toFixed(1)+'" text-anchor="middle">'+fmtKm(vals[i])+'</text>';
+    s+='<text class="tx2" x="'+(x+w/2).toFixed(1)+'" y="'+(H-8)+'" text-anchor="middle">'+labels[i]+'</text>';
+  }
+  return s+'</svg>';
+}
+
+/* ecrã principal da corrida */
+function corridaHTML(){
+  var h=hdrRun();
+  h+='<div class="chips" role="group" aria-label="'+TT('Secções da corrida','Running sections')+'">'+[['log',TT('Corridas','Runs')],['paces',TT('Ritmos','Paces')],['plans',TT('Planos','Plans')]].map(function(v){return '<button class="chip" data-act="rview" data-v="'+v[0]+'" aria-pressed="'+(runView===v[0])+'">'+v[1]+'</button>'}).join('')+'</div>';
+  if(runView==='paces')return h+ritmosHTML();
+  if(runView==='plans')return h+rplansHTML();
+  return h+corridasHTML();
+}
+function corridasHTML(){
+  var runs=sortedRuns(),h='';
+  h+='<section class="card"><h3 class="ch">'+TT('Nova corrida','New run')+'</h3>'+
+    '<label class="field"><span>'+TT('Data','Date')+'</span><input type="date" data-f="rdate" value="'+esc(runDraft.date)+'"></label>'+
+    '<label class="field"><span>'+TT('Distância (km)','Distance (km)')+'</span><input inputmode="decimal" data-f="rkm" value="'+esc(runDraft.km)+'" placeholder="'+(LANG==='en'?'5.0':'5,0')+'"></label>'+
+    '<div class="field"><span>'+TT('Tempo','Time')+'</span><div class="tri">'+
+    '<label><input inputmode="numeric" data-f="rh" value="'+esc(runDraft.h)+'" placeholder="0" aria-label="'+TT('Horas','Hours')+'"><em>h</em></label>'+
+    '<label><input inputmode="numeric" data-f="rm" value="'+esc(runDraft.m)+'" placeholder="0" aria-label="'+TT('Minutos','Minutes')+'"><em>min</em></label>'+
+    '<label><input inputmode="numeric" data-f="rs" value="'+esc(runDraft.s)+'" placeholder="0" aria-label="'+TT('Segundos','Seconds')+'"><em>s</em></label></div></div>'+
+    '<div class="rprev" id="rprev" role="status">'+prevHTML(num(runDraft.km),draftSec())+'</div>'+
+    '<button class="btn primary big" data-act="run-save">'+TT('Guardar corrida','Save run')+'</button></section>';
+  if(!runs.length)return h+'<p class="empty">'+TT('Ainda não registaste corridas.','You have not logged any runs yet.')+'</p>';
+  var km=0,sec=0;runs.forEach(function(r){km+=r.km;sec+=r.sec});
+  h+='<div class="stats"><div class="stat"><b>'+fmtKm(km)+'</b><span>'+TT('km no total','km in total')+'</span></div><div class="stat"><b>'+runs.length+'</b><span>'+TT('corridas','runs')+'</span></div><div class="stat"><b>'+fmtPace(sec/km)+'</b><span>'+TT('pace médio /km','average pace /km')+'</span></div></div>';
+  /* km por semana */
+  var now=new Date(),dow=(now.getDay()+6)%7,mon=new Date(now.getFullYear(),now.getMonth(),now.getDate()-dow).getTime(),vals=[],labs=[];
+  for(var i=7;i>=0;i--){
+    var a=mon-i*7*864e5,b=a+7*864e5,tot=0;
+    runs.forEach(function(r){var t=new Date(r.date).getTime();if(t>=a&&t<b)tot+=r.km});
+    vals.push(Math.round(tot*10)/10);labs.push(new Date(a).toLocaleDateString(LOC,{day:'numeric',month:'numeric'}));
+  }
+  h+='<h2>'+TT('Km por semana','Km per week')+'</h2><div class="chartbox">'+weekBarsSVG(vals,labs)+'</div>';
+  /* progressão */
+  var bk={};runs.forEach(function(r){var b=bucketOf(r.km);if(b)(bk[b]=bk[b]||[]).push(r)});
+  if(runBucket!=='all'&&!bk[runBucket])runBucket='all';
+  var sub=runBucket==='all'?runs:bk[runBucket];
+  h+='<h2>'+TT('Progressão do pace','Pace progression')+'</h2><label class="field"><span>'+TT('Distância','Distance')+'</span><select data-f="rbucket"><option value="all"'+(runBucket==='all'?' selected':'')+'>'+TT('Todas as distâncias','All distances')+'</option>'+RB.filter(function(b){return bk[b]}).map(function(b){return '<option value="'+b+'"'+(String(b)===String(runBucket)?' selected':'')+'>'+rbName(b)+'</option>'}).join('')+'</select></label>';
+  var pts=sub.map(function(r){return {t:new Date(r.date).getTime(),v:r.sec/r.km}}),best=Infinity;
+  pts.forEach(function(p,i){p.pr=i>0&&p.v<best;if(p.v<best)best=p.v});
+  if(pts.length>=2){
+    var dlt=pts[pts.length-1].v-pts[0].v;
+    h+='<div class="chartbox">'+paceChartSVG(pts)+'<p class="note" style="margin:6px 4px 0">'+TT('Pontos verdes: novo melhor pace. Mais alto no gráfico = mais lento.','Green dots: new best pace. Higher on the chart = slower.')+'</p></div>';
+    h+='<p class="hint" style="margin:-4px 0 12px">'+(runBucket==='all'?TT('Escolhe uma distância para comparar corridas equivalentes.','Choose a distance to compare equivalent runs.'):dlt<0?TT('Desde a primeira corrida melhoraste ','Since your first run you improved by ')+fmtPace(-dlt)+' /km.':dlt>0?TT('Estás ','You are ')+fmtPace(dlt)+TT(' /km mais lento do que na primeira corrida.',' /km slower than on your first run.'):TT('O teu pace manteve-se igual.','Your pace is unchanged.'))+'</p>';
+  }else h+='<p class="hint">'+TT('Regista pelo menos duas corridas da mesma distância para veres a progressão.','Log at least two runs of the same distance to see your progress.')+'</p>';
+  /* recordes */
+  var rec='';
+  RB.forEach(function(b){
+    if(!bk[b])return;
+    var br=bk[b].slice().sort(function(x,y){return x.sec/x.km-y.sec/y.km})[0];
+    rec+='<div class="rec"><b>'+rbName(b)+'</b><span class="v">'+fmtHMS(br.sec)+'<small>'+fmtPace(br.sec/br.km)+' /km · '+fmtDate(br.date)+'</small></span></div>';
+  });
+  if(rec)h+='<h2>'+TT('Recordes','Records')+'</h2><div class="card">'+rec+'</div>';
+  /* lista */
+  h+='<h2>'+TT('Corridas','Runs')+'</h2>';
+  runs.slice().reverse().forEach(function(r){
+    var b=bucketOf(r.km),isPR=b&&bk[b].length>1&&bk[b].every(function(o){return o===r||o.sec/o.km>r.sec/r.km});
+    h+='<div class="card runrow"><div><b>'+fmtKm(r.km)+' km · '+fmtHMS(r.sec)+(isPR?'<span class="pill">PR</span>':'')+'</b><span class="meta">'+fmtDate(r.date)+' · '+fmtPace(r.sec/r.km)+' /km · '+fmtSpd(r.km/(r.sec/3600))+' km/h</span></div><button class="icon" data-act="run-del" data-id="'+esc(r.id)+'" aria-label="'+TT('Apagar corrida','Delete run')+'">'+ICON.trash+'</button></div>';
+  });
+  return h;
+}
+
+/* ritmos: conversor, previsão e tabela */
+function refCalc(){
+  if(!refDraft){var r=S.run.ref;refDraft=r?{d:String(r.km),h:String(Math.floor(r.sec/3600)||''),m:String(Math.floor(r.sec%3600/60)||''),s:String(Math.round(r.sec%60)||'')}:{d:'5',h:'',m:'',s:''}}
+  return {km:parseFloat(refDraft.d),sec:num(refDraft.h)*3600+num(refDraft.m)*60+num(refDraft.s)};
+}
+function refHTML(){
+  var c=refCalc();
+  if(!(c.km>0&&c.sec>0))return '<p class="hint" style="margin:8px 0 0">'+TT('Escreve um tempo recente para veres previsões e ritmos de treino.','Enter a recent time to see predictions and training paces.')+'</p>';
+  var p5=riegel(c.sec,c.km,5)/5,p10=riegel(c.sec,c.km,10)/10,h='<h4>'+TT('Previsão de tempos de prova','Race time predictions')+'</h4><div class="rtab">';
+  [5,10,21.0975,42.195].forEach(function(d){var t=riegel(c.sec,c.km,d);h+='<div class="rec"><b>'+rbName(d)+'</b><span class="v">'+fmtHMS(t)+'<small>'+fmtPace(t/d)+' /km</small></span></div>'});
+  h+='</div><h4>'+TT('Ritmos de treino (aprox.)','Training paces (approx.)')+'</h4><div class="rtab">';
+  [[TT('Fácil / recuperação','Easy / recovery'),p5+60,p5+90],[TT('Corrida longa','Long run'),p5+55,p5+85],[TT('Limiar (tempo)','Threshold (tempo)'),p10+5,p10+15],[TT('Intervalos','Intervals'),p5-6,p5],[TT('Rectas curtas','Strides'),p5-25,p5-15]].forEach(function(r){
+    h+='<div class="rec"><b>'+r[0]+'</b><span class="v">'+fmtPace(r[1])+'–'+fmtPace(r[2])+'<small>'+fmtSpd(3600/r[2])+'–'+fmtSpd(3600/r[1])+' km/h</small></span></div>';
+  });
+  return h+'</div><p class="note">'+TT('Estimativas pela fórmula de Riegel e regras gerais: servem de guia, não de regra.','Estimates from the Riegel formula and general rules: a guide, not a rule.')+'</p>';
+}
+function updRef(){var el=$('#refres');if(el)el.innerHTML=refHTML()}
+function cvFromSpeed(v){
+  var sp=num(v),pm=$('#cvpm'),ps=$('#cvps'),out=$('#cvres');
+  if(!(sp>0)){if(out)out.textContent='';return}
+  var p=Math.round(3600/sp);pm.value=Math.floor(p/60);ps.value=p%60;
+  if(out)out.textContent=fmtSpd(sp)+' km/h = '+fmtPace(p)+' /km';
+}
+function cvFromPace(){
+  var p=num($('#cvpm').value)*60+num($('#cvps').value),sv=$('#cvs'),out=$('#cvres');
+  if(!(p>0)){if(out)out.textContent='';return}
+  var sp=3600/p;sv.value=(Math.round(sp*10)/10).toFixed(1).replace('.',LANG==='en'?'.':',');
+  if(out)out.textContent=fmtPace(p)+' /km = '+fmtSpd(sp)+' km/h';
+}
+function paceTableHTML(){
+  var last=sortedRuns().slice(-1)[0],hp=last?Math.round((last.sec/last.km)/5)*5:0,rows='';
+  for(var p=165;p<=600;p+=5)rows+='<tr'+(p===hp?' class="hit"':'')+'><td>'+fmtPace(p)+'</td><td>'+fmtSpd(3600/p)+'</td><td>'+fmtHMS(p*5)+'</td><td>'+fmtHMS(p*10)+'</td><td>'+fmtHMS(p*21.0975)+'</td><td>'+fmtHMS(p*42.195)+'</td></tr>';
+  return '<div class="tblwrap"><table class="ptable"><thead><tr><th>Pace /km</th><th>km/h</th><th>5 km</th><th>10 km</th><th>'+fmtKm(21.1)+' km</th><th>'+fmtKm(42.2)+' km</th></tr></thead><tbody>'+rows+'</tbody></table></div><p class="note">'+TT('De 2:45 a 10:00 por km, de 5 em 5 segundos. Os tempos de prova assumem pace constante.','From 2:45 to 10:00 per km, in 5-second steps. Finish times assume a constant pace.')+(last?' '+TT('A linha a vermelho é o pace da tua última corrida.','The red row is the pace of your last run.'):'')+'</p>';
+}
+function ritmosHTML(){
+  var c=refCalc(),h='';
+  h+='<section class="card"><h3 class="ch">'+TT('Conversor velocidade ⇄ pace','Speed ⇄ pace converter')+'</h3><div class="cv"><label class="field"><span>'+TT('Velocidade (km/h)','Speed (km/h)')+'</span><input id="cvs" inputmode="decimal" data-f="cvs" placeholder="16"></label><div class="field"><span>Pace (min/km)</span><div class="tri two"><label><input id="cvpm" inputmode="numeric" data-f="cvpm" placeholder="3"><em>min</em></label><label><input id="cvps" inputmode="numeric" data-f="cvps" placeholder="45"><em>s</em></label></div></div></div><div class="rprev" id="cvres" role="status"></div></section>';
+  h+='<section class="card"><h3 class="ch">'+TT('Previsão e ritmos de treino','Predictions and training paces')+'</h3><p class="note" style="margin:0 0 10px">'+TT('Indica um tempo recente numa prova ou corrida forte.','Enter a recent time from a race or hard run.')+'</p>'+
+    '<div class="field"><span>'+TT('Distância','Distance')+'</span><select data-f="refd">'+[5,10,21.0975,42.195].map(function(d){return '<option value="'+d+'"'+(String(d)===String(refDraft.d)?' selected':'')+'>'+rbName(d)+'</option>'}).join('')+'</select></div>'+
+    '<div class="field"><span>'+TT('Tempo','Time')+'</span><div class="tri"><label><input inputmode="numeric" data-f="refh" value="'+esc(refDraft.h)+'" placeholder="0" aria-label="'+TT('Horas','Hours')+'"><em>h</em></label><label><input inputmode="numeric" data-f="refm" value="'+esc(refDraft.m)+'" placeholder="0" aria-label="'+TT('Minutos','Minutes')+'"><em>min</em></label><label><input inputmode="numeric" data-f="refs" value="'+esc(refDraft.s)+'" placeholder="0" aria-label="'+TT('Segundos','Seconds')+'"><em>s</em></label></div></div>'+
+    '<div class="rowbtns" style="margin-bottom:6px"><button class="btn small" data-act="ref-best">'+TT('Usar o meu melhor resultado','Use my best result')+'</button><button class="btn small primary" data-act="ref-save">'+TT('Guardar como referência','Save as reference')+'</button></div>'+
+    '<div id="refres">'+refHTML()+'</div></section>';
+  h+='<h2>'+TT('Tabela de pace','Pace table')+'</h2>'+paceTableHTML();
+  return h;
+}
+
+/* planos de corrida sugeridos */
+var RPLANS=[
+ {id:'sofa5k',weeks:8,days:[0,2,5],lvl:['Iniciante','Beginner'],name:['Do sofá aos 5 km','Couch to 5 km'],goal:['Chega aos 30 minutos de corrida contínua (cerca de 5 km), alternando corrida e marcha.','Reach 30 minutes of continuous running (about 5 km) by alternating running and walking.'],
+  gen:function(w){var T=[[60,90,8],[90,90,7],[120,90,6],[180,90,5],[300,120,3],[480,120,2]];if(w<=6)return [0,1,2].map(function(){return {t:'runwalk',n:T[w-1][2],run:T[w-1][0],walk:T[w-1][1]}});if(w===7)return [{t:'time',min:20},{t:'time',min:20},{t:'time',min:25}];return [{t:'time',min:25},{t:'time',min:25},{t:'timetest',min:30}]}},
+ {id:'pace5k',weeks:6,days:[0,2,4,6],lvl:['Intermédio','Intermediate'],name:['5 km mais rápido','Faster 5 km'],goal:['Baixa o teu pace nos 5 km com intervalos, corridas de limiar e um teste final.','Lower your 5 km pace with intervals, threshold runs and a final test.'],
+  gen:function(w){var i=w-1,I=[[6,400,90],[5,600,90],[4,800,120],[5,800,120],[3,1200,150],[4,400,90]],TM=[15,18,20,22,25,15],E=[5,5,6,6,6,4],LG=[6,7,8,8,9];return [{t:'easy',km:E[i],strides:true},{t:'int',n:I[i][0],m:I[i][1],r:I[i][2]},{t:'tempo',min:TM[i]},w<6?{t:'long',km:LG[i]}:{t:'test',km:5}]}},
+ {id:'tenk',weeks:8,days:[1,3,6],lvl:['Intermédio','Intermediate'],name:['10 km: mais distância','10 km: build the distance'],goal:['Aumenta a corrida longa até aos 11 km e termina com um teste de 10 km.','Build your long run up to 11 km and finish with a 10 km test.'],
+  gen:function(w){var i=w-1,E=[5,5,5,5,6,6,6,4],LG=[6,7,8,6,9,10,11],Q=[{t:'fartlek'},{t:'tempo',min:15},{t:'int',n:5,m:800,r:120},{t:'tempo',min:20},{t:'int',n:6,m:800,r:120},{t:'tempo',min:25},{t:'int',n:4,m:1000,r:150},{t:'tempo',min:15}];return [{t:'easy',km:E[i]},Q[i],w<8?{t:'long',km:LG[i]}:{t:'test',km:10}]}},
+ {id:'half',weeks:10,days:[0,2,4,6],lvl:['Avançado','Advanced'],name:['Meia maratona','Half marathon'],goal:['Prepara os 21,1 km com corridas longas até aos 18 km e uma semana final de descida de carga.','Prepare for 21.1 km with long runs up to 18 km and a final taper week.'],
+  gen:function(w){var i=w-1,E1=[6,6,7,6,7,8,8,6,8,5],E2=[5,5,6,5,6,6,6,5,6,4],LG=[10,11,12,10,14,15,16,12,18],Q=[{t:'tempo',min:20},{t:'int',n:5,m:1000,r:150},{t:'tempo',min:25},{t:'tempo',min:20},{t:'int',n:6,m:1000,r:150},{t:'tempo',min:30},{t:'int',n:5,m:1200,r:150},{t:'tempo',min:20},{t:'tempo',min:30},{t:'tempo',min:15}];return [{t:'easy',km:E1[i]},Q[i],{t:'easy',km:E2[i]},w<10?{t:'long',km:LG[i]}:{t:'test',km:21.0975}]}}
+];
+function planDef(id){return RPLANS.filter(function(p){return p.id===id})[0]}
+function dur(sec){var m=Math.floor(sec/60),s=sec%60;return s?m+' min '+s+' s':m+' min'}
+function describe(s){
+  var en=LANG==='en';
+  switch(s.t){
+    case 'easy':return (en?'Easy run of ':'Corrida fácil de ')+fmtKm(s.km)+' km'+(s.strides?(en?' + 6 strides of 20 s':' + 6 rectas de 20 s'):'');
+    case 'time':return (en?'Continuous run of ':'Corrida contínua de ')+s.min+' min';
+    case 'timetest':return en?'Run '+s.min+' minutes non-stop (plan goal)':'Corre '+s.min+' minutos seguidos (objetivo do plano)';
+    case 'long':return (en?'Long run of ':'Corrida longa de ')+fmtKm(s.km)+(en?' km at an easy pace':' km a ritmo fácil');
+    case 'tempo':return en?'10 min warm-up + '+s.min+' min at threshold pace + 10 min easy':'10 min de aquecimento + '+s.min+' min a ritmo de limiar + 10 min suaves';
+    case 'int':return en?'10 min warm-up + '+s.n+' × '+s.m+' m at interval pace ('+s.r+' s easy jog between) + 10 min easy':'10 min de aquecimento + '+s.n+' × '+s.m+' m a ritmo de intervalos ('+s.r+' s a trote entre repetições) + 10 min suaves';
+    case 'fartlek':return en?'Fartlek: 10 min easy + 6 × (1 min fast / 2 min easy) + 10 min easy':'Fartlek: 10 min fáceis + 6 × (1 min rápido / 2 min fácil) + 10 min suaves';
+    case 'runwalk':return en?'5 min brisk walk, then '+s.n+' × ('+dur(s.run)+' running + '+dur(s.walk)+' walking)':'5 min a caminhar, depois '+s.n+' × ('+dur(s.run)+' a correr + '+dur(s.walk)+' a caminhar)';
+    case 'test':return en?'Test: run '+fmtKm(s.km)+' km as fast as you can (log it!)':'Teste: corre '+fmtKm(s.km)+' km o mais rápido que conseguires (regista a corrida!)';
+  }
+  return '';
+}
+function sessHint(s){
+  var r=S.run.ref;if(!r)return '';
+  var p5=riegel(r.sec,r.km,5)/5,p10=riegel(r.sec,r.km,10)/10,lab='',a=0,b=0;
+  if(s.t==='easy'||s.t==='long'||s.t==='time'||s.t==='fartlek'){lab=TT('Ritmo fácil','Easy pace');a=p5+60;b=p5+90}
+  else if(s.t==='tempo'){lab=TT('Ritmo de limiar','Threshold pace');a=p10+5;b=p10+15}
+  else if(s.t==='int'){lab=TT('Ritmo de intervalos','Interval pace');a=p5-6;b=p5}
+  else if(s.t==='test'){var q=riegel(r.sec,r.km,s.km)/s.km;return TT('Previsão: ','Prediction: ')+fmtPace(q)+' /km ('+fmtHMS(q*s.km)+')'}
+  else return '';
+  return lab+': '+fmtPace(a)+'–'+fmtPace(b)+' /km';
+}
+function startOfDay(d){return new Date(d.getFullYear(),d.getMonth(),d.getDate()).getTime()}
+function curWeek(ap){var days=Math.floor((startOfDay(new Date())-startOfDay(new Date(S.run.plan.start)))/864e5);return Math.min(ap.weeks,Math.max(1,Math.floor(days/7)+1))}
+function planCard(p){
+  return '<div class="card"><b class="pname">'+TT(p.name[0],p.name[1])+'</b><span class="meta">'+p.weeks+TT(' semanas',' weeks')+' · '+p.days.length+TT(' corridas por semana',' runs per week')+' · '+TT(p.lvl[0],p.lvl[1])+'</span><p class="pgoal">'+TT(p.goal[0],p.goal[1])+'</p><div class="rowbtns"><button class="btn small primary" data-act="rplan-start" data-id="'+p.id+'">'+TT('Começar','Start')+'</button><button class="btn small" data-act="rplan-view" data-id="'+p.id+'">'+TT('Ver plano','See plan')+'</button></div></div>';
+}
+function rplansHTML(){
+  var h='',ap=S.run.plan&&planDef(S.run.plan.id);
+  if(ap){
+    var cw=curWeek(ap),vw=Math.min(ap.weeks,Math.max(1,rWeek||cw)),done=S.run.plan.done||{},total=ap.weeks*ap.days.length,dn=Object.keys(done).length,WA=WDAB();
+    h+='<section class="card activeplan"><span class="meta">'+TT('Plano ativo','Active plan')+'</span><b class="tname">'+TT(ap.name[0],ap.name[1])+'</b><div class="pbar"><i style="width:'+Math.round(dn/total*100)+'%"></i></div><span class="meta">'+dn+' / '+total+' '+TT('sessões feitas','sessions done')+'</span>'+
+      '<div class="wknav"><button class="icon" data-act="rweek-prev" aria-label="'+TT('Semana anterior','Previous week')+'">‹</button><b>'+TT('Semana ','Week ')+vw+' / '+ap.weeks+(vw===cw?' · '+TT('esta semana','this week'):'')+'</b><button class="icon" data-act="rweek-next" aria-label="'+TT('Semana seguinte','Next week')+'">›</button></div>';
+    ap.gen(vw).forEach(function(s,i){
+      var key=vw+'-'+i,ok=!!done[key],hint=sessHint(s);
+      h+='<div class="sess'+(ok?' done':'')+'"><button class="chk" data-act="rsess" data-k="'+key+'" aria-pressed="'+ok+'" aria-label="'+TT('Sessão feita','Session done')+'">'+ICON.check+'</button><span class="sdesc"><b>'+WA[ap.days[i]]+'</b> · '+esc(describe(s))+(hint?'<span class="meta">'+esc(hint)+'</span>':'')+'</span></div>';
+    });
+    h+='<button class="btn danger-ghost small" data-act="rplan-stop">'+TT('Terminar plano','End plan')+'</button></section>';
+  }
+  h+='<h2>'+TT('Planos sugeridos','Suggested plans')+'</h2>'+RPLANS.map(planCard).join('');
+  h+='<p class="note">'+(S.run.ref?TT('Os ritmos-alvo usam a tua referência guardada em Ritmos.','Target paces use the reference you saved in Paces.'):TT('Dica: guarda um tempo de referência em Ritmos para veres o ritmo-alvo de cada sessão.','Tip: save a reference time in Paces to see the target pace of each session.'))+' '+TT('Aumenta a carga de forma gradual e, se tiveres dores ou uma lesão, pede orientação a um profissional.','Increase the load gradually and, if you have pain or an injury, ask a professional for guidance.')+'</p>';
+  return h;
+}
+function rplanViewBody(p){
+  var WA=WDAB(),h='<p class="note" style="margin:0 0 6px">'+TT(p.goal[0],p.goal[1])+'</p>';
+  for(var w=1;w<=p.weeks;w++){
+    h+='<h4>'+TT('Semana ','Week ')+w+'</h4>';
+    p.gen(w).forEach(function(s,i){h+='<p class="hex"><b>'+WA[p.days[i]]+'</b> · <span>'+esc(describe(s))+'</span></p>'});
+  }
+  return h+'<button class="btn primary big" data-act="rplan-start" data-id="'+p.id+'">'+TT('Começar este plano','Start this plan')+'</button>';
+}
+
+/* eventos da corrida */
+function runInput(t,f){
+  switch(f){
+    case 'rdate':runDraft.date=t.value;return true;
+    case 'rkm':runDraft.km=t.value;updRunPrev();return true;
+    case 'rh':case 'rm':case 'rs':runDraft[f.slice(1)]=t.value;updRunPrev();return true;
+    case 'cvs':cvFromSpeed(t.value);return true;
+    case 'cvpm':case 'cvps':cvFromPace();return true;
+    case 'refd':refCalc();refDraft.d=t.value;updRef();return true;
+    case 'refh':case 'refm':case 'refs':refCalc();refDraft[f.slice(3)]=t.value;updRef();return true;
+  }
+  return false;
+}
+function runAction(act,d){
+  switch(act){
+    case 'rview':runView=d.v;renderApp();return true;
+    case 'run-save':
+      var km=num(runDraft.km),sec=draftSec();
+      if(!(km>0)){toast(TT('Indica a distância.','Enter the distance.'));return true}
+      if(!(sec>0)){toast(TT('Indica o tempo.','Enter the time.'));return true}
+      var dp=(runDraft.date||todayISODate()).split('-');
+      S.runs.push({id:uid(),date:new Date(+dp[0],+dp[1]-1,+dp[2],12,0,0).toISOString(),km:Math.round(km*1000)/1000,sec:Math.round(sec)});
+      runDraft={date:todayISODate(),km:'',h:'',m:'',s:''};save();renderApp();toast(TT('Corrida guardada.','Run saved.'));return true;
+    case 'run-del':ask(TT('Apagar esta corrida?','Delete this run?'),TT('Apagar','Delete')).then(function(ok){if(ok){S.runs=S.runs.filter(function(r){return r.id!==d.id});save();renderApp()}});return true;
+    case 'ref-save':
+      var c=refCalc();if(!(c.km>0&&c.sec>0)){toast(TT('Indica o tempo.','Enter the time.'));return true}
+      S.run.ref={km:c.km,sec:Math.round(c.sec)};save();toast(TT('Referência guardada.','Reference saved.'));renderApp();return true;
+    case 'ref-best':
+      var rs=S.runs.filter(function(r){return r.km>=3});
+      if(!rs.length){toast(TT('Ainda não tens corridas de 3 km ou mais.','You have no runs of 3 km or more yet.'));return true}
+      var bestT=Infinity;rs.forEach(function(r){var e=riegel(r.sec,r.km,5);if(e<bestT)bestT=e});
+      refDraft={d:'5',h:String(Math.floor(bestT/3600)||''),m:String(Math.floor(bestT%3600/60)||''),s:String(Math.round(bestT%60)||'')};renderApp();return true;
+    case 'rplan-start':
+      var go=function(){S.run.plan={id:d.id,start:new Date().toISOString(),done:{}};rWeek=0;runView='plans';save();modal=null;renderModal();renderApp();window.scrollTo(0,0);toast(TT('Plano iniciado.','Plan started.'))};
+      if(S.run.plan)ask(TT('Já tens um plano ativo. Substituir por este?','You already have an active plan. Replace it with this one?'),TT('Substituir','Replace')).then(function(ok){if(ok)go()});else go();
+      return true;
+    case 'rplan-view':modal={type:'rplanview',id:d.id};renderModal();return true;
+    case 'rplan-stop':ask(TT('Terminar o plano ativo? O progresso das sessões perde-se.','End the active plan? Session progress will be lost.'),TT('Terminar','End')).then(function(ok){if(ok){S.run.plan=null;rWeek=0;save();renderApp()}});return true;
+    case 'rweek-prev':case 'rweek-next':
+      var ap=S.run.plan&&planDef(S.run.plan.id);if(!ap)return true;
+      var cur=Math.min(ap.weeks,Math.max(1,rWeek||curWeek(ap)));rWeek=Math.min(ap.weeks,Math.max(1,cur+(act==='rweek-next'?1:-1)));renderApp();return true;
+    case 'rsess':
+      if(!S.run.plan)return true;var dn=S.run.plan.done||(S.run.plan.done={});if(dn[d.k])delete dn[d.k];else dn[d.k]=true;save();renderApp();return true;
+  }
+  return false;
+}
+
 function dayKey(d){return d.getFullYear()+'-'+d.getMonth()+'-'+d.getDate()}
 function weekHTML(){
   var now=new Date(),dow=(now.getDay()+6)%7,mon=new Date(now.getFullYear(),now.getMonth(),now.getDate()-dow);
   var done={};S.workouts.forEach(function(w){done[dayKey(new Date(w.date))]=1});
-  var L7=['S','T','Q','Q','S','S','D'],n=0,cells='';
+  var L7=LANG==='en'?['M','T','W','T','F','S','S']:['S','T','Q','Q','S','S','D'],n=0,cells='';
   for(var i=0;i<7;i++){
     var d=new Date(mon.getFullYear(),mon.getMonth(),mon.getDate()+i),on=!!done[dayKey(d)],td=i===dow;
     if(on)n++;
@@ -609,7 +1347,7 @@ function activeHTML(){
 }
 function exCardHTML(e,ei){
   var last=lastSets(e.exId);
-  var h='<section class="card"><div class="exhead"><div><button class="exname" data-act="ex-detail" data-id="'+esc(e.exId)+'">'+esc(exName(e.exId,e.name))+'</button><p class="last">'+(last?'Última vez: '+last.map(fmtSet).join(' · '):'Primeira vez')+'</p></div><button class="icon" data-act="rm-ex" data-ei="'+ei+'" aria-label="Remover exercício">'+ICON.trash+'</button></div>';
+  var h='<section class="card"><div class="exhead"><div><button class="exname" data-act="ex-detail" data-id="'+esc(e.exId)+'">'+esc(exName(e.exId,e.name))+'</button><p class="last">'+(last?'Última vez: '+last.map(fmtSet).join(' · '):'Primeira vez')+'</p>'+(e.plan&&e.plan.reps?'<p class="last">Plano: '+e.plan.sets+' × '+esc(e.plan.reps)+'</p>':'')+'</div><button class="icon" data-act="rm-ex" data-ei="'+ei+'" aria-label="Remover exercício">'+ICON.trash+'</button></div>';
   h+='<div class="sethead"><span>Série</span><span>Anterior</span><span>kg</span><span>Reps</span><span></span></div>';
   e.sets.forEach(function(s,si){
     var pv=prevFor(ei,si);
@@ -638,7 +1376,7 @@ function itemHTML(x,mode){
   var th=x.frames?figSVG(x,0):'<span class="nofig">'+ICON.person+'</span>';
   var meta='<span class="meta">'+esc(x.group)+(x.custom?' · meu':'')+'</span>';
   if(mode==='pick'){
-    var has=S.active&&S.active.exs.some(function(e){return e.exId===x.id});
+    var has=(modal&&modal.for==='plan'&&planDraft)?planDraft.items.some(function(e){return e.exId===x.id}):(S.active&&S.active.exs.some(function(e){return e.exId===x.id}));
     return '<div class="item"><button class="itembtn"'+gc+' data-act="'+(has?'noop':'pick-ex')+'" data-id="'+esc(x.id)+'"'+(has?' disabled':'')+'><span class="th">'+th+'</span><span class="tx"><b>'+esc(x.name)+'</b>'+meta+'</span><span class="add">'+(has?ICON.check:'+')+'</span></button><button class="icon" data-act="ex-detail" data-id="'+esc(x.id)+'" aria-label="Ver como se faz">'+ICON.info+'</button></div>';
   }
   return '<button class="itembtn item"'+gc+' data-act="ex-detail" data-id="'+esc(x.id)+'"><span class="th">'+th+'</span><span class="tx"><b>'+esc(x.name)+'</b>'+meta+'</span><span class="chev">›</span></button>';
@@ -668,7 +1406,7 @@ function historicoHTML(){
   if(!S.workouts.length)return h+'<p class="empty">Ainda não tens treinos guardados.<br>Termina um treino para ele aparecer aqui.</p>';
   S.workouts.slice().reverse().forEach(function(w){
     var open=!!openHist[w.id],v=volOf(w);
-    h+='<article class="hcard"><button class="hmain" data-act="hist-toggle" data-id="'+esc(w.id)+'" aria-expanded="'+open+'"><span><b>'+esc(w.name)+(w.prs&&w.prs.length?'<span class="pill">'+w.prs.length+' PR</span>':'')+'</b><span class="meta">'+esc(fmtDate(w.date))+' · '+(w.dur||0)+' min'+(v>0?' · '+Math.round(v).toLocaleString('pt-PT')+' kg':'')+'</span></span><span class="chev">'+(open?'⌃':'⌄')+'</span></button>';
+    h+='<article class="hcard"><button class="hmain" data-act="hist-toggle" data-id="'+esc(w.id)+'" aria-expanded="'+open+'"><span><b>'+esc(w.name)+(w.prs&&w.prs.length?'<span class="pill">'+w.prs.length+' PR</span>':'')+'</b><span class="meta">'+esc(fmtDate(w.date))+' · '+(w.dur||0)+' min'+(v>0?' · '+Math.round(v).toLocaleString(LOC)+' kg':'')+'</span></span><span class="chev">'+(open?'⌃':'⌄')+'</span></button>';
     if(open){
       h+='<div class="hbody">';
       w.exs.forEach(function(e){h+='<p class="hex"><b>'+esc(exName(e.exId,e.name))+'</b><span>'+e.sets.map(fmtSet).join(' · ')+'</span></p>'});
@@ -712,14 +1450,14 @@ function chartSVG(pts,unit){
   var d=pts.map(function(p,i){return (i?'L':'M')+X(p.t).toFixed(1)+' '+Y(p.v).toFixed(1)}).join(' ');
   if(pts.length>1)s+='<path class="ln" d="'+d+'"/>';
   pts.forEach(function(p){s+='<circle class="'+(p.pr?'ptpr':'pt')+'" cx="'+X(p.t).toFixed(1)+'" cy="'+Y(p.v).toFixed(1)+'" r="4.5"/>'});
-  var dl=function(t){return new Date(t).toLocaleDateString('pt-PT',{day:'numeric',month:'short'})};
+  var dl=function(t){return new Date(t).toLocaleDateString(LOC,{day:'numeric',month:'short'})};
   s+='<text class="tx2" x="'+Lm+'" y="'+(H-8)+'">'+dl(Math.min.apply(0,xs))+'</text><text class="tx2" x="'+(W-R)+'" y="'+(H-8)+'" text-anchor="end">'+dl(Math.max.apply(0,xs))+'</text></svg>';
   return s;
 }
 function usedExIds(){
   var seen={},out=[];
   S.workouts.forEach(function(w){w.exs.forEach(function(e){if(!seen[e.exId]){seen[e.exId]=1;out.push({id:e.exId,name:exName(e.exId,e.name)})}})});
-  return out.sort(function(a,b){return a.name.localeCompare(b.name,'pt')});
+  return out.sort(function(a,b){return a.name.localeCompare(b.name,LANG==='en'?'en':'pt')});
 }
 function progressoHTML(){
   var h=hdr('Progresso');
@@ -754,11 +1492,11 @@ function progressoHTML(){
 
 /* ---------- render geral ---------- */
 function renderTabs(){
-  var t=[['treino','Treino',ICON.tTreino],['exercicios','Exercícios',ICON.tEx],['historico','Histórico',ICON.tHist],['progresso','Progresso',ICON.tProg]];
+  var t=[['treino','Treino',ICON.tTreino],['planos','Planos',ICON.tPlan],['exercicios','Exercícios',ICON.tEx],['corrida','Corrida',ICON.tRun],['historico','Histórico',ICON.tHist],['progresso','Progresso',ICON.tProg]];
   $('#tabs').innerHTML=t.map(function(x){return '<button class="tab" data-tab="'+x[0]+'"'+(tab===x[0]?' aria-current="page"':'')+'>'+x[2]+'<span>'+x[1]+'</span></button>'}).join('');
 }
 function renderApp(){
-  var f={treino:treinoHTML,exercicios:exerciciosHTML,historico:historicoHTML,progresso:progressoHTML}[tab];
+  var f={treino:treinoHTML,planos:planosHTML,corrida:corridaHTML,exercicios:exerciciosHTML,historico:historicoHTML,progresso:progressoHTML}[tab];
   $('#app').innerHTML=f();renderTabs();
 }
 function renderExList(){var el=$('#exlist');if(el)el.innerHTML=listHTML(exQ,exGroup,'lib')}
@@ -766,6 +1504,8 @@ function renderPickList(){var el=$('#pklist');if(el)el.innerHTML=listHTML(pickQ,
 
 /* ---------- modais ---------- */
 function closeModal(){
+  if(modal&&modal.type==='picker'&&modal.for==='plan'){modal={type:'plan'};renderModal();return}
+  if(modal&&modal.type==='detail'&&modal.back){modal=modal.back;renderModal();return}
   if(modal&&modal.type==='confirm'&&modal.res){var r=modal.res;modal=null;renderModal();r(false);return}
   modal=null;renderModal();
 }
@@ -800,7 +1540,7 @@ function renderModal(){
     h=sheet('Novo exercício','<label class="field"><span>Nome</span><input id="nx-name" maxlength="60" placeholder="Ex.: Remada na máquina"></label><label class="field"><span>Grupo muscular</span><select id="nx-group">'+GROUPS.map(function(g){return '<option>'+g+'</option>'}).join('')+'</select></label><button class="btn primary big" data-act="save-newex">Guardar exercício</button>');
   }
   else if(m.type==='settings'){
-    h=sheet('Ajustes','<div class="rowbtns" style="margin:0 0 14px"><button class="btn small" data-act="lock-now">Bloquear agora</button></div><label class="field"><span>Tempo de descanso entre séries</span><select data-f="restsec">'+[45,60,90,120,150,180,240].map(function(s){return '<option value="'+s+'"'+(S.settings.rest===s?' selected':'')+'>'+s+' s</option>'}).join('')+'</select></label>'+
+    h=sheet('Ajustes','<div class="rowbtns" style="margin:0 0 14px"><button class="btn small" data-act="lock-now">Bloquear agora</button></div><label class="field"><span>Idioma / Language</span><select data-f="lang"><option value="pt"'+(LANG==='pt'?' selected':'')+'>Português</option><option value="en"'+(LANG==='en'?' selected':'')+'>English</option></select></label><label class="field"><span>Tempo de descanso entre séries</span><select data-f="restsec">'+[45,60,90,120,150,180,240].map(function(s){return '<option value="'+s+'"'+(S.settings.rest===s?' selected':'')+'>'+s+' s</option>'}).join('')+'</select></label>'+
       '<h4>Cópia de segurança</h4><p class="note" style="margin:2px 0 10px">Os dados ficam guardados neste dispositivo e neste browser. Exporta de vez em quando para não os perderes.</p>'+
       '<div class="rowbtns"><button class="btn small" data-act="export-json">Exportar (JSON)</button><button class="btn small" data-act="export-csv">Exportar (CSV)</button></div>'+
       '<h4>Importar</h4><label class="field" style="margin-top:6px"><span>Ficheiro JSON exportado antes (junta aos dados atuais)</span><input type="file" id="imp-file" accept=".json,application/json"></label>'+
@@ -809,10 +1549,19 @@ function renderModal(){
   }
   else if(m.type==='summary'){
     var w=m.w,v=volOf(w);
-    h=sheet('Treino guardado','<div class="stats"><div class="stat"><b>'+(w.dur||0)+'</b><span>minutos</span></div><div class="stat"><b>'+w.exs.reduce(function(n,e){return n+e.sets.length},0)+'</b><span>séries</span></div><div class="stat"><b>'+Math.round(v).toLocaleString('pt-PT')+'</b><span>kg de volume</span></div></div>'+
+    h=sheet('Treino guardado','<div class="stats"><div class="stat"><b>'+(w.dur||0)+'</b><span>minutos</span></div><div class="stat"><b>'+w.exs.reduce(function(n,e){return n+e.sets.length},0)+'</b><span>séries</span></div><div class="stat"><b>'+Math.round(v).toLocaleString(LOC)+'</b><span>kg de volume</span></div></div>'+
       (w.prs&&w.prs.length?'<h4>Novos recordes</h4><ul class="prl">'+w.prs.map(function(p){return '<li><b>'+esc(p.name)+'</b>: '+esc(p.text)+'</li>'}).join('')+'</ul>':'')+
-      '<label class="field"><span>Guardar como modelo</span><input id="tpl-name" value="'+esc(w.name)+'" maxlength="60"></label><div class="rowbtns"><button class="btn small primary" data-act="save-tpl">Guardar modelo</button><button class="btn small" data-act="modal-close">Fechar</button></div>');
+      '<label class="field"><span>Guardar como plano</span><input id="tpl-name" value="'+esc(w.name)+'" maxlength="60"></label><div class="rowbtns"><button class="btn small primary" data-act="save-tpl">Guardar plano</button><button class="btn small" data-act="modal-close">Fechar</button></div>');
   }
+  else if(m.type==='plan'&&planDraft){
+    var pd=planDraft;
+    var prow=pd.items.map(function(it,i){return '<div class="prow"><div class="ptop"><b>'+esc(exNameL(it.exId))+'</b><span class="pbtns"><button class="icon sm" data-act="plan-up" data-i="'+i+'" aria-label="Subir">↑</button><button class="icon sm" data-act="plan-down" data-i="'+i+'" aria-label="Descer">↓</button><button class="icon sm" data-act="plan-rm" data-i="'+i+'" aria-label="Remover">'+ICON.trash+'</button></span></div><div class="pin"><label>Séries<input inputmode="numeric" data-f="psets" data-i="'+i+'" value="'+esc(it.sets)+'"></label><label>Reps<input data-f="preps" data-i="'+i+'" value="'+esc(it.reps)+'" placeholder="8-12"></label></div></div>'}).join('');
+    h=sheet(pd.id?'Editar plano':'Novo plano','<label class="field"><span>Nome do plano</span><input data-f="pname" value="'+esc(pd.name)+'" maxlength="40" placeholder="Ex.: Dia de pernas"></label>'+(prow||'<p class="hint">Ainda sem exercícios. Adiciona o primeiro.</p>')+'<button class="btn ghost big" data-act="plan-add-ex">+ Adicionar exercício</button><button class="btn primary big" data-act="plan-save">Guardar plano</button>'+(pd.id?'<button class="btn danger-ghost" data-act="plan-del" data-id="'+esc(pd.id)+'">Apagar plano</button>':''));
+  }
+  else if(m.type==='chooseplan'){
+    h=sheet('Escolher plano',(S.plans.length?S.plans.map(function(p){return '<button class="itembtn" style="margin-bottom:8px" data-act="start-plan" data-id="'+esc(p.id)+'"><span class="tx"><b>'+esc(p.name)+'</b><span class="meta">'+nEx(p.items.length)+'</span></span><span class="chev">›</span></button>'}).join(''):'<p class="hint">Ainda não tens planos. Cria o primeiro, por exemplo "Dia de pernas".</p><button class="btn primary big" data-act="go-plans">Criar plano</button>'));
+  }
+  else if(m.type==='rplanview'&&planDef(m.id)){var rpv=planDef(m.id);h=sheet(TT(rpv.name[0],rpv.name[1]),rplanViewBody(rpv))}
   else if(m.type==='confirm'){
     h=sheet('Confirmar','<p style="margin:4px 0 16px">'+esc(m.msg)+'</p><div class="rowbtns"><button class="btn danger" data-act="confirm-ok">'+esc(m.ok||'Apagar')+'</button><button class="btn" data-act="modal-close">Cancelar</button></div>');
   }
@@ -885,7 +1634,7 @@ function finish(){
 }
 
 /* ---------- exportar / importar ---------- */
-function payload(){return JSON.stringify({app:'gymlog',version:1,exportedAt:new Date().toISOString(),workouts:S.workouts,templates:S.templates,custom:S.custom,settings:S.settings},null,1)}
+function payload(){return JSON.stringify({app:'gymlog',version:1,exportedAt:new Date().toISOString(),workouts:S.workouts,templates:S.templates,plans:S.plans,schedule:S.schedule,runs:S.runs,run:S.run,custom:S.custom,settings:S.settings},null,1)}
 function csvData(){
   var rows=[['data','treino','exercicio','serie','kg','reps']];
   S.workouts.forEach(function(w){w.exs.forEach(function(e){e.sets.forEach(function(s,i){rows.push([w.date.slice(0,10),w.name,exName(e.exId,e.name),i+1,String(s.kg).replace('.',','),s.reps])})})});
@@ -905,6 +1654,10 @@ function mergeData(o){
   var n=0,ids={};S.workouts.forEach(function(w){ids[w.id]=1});
   o.workouts.forEach(function(w){if(w&&w.id&&w.date&&Array.isArray(w.exs)&&!ids[w.id]){S.workouts.push(w);ids[w.id]=1;n++}});
   var t={};S.templates.forEach(function(x){t[x.id]=1});(o.templates||[]).forEach(function(x){if(x&&x.id&&Array.isArray(x.exIds)&&!t[x.id]){S.templates.push(x);t[x.id]=1}});
+  var pl={};S.plans.forEach(function(x){pl[x.id]=1});(o.plans||[]).forEach(function(x){if(x&&x.id&&Array.isArray(x.items)&&!pl[x.id]){S.plans.push(x);pl[x.id]=1}});(o.templates||[]).forEach(function(x){if(x&&x.id&&Array.isArray(x.exIds)&&!pl[x.id]){S.plans.push(tplToPlan(x));pl[x.id]=1}});
+  if(o.schedule&&typeof o.schedule==='object'&&!Object.keys(S.schedule).length)S.schedule=o.schedule;
+  var rn={};S.runs.forEach(function(x){rn[x.id]=1});(o.runs||[]).forEach(function(x){if(x&&x.id&&x.km>0&&x.sec>0&&x.date&&!rn[x.id]){S.runs.push(x);rn[x.id]=1}});
+  if(o.run&&typeof o.run==='object'&&!S.run.plan&&!S.run.ref)S.run=Object.assign({ref:null,plan:null},o.run);
   var c={};S.custom.forEach(function(x){c[x.id]=1});(o.custom||[]).forEach(function(x){if(x&&x.id&&x.name&&!c[x.id]){S.custom.push(x);c[x.id]=1}});
   sortW();save();return n;
 }
@@ -921,7 +1674,26 @@ document.addEventListener('click',function(e){
   if(!el)return;
   var act=el.dataset.act,d=el.dataset;
   if(act==='overlay'){if(e.target===el)closeModal();return}
+  if(runAction(act,d))return;
   switch(act){
+    case 'lang':setLang(d.l);break;
+    case 'go-plans':tab='planos';renderApp();window.scrollTo(0,0);break;
+    case 'start-plan':startFromPlan(d.id);break;
+    case 'choose-plan':modal={type:'chooseplan'};renderModal();break;
+    case 'new-plan':planDraft={id:null,name:'',items:[]};modal={type:'plan'};renderModal();break;
+    case 'edit-plan':var ep=planById(d.id);if(ep){planDraft={id:ep.id,name:ep.name,items:ep.items.map(function(it){return {exId:it.exId,sets:String(it.sets||3),reps:it.reps||''}})};modal={type:'plan'};renderModal()}break;
+    case 'plan-add-ex':pickQ='';pickGroup='all';modal={type:'picker','for':'plan'};renderModal();break;
+    case 'plan-up':var iu=+d.i;if(iu>0){var tu=planDraft.items[iu];planDraft.items[iu]=planDraft.items[iu-1];planDraft.items[iu-1]=tu;renderModal()}break;
+    case 'plan-down':var idn=+d.i;if(idn<planDraft.items.length-1){var td2=planDraft.items[idn];planDraft.items[idn]=planDraft.items[idn+1];planDraft.items[idn+1]=td2;renderModal()}break;
+    case 'plan-rm':planDraft.items.splice(+d.i,1);renderModal();break;
+    case 'plan-save':
+      var pn=(planDraft.name||'').trim();
+      if(!pn){toast('Escreve o nome do plano.');break}
+      if(!planDraft.items.length){toast('Adiciona pelo menos um exercício.');break}
+      var pitems=planDraft.items.map(function(it){return {exId:it.exId,sets:Math.min(10,Math.max(1,parseInt(it.sets,10)||3)),reps:String(it.reps||'').trim()}});
+      if(planDraft.id){var pe=planById(planDraft.id);if(pe){pe.name=pn;pe.items=pitems}}else S.plans.push({id:uid(),name:pn,items:pitems});
+      save();modal=null;renderModal();renderApp();toast('Plano guardado.');break;
+    case 'plan-del':ask('Apagar este plano?','Apagar').then(function(ok){if(ok){S.plans=S.plans.filter(function(x){return x.id!==d.id});Object.keys(S.schedule).forEach(function(k){if(S.schedule[k]===d.id)delete S.schedule[k]});save();modal=null;renderModal();renderApp()}});break;
     case 'k':pressDigit(d.d);break;
     case 'kdel':delDigit();break;
     case 'lk-name-go':nameGo();break;
@@ -934,8 +1706,8 @@ document.addEventListener('click',function(e){
     case 'start-tpl':var t=S.templates.filter(function(x){return x.id===d.id})[0];if(t)startWorkout(t.exIds);break;
     case 'del-tpl':ask('Apagar este modelo?','Apagar').then(function(ok){if(ok){S.templates=S.templates.filter(function(x){return x.id!==d.id});save();renderApp()}});break;
     case 'add-ex':pickQ='';pickGroup='all';modal={type:'picker'};renderModal();break;
-    case 'pick-ex':if(S.active&&!S.active.exs.some(function(x){return x.exId===d.id})){S.active.exs.push({exId:d.id,name:exName(d.id),sets:newSets(3)});save();renderApp();renderModal()}break;
-    case 'ex-detail':modal={type:'detail',id:d.id};renderModal();break;
+    case 'pick-ex':if(modal&&modal.for==='plan'&&planDraft){if(!planDraft.items.some(function(x){return x.exId===d.id})){planDraft.items.push({exId:d.id,sets:'3',reps:''});renderModal()}}else if(S.active&&!S.active.exs.some(function(x){return x.exId===d.id})){S.active.exs.push({exId:d.id,name:exName(d.id),sets:newSets(3)});save();renderApp();renderModal()}break;
+    case 'ex-detail':modal={type:'detail',id:d.id,back:(modal&&modal.type==='picker')?modal:null};renderModal();break;
     case 'rm-ex':ask('Remover este exercício do treino?','Remover').then(function(ok){if(ok){S.active.exs.splice(+d.ei,1);save();renderApp()}});break;
     case 'add-set':var ex=S.active.exs[+d.ei];ex.sets.push({kg:'',reps:'',done:false});save();renderApp();break;
     case 'rm-set':S.active.exs[+d.ei].sets.pop();save();renderApp();break;
@@ -955,8 +1727,8 @@ document.addEventListener('click',function(e){
     case 'export-json':exportFile('treinos-'+new Date().toISOString().slice(0,10)+'.json',payload());break;
     case 'export-csv':exportFile('treinos-'+new Date().toISOString().slice(0,10)+'.csv',csvData());break;
     case 'import-text':doImport(($('#imp-text').value||'').trim());break;
-    case 'wipe':ask('Apagar todos os treinos, modelos e exercícios criados? Não dá para desfazer.','Apagar tudo').then(function(ok){if(ok){S={workouts:[],templates:[],custom:[],settings:S.settings,active:null};rest=null;renderRest();save();modal=null;renderModal();renderApp();toast('Dados apagados.')}});break;
-    case 'save-tpl':var tn=($('#tpl-name').value||'').trim()||'Modelo';var sw=modal.w;S.templates.push({id:uid(),name:tn,exIds:sw.exs.map(function(x){return x.exId})});save();modal=null;renderModal();renderApp();toast('Modelo guardado.');break;
+    case 'wipe':ask('Apagar todos os treinos, modelos e exercícios criados? Não dá para desfazer.','Apagar tudo').then(function(ok){if(ok){S={workouts:[],templates:[],plans:[],schedule:{},runs:[],run:{ref:null,plan:null},custom:[],settings:S.settings,active:null};rest=null;renderRest();save();modal=null;renderModal();renderApp();toast('Dados apagados.')}});break;
+    case 'save-tpl':var tn=($('#tpl-name').value||'').trim()||'Plano';var sw=modal.w;S.plans.push({id:uid(),name:tn,items:sw.exs.map(function(x){return {exId:x.exId,sets:Math.max(1,x.sets.length),reps:''}})});save();modal=null;renderModal();renderApp();toast('Plano guardado.');break;
     case 'rest-add':if(rest&&!rest.done){rest.endAt+=(+d.s)*1000;rest.total=Math.max(rest.total,rest.endAt-Date.now());renderRest()}break;
     case 'rest-skip':rest=null;renderRest();break;
     case 'modal-close':closeModal();break;
@@ -976,7 +1748,11 @@ function toggleSet(ei,si){
 }
 document.addEventListener('input',function(e){
   var t=e.target,f=t.dataset&&t.dataset.f;if(!f)return;
-  if((f==='kg'||f==='reps')&&S.active){S.active.exs[+t.dataset.ei].sets[+t.dataset.si][f]=t.value;saveSoon()}
+  if(runInput(t,f)){}
+  else if(f==='pname'&&planDraft){planDraft.name=t.value}
+  else if(f==='psets'&&planDraft){planDraft.items[+t.dataset.i].sets=t.value}
+  else if(f==='preps'&&planDraft){planDraft.items[+t.dataset.i].reps=t.value}
+  else if((f==='kg'||f==='reps')&&S.active){S.active.exs[+t.dataset.ei].sets[+t.dataset.si][f]=t.value;saveSoon()}
   else if(f==='aname'&&S.active){S.active.name=t.value;saveSoon()}
   else if(f==='q'){exQ=t.value;renderExList()}
   else if(f==='pq'){pickQ=t.value;renderPickList()}
@@ -986,6 +1762,9 @@ document.addEventListener('change',function(e){
   if(f==='progex'){progEx=t.value;renderApp()}
   else if(f==='progmetric'){progMetric=t.value;renderApp()}
   else if(f==='restsec'){S.settings.rest=+t.value;save()}
+  else if(f==='sched'){if(t.value)S.schedule[t.dataset.d]=t.value;else delete S.schedule[t.dataset.d];save();renderApp()}
+  else if(f==='rbucket'){runBucket=t.value;renderApp()}
+  else if(f==='lang'){setLang(t.value)}
   else if(t.id==='imp-file'&&t.files&&t.files[0]){var r=new FileReader();r.onload=function(){doImport(String(r.result))};r.onerror=function(){toast('Não foi possível ler o ficheiro.')};r.readAsText(t.files[0])}
 });
 document.addEventListener('keydown',function(e){
@@ -1002,6 +1781,7 @@ document.addEventListener('visibilitychange',function(){
   if(document.hidden){hiddenAt=Date.now();return}
   if(A&&!LK.show&&hiddenAt&&Date.now()-hiddenAt>300000)lockNow();
   tick();
+  setTimeout(function(){try{window.scrollTo(0,0)}catch(e){}},80);
 });
 
 /* ---------- login / bloqueio ---------- */
@@ -1040,8 +1820,8 @@ function renderLock(msg,isErr){
   var el=$('#lock');
   if(!LK.show){el.style.display='none';el.innerHTML='';el.classList.remove('lift');setInert(false);return}
   setInert(true);
-  el.style.display='flex';el.classList.toggle('lift',!!LK.lift);
-  var brand='<div class="lk-top"><div class="lk-brand"><i></i>TREINO</div></div>',h='';
+  el.style.display='flex';el.classList.toggle('lift',!!LK.lift);el.setAttribute('aria-label',LANG==='en'?'Sign in':'Entrar');
+  var brand='<div class="lk-top"><div class="lk-brand"><i></i>TREINO</div><div class="lk-lang" role="group" aria-label="Language">'+['pt','en'].map(function(l){return '<button data-act="lang" data-l="'+l+'" aria-pressed="'+(LANG===l)+'">'+l.toUpperCase()+'</button>'}).join('')+'</div></div>',h='';
   if(LK.mode==='name'){
     h=brand+'<div class="lk-mid"><h1 class="lk-t">Bem-vindo</h1><p class="lk-s">Vamos criar o teu acesso. Como te devo chamar?</p><input id="lk-name" class="lk-in" maxlength="24" autocomplete="off" autocapitalize="words" placeholder="O teu nome" aria-label="O teu nome"><button class="btn primary lk-btn" data-act="lk-name-go">Continuar</button></div><div class="lk-bot"></div>';
   }else if(LK.mode==='forgot'){
@@ -1118,7 +1898,7 @@ function lockNow(){
 }
 function resetAll(){
   try{localStorage.removeItem(AKEY);localStorage.removeItem(KEY)}catch(e){}
-  S={workouts:[],templates:[],custom:[],settings:{rest:90},active:null};rest=null;renderRest();
+  S={workouts:[],templates:[],plans:[],schedule:{},runs:[],run:{ref:null,plan:null},custom:[],settings:{rest:90},active:null};rest=null;renderRest();
   A=null;LK={show:true,mode:'name',pin:'',first:'',fails:0,until:0,busy:false,lift:false};renderLock();
 }
 function initLock(){
@@ -1127,9 +1907,13 @@ function initLock(){
 }
 
 load();
+LANG=S.settings.lang==='en'?'en':'pt';LOC=LANG==='en'?'en-GB':'pt-PT';buildDict();startTranslator();
 try{if(navigator.storage&&navigator.storage.persist)navigator.storage.persist()}catch(e){}
 renderApp();
 initLock();
+if(LANG==='en'){document.documentElement.lang='en';var tb0=document.querySelector('.tabbar');if(tb0)tb0.setAttribute('aria-label','Sections');trNode(document.body)}
+function nudge(){try{window.scrollTo(0,0)}catch(e){}}
+setTimeout(nudge,60);setTimeout(nudge,500);window.addEventListener('pageshow',nudge);
 setInterval(tick,250);
 })();
 </script>
