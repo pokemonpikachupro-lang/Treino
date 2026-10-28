@@ -115,8 +115,55 @@ h2{font-family:var(--fd);font-weight:600;font-size:24px;margin:26px 0 10px}
 .add svg{width:22px;height:22px;stroke:var(--ok);fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
 .chev{color:var(--muted);font-size:22px}
 .fig{display:block;width:100%;height:auto}
-.fig .floor{stroke:#2A2A30;stroke-width:2}
-.fig .mat{fill:#0C2347;stroke:#1B4A94;stroke-width:1.2}
+.fig .flr{fill:#131316}
+.fig .flt{stroke:#2C2C33;stroke-width:1.2}
+.fig .flg{stroke:#1D1D22;stroke-width:1}
+.fig .shd{fill:#000;fill-opacity:.5}
+.fig .mat{fill:#0C2347;stroke:#1B4A94;stroke-width:1}
+.fig line{stroke-linecap:round;fill:none}
+.fig line.out{stroke:#050506}
+.fig line.skind{stroke:#A8775A}.fig line.skin{stroke:#E0AE8E}
+.fig line.armd{stroke:#B98262}.fig line.arm{stroke:#EDBF9F}
+.fig line.shirtd{stroke:#081528}.fig line.shirt{stroke:#1B4A94}
+.fig line.shortd{stroke:#0A0A0C}.fig line.short{stroke:#34343E}
+.fig line.shoed{stroke:#7A0E15}.fig line.shoe{stroke:#E0202B}
+.fig line.fard{stroke:#5D4638}.fig line.far{stroke:#8A6A57}
+.fig line.farshoed{stroke:#4B0A0F}.fig line.farshoe{stroke:#8E1119}
+.fig line.hi{stroke:#fff;stroke-opacity:.32}
+.fig line.gh{stroke:#A6A6B4;stroke-opacity:.2}
+.fig line.hl{stroke:#E0202B;stroke-opacity:.7}
+.fig line.hlg{stroke:#E0202B;stroke-opacity:.22}
+.fig circle.hlc{fill:#E0202B;fill-opacity:.65}
+.fig circle.hair{fill:#1A1210;stroke:#050506;stroke-width:1.6}
+.fig circle.headc{fill:#E4B596}
+.fig circle.hl2{fill:#fff;fill-opacity:.35}
+.fig circle.hand{fill:#EDBF9F;stroke:#050506;stroke-width:1.2}
+.fig line.frs{stroke:#09090B}
+.fig line.fr1{stroke:#6D6D78}
+.fig line.fr2{stroke:#45454E}
+.fig line.frh{stroke:#B4B4C0;stroke-opacity:.45}
+.fig line.mt{stroke:#9A9AA4}
+.fig circle.mtc{fill:#9A9AA4;stroke:#050506;stroke-width:1}
+.fig line.padb{stroke:#5A5A66}
+.fig line.padf{stroke:#2B2B32}
+.fig line.padh{stroke:#6A6A78;stroke-opacity:.7}
+.fig circle.padf{fill:#2B2B32;stroke:#5A5A66;stroke-width:1.5}
+.fig line.cab{stroke:#B0B0BA;stroke-width:1.3}
+.fig circle.pull{fill:#17171A;stroke:#9A9AA4;stroke-width:1.6}
+.fig rect.stkf{fill:#101012;stroke:#4A4A55;stroke-width:1.2}
+.fig rect.stp{fill:#2A2A31}
+.fig rect.pinp{fill:#E0202B}
+.fig circle.plate{fill:#6F0E15;stroke:#E0202B;stroke-width:2}
+.fig circle.plate2{fill:none;stroke:#FF5A62;stroke-opacity:.55;stroke-width:1}
+.fig circle.hub{fill:#050506}
+.fig rect.dbh{fill:#3A3A44;stroke:#050506;stroke-width:1}
+.fig rect.dbp{fill:#E0202B;stroke:#050506;stroke-width:1}
+.fig path.pth{fill:none;stroke:#E0202B;stroke-width:1.7;stroke-dasharray:3 3;stroke-linecap:round;opacity:.95}
+.fig polygon.arw{fill:#E0202B}
+.animbox{background:var(--bg);border-radius:16px;padding:6px 6px 8px;margin:0 0 12px}
+.animctl{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:4px;padding:0 4px}
+.animlab{font-size:14px;color:var(--muted)}
+.animbtns{display:flex;gap:6px}
 .fig line{stroke-linecap:round;fill:none}
 .fig line.out{stroke:#050506}
 .fig line.trunk,.fig line.leg{stroke:#CFC9C4}
@@ -308,6 +355,27 @@ body{min-height:100vh;min-height:100dvh}
 .sess.done .chk{background:var(--ok);border-color:var(--ok);color:#04150E}
 .sdesc .meta{display:block;color:#9DB8E8}
 .tab span{white-space:nowrap;font-size:11px}
+
+.acctlist{width:100%;max-width:340px;display:flex;flex-direction:column;gap:10px;margin-top:16px;max-height:46vh;overflow-y:auto}
+.acct{display:flex;align-items:center;gap:14px;padding:12px 14px;border-radius:16px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);text-align:left;width:100%}
+.acct:active{background:rgba(224,32,43,.25)}
+.av{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-family:var(--fd);font-weight:700;font-size:24px;color:#fff;flex:none}
+.an{flex:1;font-size:18px;font-weight:600;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.acct .chev{color:var(--muted)}
+.lk-links{display:flex;gap:4px;flex-wrap:wrap;justify-content:center}
+
+.addrow{display:flex;gap:8px;margin:6px 0}
+.addrow .btn{flex:1;min-height:50px;padding:0 10px}
+.field.mini{margin:8px 0 6px}
+.field.mini select{min-height:42px}
+.cfields{display:flex;gap:8px;margin:6px 0 4px}
+.cfields label{flex:1;font-size:12px;color:var(--muted)}
+.cfields input{width:100%;height:44px;border-radius:10px;border:1.5px solid var(--line);background:var(--bg);text-align:center;font-family:var(--fd);font-weight:600;font-size:22px;margin-top:2px}
+.cest{margin:4px 0 8px;font-size:13px;color:var(--muted);min-height:16px}
+.card.cardio{border-left:4px solid var(--navy2)}
+.card.cardio.done{background:var(--okbg);box-shadow:inset 0 0 0 1px var(--okline)}
+.exname.static{font-family:var(--fd);font-weight:700;font-size:24px}
+.role{display:inline-block;margin-left:8px;font-size:12px;font-weight:600;background:var(--navy2);color:#fff;border-radius:8px;padding:1px 8px;vertical-align:4px}
 </style>
 </head>
 <body>
@@ -361,72 +429,123 @@ function joints(p){
 function pt(a){return a[0].toFixed(1)+' '+a[1].toFixed(1)}
 function f1(n){return n.toFixed(1)}
 function lerp(a,b,t){return [a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t]}
+function off(a,dx,dy){return [a[0]+dx,a[1]+dy]}
 function ln(cls,a,b,w){return '<line class="'+cls+'" x1="'+f1(a[0])+'" y1="'+f1(a[1])+'" x2="'+f1(b[0])+'" y2="'+f1(b[1])+'"'+(w?' style="stroke-width:'+w+'"':'')+'/>'}
 function cir(cls,c,r){return '<circle class="'+cls+'" cx="'+f1(c[0])+'" cy="'+f1(c[1])+'" r="'+r+'"/>'}
+function frm(cls,a,b,w){w=w||3.2;return ln('frs',off(a,2,2),off(b,2,2),w)+ln(cls,a,b,w)+ln('frh',off(a,-.7,-.9),off(b,-.7,-.9),1)}
+function pad(a,b,w){return ln('padb',a,b,w+2.5)+ln('padf',a,b,w)+ln('padh',off(a,-.9,-1.3),off(b,-.9,-1.3),Math.max(1,w*.28))}
+function tube(a,b,w,k){
+  return ln(k+'d',a,b,w)+ln(k,off(a,-.06*w,-.08*w),off(b,-.06*w,-.08*w),w*.78)+ln('hi',off(a,-.2*w,-.24*w),off(b,-.2*w,-.24*w),Math.max(1.2,w*.26));
+}
 function chain(pts,ws,cs){
   var s='',i;
   for(i=0;i<ws.length;i++)s+=ln('out',pts[i],pts[i+1],ws[i]+4);
-  for(i=0;i<ws.length;i++)s+=ln(cs[i],pts[i],pts[i+1],ws[i]);
+  for(i=0;i<ws.length;i++)s+=tube(pts[i],pts[i+1],ws[i],cs[i]);
   return s;
 }
-function pad(a,b,w){return ln('padb',a,b,w+2.5)+ln('padf',a,b,w)}
 function stackSVG(x,y,w,h,sel){
   var n=Math.max(4,Math.round(h/9)),ph=(h-4)/n,s='<rect class="stkf" x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="2"/>';
   for(var i=0;i<n;i++)s+='<rect class="'+(i===sel?'pinp':'stp')+'" x="'+(x+2)+'" y="'+(y+2+i*ph).toFixed(1)+'" width="'+(w-4)+'" height="'+(ph-1.4).toFixed(1)+'" rx="1"/>';
   return s;
 }
+function floorSVG(mat){
+  var s='<rect class="flr" x="0" y="132" width="200" height="14"/><line class="flt" x1="0" y1="132" x2="200" y2="132"/>';
+  s+='<line class="flg" x1="40" y1="132" x2="14" y2="146"/><line class="flg" x1="80" y1="132" x2="66" y2="146"/><line class="flg" x1="120" y1="132" x2="134" y2="146"/><line class="flg" x1="160" y1="132" x2="186" y2="146"/><line class="flg" x1="0" y1="139" x2="200" y2="139"/>';
+  if(mat)s+='<rect class="mat" x="12" y="131" width="176" height="5" rx="2.5"/><line class="frh" x1="16" y1="131.6" x2="184" y2="131.6" style="stroke-width:1"/>';
+  return s;
+}
 function sceneSVG(ex,j){
-  var sc=ex.scene,W=j.W,m,s='<line class="floor" x1="8" y1="132" x2="192" y2="132"/>';
-  if(!sc)return s;
-  var seat=function(){return pad([84,106],[128,106],8)+pad([91,106],[91,54],9)+ln('fr1',[104,111],[104,131])};
-  if(sc==='mat'){s+='<rect class="mat" x="14" y="132" width="172" height="5" rx="2.5"/>'}
-  else if(sc==='bench'){s+=ln('fr1',[66,118],[66,131])+ln('fr1',[112,118],[112,131])+ln('fr2',[56,132],[78,132])+ln('fr2',[100,132],[124,132])+pad([52,113],[124,113],9)}
-  else if(sc==='incline'){s+=ln('fr1',[126,114],[126,131])+ln('fr1',[98,92],[104,131])+ln('fr2',[92,132],[140,132])+pad([112,111],[142,111],8)+pad([116,108],[92,74],9)}
-  else if(sc==='seatback'){s+=ln('fr2',[84,132],[124,132])+seat()}
-  else if(sc==='hipbench'){s+=ln('fr1',[44,118],[44,131])+ln('fr1',[76,118],[76,131])+ln('fr2',[34,132],[86,132])+pad([34,113],[86,113],9)}
-  else if(sc==='pullbar'){s+=ln('fr2',[58,132],[78,132])+ln('fr2',[140,132],[160,132])+ln('fr1',[68,-6],[68,131])+ln('fr1',[150,-6],[150,131])+ln('mt',[64,-6],[154,-6],4)}
-  else if(sc==='dips'){s+=ln('fr2',[W[0]-16,132],[W[0]+16,132])+ln('fr1',[W[0],W[1]+4],[W[0],131])+cir('mtc',W,3.6)}
-  else if(sc==='rack'){s+=ln('fr1',[134,16],[134,131])+ln('fr2',[124,132],[152,132])+ln('mt',[134,40],[116,40],3.2)+ln('mt',[134,104],[114,104],3.2)}
-  else if(sc==='smith'){var c=[j.N[0]-4,j.N[1]+2];s+=ln('fr1',[118,-22],[118,131])+ln('fr2',[108,132],[130,132])+ln('mt',c,[118,c[1]],3)}
+  var sc=ex.scene,W=j.W,m,s=floorSVG(sc==='mat');
+  if(!sc||sc==='mat')return s;
+  var seat=function(){return pad([84,106],[128,106],8)+pad([91,106],[91,54],9)+frm('fr1',[104,111],[104,131])};
+  var bench=function(){return frm('fr1',[66,118],[66,131])+frm('fr1',[112,118],[112,131])+frm('fr2',[56,132],[78,132])+frm('fr2',[100,132],[124,132])+pad([52,113],[124,113],9)};
+  var incl=function(){return frm('fr1',[126,114],[126,131])+frm('fr1',[98,92],[104,131])+frm('fr2',[92,132],[140,132])+pad([112,111],[142,111],8)+pad([116,108],[92,74],9)};
+  var P=j.P,N=j.N,A=j.A,E=j.E;
+  if(sc==='bench')s+=bench();
+  else if(sc==='incline')s+=incl();
+  else if(sc==='smithbench'){s+=bench()+frm('fr2',[124,-8],[124,111],3)+ln('mt',W,[124,W[1]],3)}
+  else if(sc==='smithinc'){s+=incl()+frm('fr2',[124,-8],[124,111],3)+ln('mt',W,[124,W[1]],3)}
+  else if(sc==='seatback'){s+=frm('fr2',[84,132],[124,132])+seat()}
+  else if(sc==='hipbench'){s+=frm('fr1',[44,118],[44,131])+frm('fr1',[76,118],[76,131])+frm('fr2',[34,132],[86,132])+pad([34,113],[86,113],9)}
+  else if(sc==='pullbar'){s+=frm('fr2',[58,132],[78,132])+frm('fr2',[140,132],[160,132])+frm('fr1',[68,-6],[68,131])+frm('fr1',[150,-6],[150,131])+ln('mt',[64,-6],[154,-6],4)}
+  else if(sc==='dips'){s+=frm('fr2',[W[0]-16,132],[W[0]+16,132])+frm('fr1',[W[0],W[1]+4],[W[0],131])+cir('mtc',W,3.6)}
+  else if(sc==='rack'){s+=frm('fr1',[134,16],[134,131])+frm('fr2',[124,132],[152,132])+ln('mt',[134,40],[116,40],3.2)+ln('mt',[134,104],[114,104],3.2)}
+  else if(sc==='smith'){var c=(ex.eq&&ex.eq.k==='bar')?W:[N[0]-4,N[1]+2];s+=frm('fr1',[118,-22],[118,131])+frm('fr2',[108,132],[130,132])+ln('mt',c,[118,c[1]],3)}
+  else if(sc==='backext'){s+=frm('fr1',[64,131],[88,94])+frm('fr1',[112,131],[100,92])+frm('fr2',[40,125],[62,132],5)+pad([86,90],[108,78],9)}
   else if(sc.indexOf('mach:')===0){
     m=sc.slice(5);
-    s+=stackSVG(16,22,20,100,3)+ln('fr2',[44,12],[44,131])+ln('fr2',[12,132],[154,132])+ln('cab',[36,26],[44,12]);
-    if(m==='calf')s+=pad([84,106],[128,106],8)+ln('fr1',[104,111],[104,131]);else s+=seat();
-    if(m==='fly'){var pv=[96,44];s+=ln('cab',[44,12],pv)+ln('fr1',pv,W,4)+pad(j.E,W,7)+cir('mtc',pv,3.5)}
-    else if(m==='press'){var pv2=[84,80];s+=ln('cab',[44,12],pv2)+ln('fr1',pv2,W,4)+cir('mtc',W,3.2)}
-    else if(m==='shoulder'){var pv3=[86,50];s+=ln('cab',[44,12],pv3)+ln('fr1',pv3,W,4)+cir('mtc',W,3.2)}
-    else if(m==='pulldown'){s+=ln('fr1',[44,-16],[96,-16])+cir('pull',[96,-16],5)+ln('cab',[96,-16],W)+ln('mt',[W[0]-7,W[1]],[W[0]+7,W[1]],3)+pad([118,88],[142,88],5)}
-    else if(m==='legext'||m==='legcurl'){s+=ln('cab',[44,12],[112,104])+ln('fr1',[112,104],j.A,3.5)+cir('padf',j.A,5.5)}
-    else if(m==='calf'){s+=pad([122,86],[142,86],6)+ln('fr1',[124,127],[154,127],5)+ln('fr2',[140,128],[140,131])}
+    var stackAt=function(){return stackSVG(16,22,20,100,3)+frm('fr2',[44,12],[44,131])+frm('fr2',[12,132],[154,132])+ln('cab',[36,26],[44,12])};
+    if(m==='legpress'){
+      var p1=[A[0]-7.7,A[1]-9.2],p2=[A[0]+7.7,A[1]+9.2];
+      s+=frm('fr2',[24,132],[116,132])+frm('fr2',[58,129],[170,38],3.4)+frm('fr1',[50,114],[50,131])+pad([55,111],[33,80],9)+pad([46,112],[72,112],8)+frm('fr1',p1,p2,5)+frm('fr1',A,[A[0]+14,A[1]-12],2.4);
+    }
+    else if(m==='hack'){
+      s+=frm('fr2',[24,132],[150,132])+frm('fr2',[70,132],[98,6],3.4)+pad(off(P,-8,2),off(N,-8,-2),9)+pad(off(N,-3,-4),off(N,6,0),7)+cir('mtc',off(P,10,-3),2.6);
+    }
+    else if(m==='calfstand'){
+      s+=frm('fr2',[84,133],[120,133],5)+frm('fr1',[134,132],[134,2])+frm('fr1',[134,N[1]-6],[N[0]+6,N[1]-6])+pad(off(N,-6,-5),off(N,7,-5),8);
+    }
+    else if(m==='lcurl'){
+      s+=stackSVG(172,20,18,110,3)+frm('fr2',[168,14],[168,131])+frm('fr2',[24,132],[160,132])+frm('fr1',[66,118],[66,131])+frm('fr1',[116,118],[116,131])+pad([54,113],[128,113],9)+ln('cab',[168,44],[132,110])+frm('fr1',[132,110],A,3.5)+cir('padf',A,5.5);
+    }
+    else if(m==='preacher'){
+      s+=stackAt()+seat()+pad(off(N,0,6),off(E,6,9),9)+frm('fr1',[112,88],[116,131]);
+    }
+    else if(m==='crunch'){
+      s+=stackAt()+seat()+pad(off(N,-3,-2),off(N,6,4),8)+frm('fr1',[100,50],W,3)+cir('mtc',W,3);
+    }
+    else{
+      s+=stackAt();
+      if(m==='calf')s+=pad([84,106],[128,106],8)+frm('fr1',[104,111],[104,131]);else s+=seat();
+      if(m==='fly'){var pv=[96,44];s+=ln('cab',[44,12],pv)+frm('fr1',pv,W,4)+pad(E,W,7)+cir('mtc',pv,3.5)}
+      else if(m==='press'){var pv2=[84,80];s+=ln('cab',[44,12],pv2)+frm('fr1',pv2,W,4)+cir('mtc',W,3.2)}
+      else if(m==='shoulder'){var pv3=[86,50];s+=ln('cab',[44,12],pv3)+frm('fr1',pv3,W,4)+cir('mtc',W,3.2)}
+      else if(m==='pulldown'){s+=frm('fr1',[44,-16],[96,-16])+cir('pull',[96,-16],5)+ln('cab',[96,-16],W)+ln('mt',[W[0]-7,W[1]],[W[0]+7,W[1]],3)+pad([118,88],[142,88],5)}
+      else if(m==='legext'||m==='legcurl'){s+=ln('cab',[44,12],[112,104])+frm('fr1',[112,104],A,3.5)+cir('padf',A,5.5)}
+      else if(m==='calf'){s+=pad([122,86],[142,86],6)+frm('fr1',[124,127],[154,127],5)+frm('fr2',[140,128],[140,131])}
+    }
   }
   else if(sc.indexOf('cable:')===0){
     m=sc.slice(6);
-    var pl={high:[160,-14],face:[160,22],low:[160,116],top:[156,-22],row:[160,116]}[m]||[160,0];
-    s+=stackSVG(172,-20,18,128,4)+ln('fr2',[168,-26],[168,131])+ln('fr2',[160,132],[194,132])+cir('pull',pl,5)+ln('cab',pl,W)+cir('mtc',W,2.8);
-    if(m==='row')s+=ln('fr1',[152,100],[152,130],4)+pad([56,124],[100,124],8)+ln('fr1',[70,128],[70,131]);
+    var pl={high:[160,-14],face:[160,22],low:[160,116],top:[156,-22],row:[160,116],ankle:[160,116]}[m]||[160,0];
+    var tgt=m==='ankle'?A:W;
+    s+=stackSVG(172,-20,18,128,4)+frm('fr2',[168,-26],[168,131])+frm('fr2',[160,132],[194,132])+cir('pull',pl,5)+ln('cab',pl,tgt)+cir('mtc',tgt,2.8);
+    if(m==='row')s+=frm('fr1',[152,100],[152,130],4)+pad([56,124],[100,124],8)+frm('fr1',[70,128],[70,131]);
   }
   return s;
 }
 function hlSVG(ex,j,fr){
   var g=ex.group,r=fr.t*Math.PI/180,n=[-Math.cos(r),Math.sin(r)],s='';
-  var off=function(a,k){return [a[0]+n[0]*k,a[1]+n[1]*k]};
-  if(g==='Peito')s=ln('hl',off(lerp(j.N,j.P,.1),3.5),off(lerp(j.N,j.P,.5),3.5),10);
-  else if(g==='Costas')s=ln('hl',off(lerp(j.N,j.P,.06),-3.5),off(lerp(j.N,j.P,.78),-3.5),10);
-  else if(g==='Core')s=ln('hl',off(lerp(j.N,j.P,.5),3.5),off(lerp(j.N,j.P,.95),3.5),10);
-  else if(g==='Ombros')s=cir('hlc',j.N,7);
-  else if(g==='Braços')s=ln('hl',j.N,j.E,6)+ln('hl',j.E,j.W,5);
-  else if(g==='Pernas')s=ln('hl',j.P,j.K,8)+ln('hl',j.K,j.A,6);
+  var o=function(a,k){return [a[0]+n[0]*k,a[1]+n[1]*k]};
+  var seg=function(a,b,w){return ln('hlg',a,b,w+5)+ln('hl',a,b,w)};
+  if(g==='Peito')s=seg(o(lerp(j.N,j.P,.1),3.5),o(lerp(j.N,j.P,.5),3.5),10);
+  else if(g==='Costas')s=seg(o(lerp(j.N,j.P,.06),-3.5),o(lerp(j.N,j.P,.78),-3.5),10);
+  else if(g==='Core')s=seg(o(lerp(j.N,j.P,.5),3.5),o(lerp(j.N,j.P,.95),3.5),10);
+  else if(g==='Ombros')s=cir('hlc',j.N,7.5);
+  else if(g==='Braços')s=seg(j.N,j.E,6)+seg(j.E,j.W,5);
+  else if(g==='Pernas')s=seg(j.P,j.K,8)+seg(j.K,j.A,6);
   return s;
 }
 function bodySVG(ex,j,fr){
-  var s='',hd=fr.hd!=null?fr.hd:fr.t;
+  var s='',hd=fr.hd!=null?fr.hd:fr.t,r=hd*Math.PI/180,nrm=[-Math.cos(r),Math.sin(r)];
   if(j.K2)s+=chain([j.P,j.K2,j.A2,j.T2],[11,8.5,6],['far','far','farshoe']);
-  s+=chain([j.P,j.N],[15],['trunk']);
-  s+=chain([j.P,j.K,j.A,j.T],[11,8.5,6],['leg','leg','shoe']);
-  s+=chain([j.N,add(j.N,7,hd)],[6],['trunk']);
-  s+=cir('head',j.H,8);
-  s+=chain([j.N,j.E,j.W],[8,7],['arm','arm'])+cir('hand',j.W,3.6);
+  s+=chain([j.P,j.N],[15],['shirt']);
+  s+=chain([j.P,j.K,j.A,j.T],[11,8.5,6],['skin','skin','shoe']);
+  s+=tube(j.P,lerp(j.P,j.K,.5),12.5,'short');
+  s+=tube(j.N,add(j.N,7,hd),6,'skin');
+  s+=cir('hair',j.H,8.4)+cir('headc',[j.H[0]+nrm[0]*1.6,j.H[1]+nrm[1]*1.6],7.2)+cir('hl2',[j.H[0]+nrm[0]*1.6-2,j.H[1]+nrm[1]*1.6-2.4],2.2);
+  s+=chain([j.N,j.E,j.W],[8,7],['arm','arm'])+tube(j.N,lerp(j.N,j.E,.45),9.4,'shirt')+cir('hand',j.W,3.6);
   return s+hlSVG(ex,j,fr);
+}
+function ghostSVG(j){
+  var s=ln('gh',j.P,j.N,15)+ln('gh',j.P,j.K,11)+ln('gh',j.K,j.A,8.5)+ln('gh',j.N,j.E,8)+ln('gh',j.E,j.W,7);
+  if(j.K2)s+=ln('gh',j.P,j.K2,11)+ln('gh',j.K2,j.A2,8.5);
+  return s;
+}
+function shadowSVG(j,ex){
+  var xs=[j.P,j.N,j.K,j.A,j.T,j.H,j.E,j.W].map(function(p){return p[0]}),mn=Math.min.apply(0,xs),mx=Math.max.apply(0,xs);
+  var rx=Math.max(24,Math.min(70,(mx-mn)/2*.8+10));
+  return '<ellipse class="shd" cx="'+f1((mn+mx)/2)+'" cy="'+(ex.scene==='mat'?136:133.5)+'" rx="'+f1(rx)+'" ry="3.4"/>';
 }
 function eqSVG(ex,j){
   var q=ex.eq,s='';
@@ -440,9 +559,70 @@ function eqSVG(ex,j){
   else if(q.k==='dbv'){var x2=j.W[0]-4.5,y2=j.W[1]-8;s='<rect class="dbh" x="'+f1(x2)+'" y="'+f1(y2)+'" width="9" height="16" rx="2.5"/><rect class="dbp" x="'+f1(x2)+'" y="'+f1(y2)+'" width="9" height="4.5" rx="1.5"/><rect class="dbp" x="'+f1(x2)+'" y="'+f1(y2+11.5)+'" width="9" height="4.5" rx="1.5"/>'}
   return s;
 }
+function pathSVG(ex){
+  var A=joints(ex.frames[0]),B=joints(ex.frames[1]),best=null,bd=0;
+  ['W','A','P','N','T','E','K'].forEach(function(k){var d=Math.hypot(A[k][0]-B[k][0],A[k][1]-B[k][1]);if(d>bd){bd=d;best=k}});
+  if(!best||bd<14)return '';
+  var a=A[best],b=B[best],mx=(a[0]+b[0])/2,my=(a[1]+b[1])/2,nx=-(b[1]-a[1]),ny=(b[0]-a[0]),l=Math.hypot(nx,ny)||1,cx=mx+nx/l*9,cy=my+ny/l*9;
+  var dx=b[0]-cx,dy=b[1]-cy,dl=Math.hypot(dx,dy)||1,ux=dx/dl,uy=dy/dl,px=-uy,py=ux;
+  var tip=[b[0]+ux*3,b[1]+uy*3],l1=[b[0]-ux*5+px*3.4,b[1]-uy*5+py*3.4],l2=[b[0]-ux*5-px*3.4,b[1]-uy*5-py*3.4];
+  return '<path class="pth" d="M'+f1(a[0])+' '+f1(a[1])+' Q'+f1(cx)+' '+f1(cy)+' '+f1(b[0])+' '+f1(b[1])+'"/><polygon class="arw" points="'+f1(tip[0])+','+f1(tip[1])+' '+f1(l1[0])+','+f1(l1[1])+' '+f1(l2[0])+','+f1(l2[1])+'"/>';
+}
+function figInner(ex,pose,opt){
+  opt=opt||{};
+  var j=joints(pose),s=sceneSVG(ex,j)+shadowSVG(j,ex);
+  if(opt.ghosts)s+=ghostSVG(joints(ex.frames[0]))+ghostSVG(joints(ex.frames[1]));
+  s+=bodySVG(ex,j,pose)+eqSVG(ex,j);
+  if(opt.path)s+=pathSVG(ex);
+  return s;
+}
 function figSVG(ex,i){
-  var fr=ex.frames[i],j=joints(fr),labels=ex.labels||['Posição inicial','Posição final'];
-  return '<svg class="fig" viewBox="0 -34 200 180" role="img" aria-label="'+esc(ex.name+' – '+labels[i])+'">'+sceneSVG(ex,j)+bodySVG(ex,j,fr)+eqSVG(ex,j)+'</svg>';
+  var labels=ex.labels||['Posição inicial','Posição final'];
+  return '<svg class="fig" viewBox="0 -34 200 180" role="img" aria-label="'+esc(ex.name+' – '+labels[i])+'">'+figInner(ex,ex.frames[i],{})+'</svg>';
+}
+/* animação */
+function lerpPose(a,b,u,raw){
+  var o={},k,d;
+  var ka=Object.assign({},a),kb=Object.assign({},b);
+  ['ft','ft2'].forEach(function(f){if(ka[f]==null&&kb[f]!=null)ka[f]=90;if(kb[f]==null&&ka[f]!=null)kb[f]=90});
+  if(ka.hd==null&&kb.hd!=null)ka.hd=ka.t;if(kb.hd==null&&ka.hd!=null)kb.hd=kb.t;
+  for(k in ka){
+    if(k==='p'){o.p=[ka.p[0]+(kb.p[0]-ka.p[0])*u,ka.p[1]+(kb.p[1]-ka.p[1])*u];continue}
+    if(kb[k]==null){o[k]=ka[k];continue}
+    d=kb[k]-ka[k];if(!raw)d=((d+540)%360)-180;
+    o[k]=ka[k]+d*u;
+  }
+  for(k in kb)if(!(k in o))o[k]=kb[k];
+  return o;
+}
+function easeIO(t){return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2}
+function phaseU(ms){
+  var H=350,M=1100,T=2*(H+M),x=ms%T;
+  if(x<H)return 0;x-=H;if(x<M)return easeIO(x/M);x-=M;if(x<H)return 1;x-=H;return 1-easeIO(x/M);
+}
+var anim={raf:0,ex:null,playing:true,slow:false,acc:0,last:0};
+function stopAnim(){if(anim.raf&&window.cancelAnimationFrame)cancelAnimationFrame(anim.raf);anim.raf=0;anim.ex=null}
+function drawAnim(){
+  var el=$('#animsvg');if(!el||!anim.ex)return;
+  var ex=anim.ex,u=phaseU(anim.acc*(anim.slow?.5:1));
+  el.innerHTML=figInner(ex,lerpPose(ex.frames[0],ex.frames[1],u,ex.raw),{ghosts:true,path:true});
+  var lb=$('#animlab');if(lb){var l=ex.labels||[],t=(u<.5?l[0]:l[1])||'';if(lb.textContent!==t)lb.textContent=t}
+}
+function tickAnim(){
+  if(!window.requestAnimationFrame)return;
+  anim.raf=requestAnimationFrame(function(ts){
+    if(!anim.ex)return;
+    if(!anim.last)anim.last=ts;
+    if(anim.playing&&!document.hidden){anim.acc+=Math.min(60,ts-anim.last);drawAnim()}
+    anim.last=ts;tickAnim();
+  });
+}
+function startAnim(ex){
+  stopAnim();anim.ex=ex;anim.slow=false;anim.acc=0;anim.last=0;
+  var reduce=false;try{reduce=!!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)}catch(e){}
+  anim.playing=!reduce;
+  drawAnim();tickAnim();
+  var b=$('#animbtn');if(b)b.textContent=anim.playing?TT('Pausar','Pause'):TT('Reproduzir','Play');
 }
 
 /* ---------- biblioteca de exercícios ---------- */
@@ -561,12 +741,33 @@ function eqOf(c){
   if(c==='dv')return {k:'dbv'};
   return {k:{b:'bar',n:'neck',f:'front',h:'hip'}[k],r:r};
 }
+Object.assign(TP,{
+ incpress:{scene:null,labels:['Início','Braços esticados'],frames:[{p:[100,98],t:180,ua:275,fa:95,th:90,sh:0},{p:[100,98],t:180,ua:125,fa:125,th:90,sh:0}]},
+ decpress:{scene:null,labels:['Início','Braços esticados'],frames:[{p:[100,98],t:180,ua:275,fa:95,th:90,sh:0},{p:[100,98],t:180,ua:70,fa:70,th:90,sh:0}]},
+ flylow:{scene:null,labels:['Mãos em baixo','Mãos à frente do peito'],frames:[{p:[100,70],t:180,ua:15,fa:15,th:0,sh:0},{p:[100,70],t:180,ua:105,fa:100,th:0,sh:0}]},
+ flyhigh:{scene:null,labels:['Mãos em cima','Mãos em baixo'],frames:[{p:[100,70],t:180,ua:150,fa:150,th:0,sh:0},{p:[100,70],t:180,ua:40,fa:35,th:0,sh:0}]},
+ dipmach:{scene:null,labels:['Início','Braços esticados'],frames:[{p:[100,98],t:180,ua:60,fa:100,th:90,sh:0},{p:[100,98],t:180,ua:5,fa:5,th:90,sh:0}]},
+ legpress:{scene:null,labels:['Joelhos fletidos','Pernas quase esticadas'],frames:[{p:[60,106],t:215,ua:75,fa:95,th:153,sh:51,ft:220},{p:[60,106],t:215,ua:75,fa:95,th:127,sh:98,ft:220}]},
+ hack:{scene:null,labels:['De pé','Em baixo'],frames:[{p:[88,70],t:187,ua:30,fa:60,th:0,sh:0},{p:[80,96],t:187,ua:30,fa:60,th:80,sh:350}]},
+ calfstand:{scene:null,labels:['Calcanhares em baixo','Em pontas'],frames:[{p:[100,70],t:180,ua:40,fa:10,th:0,sh:0},{p:[100,63],t:180,ua:40,fa:10,th:0,sh:0,ft:45}]},
+ lcurl:{scene:null,labels:['Perna esticada','Perna fletida'],frames:[{p:[100,108],t:270,ua:300,fa:270,th:90,sh:90},{p:[100,108],t:270,ua:300,fa:270,th:90,sh:165}]},
+ glutekick:{scene:null,labels:['Perna junto ao corpo','Perna esticada para trás'],frames:[{p:[96,76],t:165,ua:75,fa:75,th:10,sh:355,th2:0,sh2:0},{p:[96,76],t:165,ua:75,fa:75,th:300,sh:300,th2:0,sh2:0}]},
+ preacher:{scene:null,labels:['Braço esticado','Braço fletido'],frames:[{p:[100,98],t:180,ua:60,fa:60,th:90,sh:0},{p:[100,98],t:180,ua:60,fa:215,th:90,sh:0}]},
+ crunchmach:{scene:null,labels:['Sentado','Tronco fletido'],frames:[{p:[100,98],t:185,ua:60,fa:100,th:90,sh:0},{p:[100,98],t:150,ua:60,fa:100,th:90,sh:0}]},
+ extmach:{scene:null,labels:['Tronco inclinado','Tronco em extensão'],frames:[{p:[100,98],t:160,ua:60,fa:100,th:90,sh:0},{p:[100,98],t:195,ua:60,fa:100,th:90,sh:0}]},
+ backext:{scene:null,labels:['Tronco em baixo','Tronco alinhado'],frames:[{p:[96,84],t:75,ua:90,fa:120,th:320,sh:320},{p:[96,84],t:140,ua:90,fa:120,th:320,sh:320}]},
+ tricepsoh:{scene:null,labels:['Cotovelos fletidos','Braços esticados'],frames:[{p:[100,70],t:180,ua:175,fa:320,th:0,sh:0},{p:[100,70],t:180,ua:175,fa:178,th:0,sh:0}]}
+});
+var SCOV={'supino-smith':'smithbench','supino-inc-smith':'smithinc','agach-smith-pes':'smith','press-smith':'smith','remada-smith':'smith','elev-frontal-cabo':'cable:low','remada-alta-cabo':'cable:low','kickback-cabo':'cable:low'};
 function sceneFor(tpl,eq,id){
-  var M={seatfly:'mach:fly',seatrev:'mach:fly',seatpress:'mach:press',pulldown:'mach:pulldown',legext:'mach:legext',legcurl:'mach:legcurl',seatcalf:'mach:calf',fly:'cable:high',facepull:'cable:face',pushdown:'cable:top',straightarm:'cable:top',seatedrow:'cable:row',situp:'mat',legraise:'mat',floor:'mat',bridge:'mat',revcrunch:'mat',mountain:'mat',birddog:'mat',hollow:'mat',superman:'mat',wheel:'mat',pushup:'mat',front:'rack',gm:'rack',squat:'rack',hipthrust:'hipbench'};
+  var M={seatfly:'mach:fly',seatrev:'mach:fly',seatpress:'mach:press',pulldown:'mach:pulldown',legext:'mach:legext',legcurl:'mach:legcurl',seatcalf:'mach:calf',fly:'cable:high',facepull:'cable:face',pushdown:'cable:top',straightarm:'cable:top',seatedrow:'cable:row',situp:'mat',legraise:'mat',floor:'mat',bridge:'mat',revcrunch:'mat',mountain:'mat',birddog:'mat',hollow:'mat',superman:'mat',wheel:'mat',pushup:'mat',front:'rack',gm:'rack',squat:'rack',hipthrust:'hipbench',
+    incpress:'mach:press',decpress:'mach:press',flylow:'cable:low',flyhigh:'cable:high',dipmach:'mach:press',legpress:'mach:legpress',hack:'mach:hack',calfstand:'mach:calfstand',lcurl:'mach:lcurl',glutekick:'cable:ankle',preacher:'mach:preacher',crunchmach:'mach:crunch',extmach:'mach:crunch',backext:'backext'};
+  if(SCOV[id])return SCOV[id];
   if(id==='agach-smith')return 'smith';
   if(tpl==='seatohpress')return eq?'seatback':'mach:shoulder';
   if(tpl==='curl')return eq?null:'cable:low';
-  return M[tpl]||TP[tpl].scene;
+  if(Object.prototype.hasOwnProperty.call(M,tpl))return M[tpl];
+  return TP[tpl].scene;
 }
 function X(id,name,group,muscles,tpl,eq,steps,tips,labels){
   var o={id:id,name:name,group:group,muscles:muscles,scene:null,eq:eqOf(eq),steps:steps.split('|'),tips:tips.split('|')};
@@ -681,7 +882,9 @@ X('prancha-toque','Prancha com toque no ombro','Core','Core, ombros','','','Em p
 X('windshield','Limpa-para-brisas','Core','Oblíquos, abdominais','','','Deita-te de costas com os braços abertos e as pernas na vertical.|Leva as pernas para um lado sem tocar no chão.|Volta ao centro e passa para o outro lado.','Se for difícil, dobra os joelhos.')
 ];
 EXS=EXS.concat(NEWX);
+function applyTpl(id,tpl){var x=EXS.filter(function(e){return e.id===id})[0];if(x&&TP[tpl]){x.frames=TP[tpl].frames;x.labels=TP[tpl].labels;x.scene=sceneFor(tpl,x.eq,id);if(TP[tpl].raw)x.raw=true}}
 EXS.forEach(function(x){if(x.id==='flexoes'||x.id==='prancha'||x.id==='abdominais')x.scene='mat';if(x.id==='agachamento')x.scene='rack'});
+applyTpl('hiperextensao','backext');applyTpl('prensa','legpress');applyTpl('ext-cabo-acima','tricepsoh');applyTpl('curl-scott','preacher');
 /* ---------- inglês (English) ---------- */
 var EXEN={
 'supino-barra':['Barbell bench press','Chest, triceps, front deltoid','Lie on the bench with your eyes under the bar, feet flat on the floor, shoulder blades together and down.|Grip the bar slightly wider than shoulder width and unrack it with straight arms.|Lower the bar under control until it lightly touches the middle of your chest, with your elbows at about 45° from your torso.|Press the bar up until your arms are straight, without lifting your back or hips off the bench.','Keep your wrists in line with your forearms.|With heavy loads, train with a spotter or use safety bars.|Do not bounce the bar off your chest.'],
@@ -874,7 +1077,7 @@ var EN={
  'Início (braços esticados)':'Start (arms straight)','Fim (barra no abdómen)':'End (bar at abdomen)','Início (suspenso)':'Start (hanging)','Fim (queixo acima da barra)':'End (chin over the bar)',
  'Início (barra no chão)':'Start (bar on the floor)','Fim (de pé)':'End (standing)','Início (de pé)':'Start (standing)','Calcanhares no chão':'Heels on the floor',
  'Halteres nos ombros':'Dumbbells at shoulders','Cotovelos fletidos':'Elbows bent','Posição correta':'Correct position','Erro: anca demasiado alta':'Mistake: hips too high',
- 'Corrida':'Running','Substituir':'Replace','Terminar':'End','Posição inicial':'Start position','Posição final':'End position',
+ 'Corrida':'Running','Quem vai treinar?':'Who is training?','Escolhe a tua conta.':'Choose your account.','+ Nova conta':'+ New account','Nova conta':'New account','Como se chama esta conta?':'What should this account be called?','Trocar de conta':'Switch account','Conta:':'Account:','Apagar esta conta':'Delete this account','Apagar esta conta e todos os dados dela? Não dá para desfazer.':'Delete this account and all its data? This cannot be undone.','Já existe uma conta com esse nome.':'An account with that name already exists.','O PIN só existe neste dispositivo e não dá para o recuperar. Para criares um novo, é preciso apagar esta conta e todos os treinos guardados nela.':'The PIN only exists on this device and cannot be recovered. To create a new one, this account and all the workouts saved in it must be deleted.','Substituir':'Replace','Terminar':'End','Ilustrações esquemáticas em movimento: a linha a tracejado mostra o percurso e o vermelho o músculo que trabalha.':'Schematic illustrations in motion: the dashed line shows the path and the red shows the working muscle.','Mãos em baixo':'Hands low','Mãos à frente do peito':'Hands in front of chest','Mãos em cima':'Hands high','Joelhos fletidos':'Knees bent','Pernas quase esticadas':'Legs almost straight','Perna junto ao corpo':'Leg by your body','Perna esticada para trás':'Leg extended back','Braço fletido':'Arm bent','Tronco fletido':'Torso flexed','Tronco inclinado':'Torso leaning forward','Tronco em extensão':'Torso extended','Tronco em baixo':'Torso low','Tronco alinhado':'Torso aligned','Posição inicial':'Start position','Posição final':'End position',
  'Planos':'Plans','Planeia os treinos e escolhe o plano de cada dia da semana.':'Plan your workouts and choose a plan for each day of the week.','Semana':'Week','Hoje':'Today','Sem plano (descanso)':'No plan (rest day)','Os teus planos':'Your plans','+ Novo plano':'+ New plan','Editar':'Edit','Novo plano':'New plan','Editar plano':'Edit plan','Nome do plano':'Plan name','Ex.: Dia de pernas':'e.g. Leg day','Séries':'Sets','Ainda sem exercícios. Adiciona o primeiro.':'No exercises yet. Add the first one.','Guardar plano':'Save plan','Apagar plano':'Delete plan','Subir':'Move up','Descer':'Move down','Escreve o nome do plano.':'Enter the plan name.','Adiciona pelo menos um exercício.':'Add at least one exercise.','Plano guardado.':'Plan saved.','Apagar este plano?':'Delete this plan?','Criar plano':'Create plan','Gerir planos':'Manage plans','Guardar como plano':'Save as plan','Escolher plano':'Choose a plan','Começar este plano':'Start this plan',
  'Ainda não tens planos. Cria o primeiro, por exemplo "Dia de pernas".':'You have no plans yet. Create the first one, for example "Leg day".',
  'Cria planos no separador Planos para treinares por dia (por exemplo, dia de pernas) ou guarda um treino terminado como plano.':'Create plans in the Plans tab to train by day (for example, leg day) or save a finished workout as a plan.'
@@ -952,7 +1155,7 @@ function startTranslator(){
 }
 function setLang(l){
   LANG=(l==='en')?'en':'pt';LOC=LANG==='en'?'en-GB':'pt-PT';
-  S.settings.lang=LANG;save();
+  try{localStorage.setItem(LANGKEY,LANG)}catch(e){}if(curId){S.settings.lang=LANG;save()}
   document.documentElement.lang=LANG==='en'?'en':'pt-PT';
   var tb=document.querySelector('.tabbar');if(tb)tb.setAttribute('aria-label',LANG==='en'?'Sections':'Secções');
   renderApp();renderRest();if(modal)renderModal();renderLock();
@@ -960,15 +1163,139 @@ function setLang(l){
 }
 
 
+/* ---------- mais exercícios: máquinas e exercícios individuais ---------- */
+var NEWX2=[];
+function Y(id,group,tpl,eq,nm,mu,st,tp){
+  EXEN[id]=[nm[1],mu[1],st[1],tp[1]];
+  NEWX2.push(X(id,nm[0],group,mu[0],tpl,eq,st[0],tp[0]));
+}
+/* Peito */
+Y('press-inc-maq','Peito','incpress','',['Press de peito inclinado na máquina','Incline chest press machine'],['Peitoral superior, deltoide anterior, tríceps','Upper chest, front deltoid, triceps'],['Senta-te com as costas apoiadas e as pegas à altura da parte alta do peito.|Empurra as pegas para a frente e para cima até esticares os braços.|Volta devagar até sentires o peito alongar.','Sit with your back supported and the handles at upper-chest height.|Press the handles forward and up until your arms are straight.|Return slowly until you feel your chest stretch.'],['Ajusta o banco para as pegas ficarem à altura do peito.','Adjust the seat so the handles are at chest height.']);
+Y('press-conv-maq','Peito','seatpress','',['Press de peito convergente na máquina','Converging chest press machine'],['Peitoral, tríceps, deltoide anterior','Chest, triceps, front deltoid'],['Senta-te com as costas apoiadas e agarra as pegas à altura do peito.|Empurra as pegas para a frente, deixando-as convergir no centro.|Volta devagar sem deixar os pesos tocarem.','Sit with your back supported and grip the handles at chest height.|Press the handles forward, letting them converge at the centre.|Return slowly without letting the weights touch down.'],['Aperta o peito no fim do movimento.','Squeeze your chest at the end of the movement.']);
+Y('press-decl-maq','Peito','decpress','',['Press de peito declinado na máquina','Decline chest press machine'],['Peitoral inferior, tríceps','Lower chest, triceps'],['Senta-te com as costas apoiadas e as pegas junto à parte baixa do peito.|Empurra as pegas para a frente e ligeiramente para baixo.|Volta devagar até sentires o peito alongar.','Sit with your back supported and the handles by your lower chest.|Press the handles forward and slightly down.|Return slowly until you feel your chest stretch.'],['Mantém os ombros para trás e para baixo.','Keep your shoulders back and down.']);
+Y('crossover-baixo','Peito','flylow','',['Crossover nos cabos (de baixo para cima)','Low-to-high cable fly'],['Peitoral superior, deltoide anterior','Upper chest, front deltoid'],['Com as roldanas em baixo, agarra um cabo em cada mão, com os cotovelos ligeiramente fletidos.|Sobe os braços em arco até as mãos se juntarem à frente do peito.|Desce devagar até sentires o peito alongar.','With the pulleys low, grip a handle in each hand with your elbows slightly bent.|Raise your arms in an arc until your hands meet in front of your chest.|Lower slowly until you feel your chest stretch.'],['Mantém o tronco firme e o movimento controlado.','Keep your torso steady and the movement controlled.']);
+Y('crossover-alto','Peito','flyhigh','',['Crossover nos cabos (de cima para baixo)','High-to-low cable fly'],['Peitoral inferior, deltoide anterior','Lower chest, front deltoid'],['Com as roldanas em cima, agarra um cabo em cada mão e inclina o tronco ligeiramente.|Desce os braços em arco até as mãos se juntarem à frente da anca.|Volta devagar até sentires o peito alongar.','With the pulleys high, grip a handle in each hand and lean your torso slightly forward.|Bring your arms down in an arc until your hands meet in front of your hips.|Return slowly until you feel your chest stretch.'],['Mantém os cotovelos ligeiramente fletidos durante todo o movimento.','Keep your elbows slightly bent throughout.']);
+Y('supino-smith','Peito','bench','b11',['Supino na máquina Smith','Smith machine bench press'],['Peitoral, tríceps, deltoide anterior','Chest, triceps, front deltoid'],['Posiciona o banco de forma a que a barra desça sobre a parte média do peito.|Roda a barra para a destravar e desce-a de forma controlada.|Empurra a barra para cima até esticares os braços e trava-a no fim.','Position the bench so the bar lowers over your mid chest.|Rotate the bar to unlock it and lower it under control.|Press up until your arms are straight and rack it at the end.'],['A trajetória fixa dá segurança, mas mantém os pés bem assentes.','The fixed path adds safety, but keep your feet firmly planted.']);
+Y('supino-inc-smith','Peito','incline','b11',['Supino inclinado na máquina Smith','Incline Smith machine press'],['Peitoral superior, deltoide anterior, tríceps','Upper chest, front deltoid, triceps'],['Inclina o banco a 30°–45° e alinha a barra com a parte alta do peito.|Destrava a barra e desce-a de forma controlada.|Empurra até esticares os braços.','Set the bench to 30°–45° and line the bar up with your upper chest.|Unlock the bar and lower it under control.|Press until your arms are straight.'],['Não uses uma inclinação excessiva.','Do not use too steep an incline.']);
+Y('press-squeeze','Peito','bench','d',['Press com halteres juntos (squeeze press)','Dumbbell squeeze press'],['Peitoral (zona interna), tríceps','Inner chest, triceps'],['Deita-te no banco com os halteres juntos em cima do peito.|Aperta os halteres um contra o outro e empurra-os para cima.|Desce devagar mantendo o aperto.','Lie on the bench with the dumbbells held together above your chest.|Squeeze the dumbbells against each other and press them up.|Lower slowly while keeping the squeeze.'],['Usa pouca carga: o aperto constante torna o exercício difícil.','Use light weight: the constant squeeze makes it hard.']);
+Y('fundos-maq','Peito','dipmach','',['Fundos na máquina','Dip machine'],['Peitoral inferior, tríceps','Lower chest, triceps'],['Senta-te e agarra as pegas junto aos ombros, com o tronco ligeiramente à frente.|Empurra as pegas para baixo até esticares os braços.|Volta devagar até aos cotovelos ficarem a 90°.','Sit and grip the handles by your shoulders, with your torso leaning slightly forward.|Push the handles down until your arms are straight.|Return slowly until your elbows are at 90°.'],['É uma boa forma de progredir para os fundos livres.','A good way to progress towards free dips.']);
+Y('supino-pausa','Peito','bench','b11',['Supino com pausa','Paused bench press'],['Peitoral, tríceps','Chest, triceps'],['Deita-te no banco e desce a barra de forma controlada até ao peito.|Faz uma pausa de 1 a 2 segundos com a barra parada no peito.|Empurra a barra para cima até esticares os braços.','Lie on the bench and lower the bar under control to your chest.|Pause for 1 to 2 seconds with the bar still on your chest.|Press the bar up until your arms are straight.'],['Não relaxes o corpo durante a pausa.','Do not relax your body during the pause.']);
+Y('supino-largo','Peito','bench','b11',['Supino com pegada larga','Wide-grip bench press'],['Peitoral, deltoide anterior','Chest, front deltoid'],['Agarra a barra bem mais larga do que os ombros e destrava-a com os braços esticados.|Desce a barra até ao peito, com os cotovelos abertos.|Empurra a barra para cima até esticares os braços.','Grip the bar well wider than your shoulders and unrack it with straight arms.|Lower the bar to your chest with your elbows flared.|Press the bar up until your arms are straight.'],['Uma pegada demasiado larga sobrecarrega os ombros.','Too wide a grip overloads the shoulders.']);
+Y('crucifixo-cabo','Peito','','',['Crucifixo deitado nos cabos','Lying cable fly'],['Peitoral','Chest'],['Deita-te num banco entre as duas roldanas baixas e agarra um cabo em cada mão.|Abre os braços em arco, com os cotovelos ligeiramente fletidos.|Junta as mãos por cima do peito.','Lie on a bench between two low pulleys and grip a handle in each hand.|Open your arms in an arc with your elbows slightly bent.|Bring your hands together above your chest.'],['O cabo mantém a tensão no peito durante todo o movimento.','The cable keeps tension on the chest throughout the movement.']);
+Y('flexoes-explosivas','Peito','pushup','',['Flexões explosivas','Explosive push-ups'],['Peitoral, tríceps, ombros','Chest, triceps, shoulders'],['Faz uma flexão normal, descendo de forma controlada.|Empurra o chão com força para as mãos se levantarem.|Aterra com os cotovelos ligeiramente fletidos e repete.','Do a normal push-up, lowering under control.|Push the floor away hard so your hands leave the ground.|Land with your elbows slightly bent and repeat.'],['Só avança quando dominares as flexões normais.','Only progress to this once you have mastered regular push-ups.']);
+Y('flexoes-inclinadas','Peito','','',['Flexões inclinadas (mãos no banco)','Incline push-ups (hands on a bench)'],['Peitoral inferior, tríceps','Lower chest, triceps'],['Apoia as mãos num banco ou barra, com o corpo em linha reta.|Desce o peito até ao banco, com os cotovelos a 45°.|Empurra para voltar a esticar os braços.','Rest your hands on a bench or bar with your body in a straight line.|Lower your chest to the bench with your elbows at 45°.|Push up to straighten your arms again.'],['É uma versão mais fácil das flexões no chão.','An easier version of floor push-ups.']);
+/* Costas */
+Y('puxada-larga','Costas','pulldown','b4',['Puxada com pegada larga','Wide-grip lat pulldown'],['Dorsais, redondo maior, bíceps','Lats, teres major, biceps'],['Senta-te com as coxas presas e agarra a barra bem mais larga do que os ombros.|Puxa a barra até à parte alta do peito, levando os cotovelos para baixo.|Sobe devagar até esticares os braços.','Sit with your thighs secured and grip the bar well wider than your shoulders.|Pull the bar to your upper chest, driving your elbows down.|Return slowly until your arms are straight.'],['Evita puxar a barra para trás da cabeça.','Avoid pulling the bar behind your head.']);
+Y('puxada-fechada','Costas','pulldown','b4',['Puxada com pegada fechada (triângulo)','Close-grip pulldown (V-bar)'],['Dorsais, bíceps','Lats, biceps'],['Senta-te e agarra a pega em V com os braços esticados.|Puxa a pega até ao peito, com os cotovelos junto ao corpo.|Sobe devagar até esticares os braços.','Sit and grab the V-bar with straight arms.|Pull the handle to your chest with your elbows close to your body.|Return slowly until your arms are straight.'],['Inclina o tronco ligeiramente para trás, sem balançar.','Lean your torso slightly back, without swinging.']);
+Y('puxada-supinada','Costas','pulldown','b4',['Puxada com pegada supinada','Reverse-grip pulldown'],['Dorsais, bíceps','Lats, biceps'],['Agarra a barra com as palmas viradas para ti, à largura dos ombros.|Puxa a barra até ao peito, levando os cotovelos para trás.|Sobe devagar até esticares os braços.','Grip the bar with your palms facing you, shoulder-width apart.|Pull the bar to your chest, driving your elbows back.|Return slowly until your arms are straight.'],['Esta pegada trabalha mais o bíceps.','This grip works the biceps more.']);
+Y('puxada-unilateral','Costas','pulldown','',['Puxada unilateral no cabo','Single-arm cable pulldown'],['Dorsais, bíceps','Lats, biceps'],['Senta-te e agarra a pega com uma mão, com o braço esticado.|Puxa o cotovelo para baixo e para trás, até a mão chegar ao ombro.|Sobe devagar até esticares o braço.','Sit and grab the handle with one hand, arm straight.|Pull your elbow down and back until your hand reaches your shoulder.|Return slowly until your arm is straight.'],['Mantém o tronco direito, sem rodar.','Keep your torso upright, without rotating.']);
+Y('remada-maq','Costas','seatedrow','',['Remada na máquina com apoio no peito','Chest-supported machine row'],['Dorsais, romboides, trapézio','Lats, rhomboids, trapezius'],['Senta-te com o peito apoiado na almofada e agarra as pegas.|Puxa as pegas para trás, juntando as omoplatas.|Volta devagar até esticares os braços.','Sit with your chest against the pad and grab the handles.|Pull the handles back, squeezing your shoulder blades together.|Return slowly until your arms are straight.'],['O apoio no peito impede o balanço do tronco.','The chest support prevents torso swing.']);
+Y('remada-baixa-maq','Costas','seatedrow','',['Remada baixa na máquina','Low row machine'],['Dorsais (zona inferior), romboides','Lower lats, rhomboids'],['Senta-te com os pés apoiados e agarra as pegas com os braços esticados.|Puxa as pegas até ao abdómen, levando os cotovelos para trás.|Volta devagar até esticares os braços.','Sit with your feet braced and grab the handles with straight arms.|Pull the handles to your abdomen, driving your elbows back.|Return slowly until your arms are straight.'],['Mantém o peito aberto e o tronco direito.','Keep your chest open and your torso upright.']);
+Y('remada-alta-maq','Costas','seatedrow','',['Remada alta na máquina','High row machine'],['Trapézio, romboides, dorsais','Trapezius, rhomboids, lats'],['Senta-te com o peito apoiado e agarra as pegas acima da altura do peito.|Puxa os cotovelos para trás e para fora, juntando as omoplatas.|Volta devagar até esticares os braços.','Sit with your chest supported and grab the handles above chest height.|Pull your elbows back and out, squeezing your shoulder blades together.|Return slowly until your arms are straight.'],['Não encolhas os ombros ao puxar.','Do not shrug your shoulders as you pull.']);
+Y('remada-cabo-unil','Costas','seatedrow','',['Remada unilateral no cabo','Single-arm cable row'],['Dorsais, romboides, bíceps','Lats, rhomboids, biceps'],['Senta-te de frente para a roldana baixa e agarra a pega com uma mão.|Puxa o cotovelo para trás, junto ao corpo.|Volta devagar até esticares o braço.','Sit facing the low pulley and grab the handle with one hand.|Pull your elbow back, close to your body.|Return slowly until your arm is straight.'],['Mantém os ombros paralelos à máquina, sem rodar.','Keep your shoulders square to the machine, without rotating.']);
+Y('remada-smith','Costas','row','b10',['Remada na máquina Smith','Smith machine row'],['Dorsais, trapézio, romboides','Lats, trapezius, rhomboids'],['Inclina o tronco para a frente e agarra a barra com os braços esticados.|Puxa a barra até ao abdómen, juntando as omoplatas.|Desce devagar até esticares os braços.','Lean your torso forward and grip the bar with straight arms.|Pull the bar to your abdomen, squeezing your shoulder blades together.|Lower slowly until your arms are straight.'],['Mantém a coluna neutra durante toda a série.','Keep a neutral spine throughout the set.']);
+Y('remada-meadows','Costas','row','b8',['Remada Meadows (landmine)','Meadows row (landmine)'],['Dorsais, trapézio, romboides','Lats, trapezius, rhomboids'],['Coloca-te de lado para a barra landmine e agarra a ponta com uma mão.|Puxa o cotovelo para cima e para trás, até à anca.|Desce devagar até esticares o braço.','Stand side-on to the landmine bar and grip the end with one hand.|Pull your elbow up and back towards your hip.|Lower slowly until your arm is straight.'],['Mantém o tronco inclinado e as costas direitas.','Keep your torso hinged and your back straight.']);
+Y('remada-yates','Costas','row','b10',['Remada Yates','Yates row'],['Dorsais, trapézio, bíceps','Lats, trapezius, biceps'],['Com o tronco inclinado a cerca de 30°, agarra a barra com as palmas viradas para cima.|Puxa a barra até ao abdómen inferior.|Desce devagar até esticares os braços.','With your torso at about 30°, grip the bar with your palms facing up.|Pull the bar to your lower abdomen.|Lower slowly until your arms are straight.'],['É uma remada mais vertical e menos exigente para a lombar.','A more upright row that is easier on the lower back.']);
+Y('extensao-lombar-maq','Costas','extmach','',['Extensão lombar na máquina','Lower back extension machine'],['Lombar, glúteos','Lower back, glutes'],['Senta-te com as costas encostadas à almofada e os pés apoiados.|Empurra a almofada para trás, estendendo as costas.|Volta devagar à posição inicial.','Sit with your back against the pad and your feet braced.|Push the pad back, extending your spine.|Return slowly to the start.'],['Usa uma amplitude confortável e uma carga moderada.','Use a comfortable range and a moderate load.']);
+Y('terra-hex','Costas','deadlift','b15',['Levantamento terra com barra hexagonal','Trap bar deadlift'],['Quadricípites, glúteos, lombar, trapézio','Quads, glutes, lower back, trapezius'],['Entra dentro da barra, com os pés à largura da anca, e agarra as pegas laterais.|Empurra o chão com os pés, estendendo a anca e os joelhos.|Fica direito em cima e desce de forma controlada.','Step inside the bar with your feet hip-width apart and grab the side handles.|Push the floor away with your feet, extending your hips and knees.|Stand tall at the top and lower under control.'],['Mantém o peito aberto e a coluna neutra.','Keep your chest open and your spine neutral.']);
+Y('terra-deficit','Costas','deadlift','b15',['Terra em défice','Deficit deadlift'],['Isquiotibiais, glúteos, lombar','Hamstrings, glutes, lower back'],['Sobe para uma plataforma baixa e agarra a barra com a coluna neutra.|Empurra o chão com os pés, estendendo a anca e os joelhos.|Fica direito em cima e desce de forma controlada.','Stand on a low platform and grip the bar with a neutral spine.|Push the floor away with your feet, extending your hips and knees.|Stand tall at the top and lower under control.'],['Usa menos carga do que no terra normal.','Use less weight than in a regular deadlift.']);
+Y('remada-t-apoiada','Costas','row','b8',['Remada em T com apoio no peito','Chest-supported T-bar row'],['Dorsais, romboides, trapézio','Lats, rhomboids, trapezius'],['Deita o peito na almofada inclinada e agarra as pegas da barra.|Puxa a barra em direção ao peito, juntando as omoplatas.|Desce devagar até esticares os braços.','Rest your chest on the angled pad and grip the bar handles.|Pull the bar towards your chest, squeezing your shoulder blades together.|Lower slowly until your arms are straight.'],['O apoio no peito protege a lombar.','The chest support protects your lower back.']);
+Y('pullover-maq','Costas','','',['Pullover na máquina','Pullover machine'],['Dorsais, peitoral, tríceps','Lats, chest, triceps'],['Senta-te e apoia os cotovelos nas almofadas, com os braços acima da cabeça.|Leva os cotovelos para baixo, em arco, até à frente do corpo.|Volta devagar até sentires os dorsais alongarem.','Sit and rest your elbows on the pads with your arms overhead.|Drive your elbows down in an arc in front of your body.|Return slowly until you feel your lats stretch.'],['Mantém as costas encostadas ao banco.','Keep your back against the seat.']);
+/* Pernas */
+Y('prensa-45','Pernas','legpress','',['Prensa a 45°','45° leg press'],['Quadricípites, glúteos','Quads, glutes'],['Senta-te com as costas e a anca bem apoiadas e os pés na plataforma, à largura dos ombros.|Destrava a máquina e desce a plataforma até os joelhos ficarem a cerca de 90°.|Empurra a plataforma até quase esticares as pernas.','Sit with your back and hips well supported and your feet on the platform, shoulder-width apart.|Unlock the machine and lower the platform until your knees are at about 90°.|Push the platform until your legs are almost straight.'],['Não deixes a anca levantar do banco nem bloqueies os joelhos.','Do not let your hips lift off the seat or lock your knees.']);
+Y('prensa-unilateral','Pernas','legpress','',['Prensa unilateral','Single-leg press'],['Quadricípites, glúteos','Quads, glutes'],['Senta-te e coloca um só pé no centro da plataforma.|Desce a plataforma de forma controlada até o joelho ficar a cerca de 90°.|Empurra a plataforma até quase esticares a perna.','Sit and place just one foot in the centre of the platform.|Lower the platform under control until your knee is at about 90°.|Push the platform until your leg is almost straight.'],['Usa pouca carga: o equilíbrio entre as duas pernas melhora.','Use light weight: it helps balance out your two legs.']);
+Y('prensa-pes-altos','Pernas','legpress','',['Prensa com pés altos (glúteos e isquiotibiais)','High-foot leg press (glutes and hamstrings)'],['Glúteos, isquiotibiais','Glutes, hamstrings'],['Coloca os pés na parte alta da plataforma, à largura dos ombros.|Desce a plataforma até a anca começar a querer levantar.|Empurra com os calcanhares até quase esticares as pernas.','Place your feet high on the platform, shoulder-width apart.|Lower the platform until your hips are about to lift.|Push through your heels until your legs are almost straight.'],['Empurra sempre com os calcanhares.','Always push through your heels.']);
+Y('prensa-pes-baixos','Pernas','legpress','',['Prensa com pés baixos (quadricípites)','Low-foot leg press (quads)'],['Quadricípites','Quads'],['Coloca os pés na parte baixa da plataforma, à largura da anca.|Desce a plataforma de forma controlada, com os joelhos à frente dos pés.|Empurra até quase esticares as pernas.','Place your feet low on the platform, hip-width apart.|Lower the platform under control, with your knees travelling over your toes.|Push until your legs are almost straight.'],['Mantém os calcanhares sempre apoiados.','Keep your heels planted at all times.']);
+Y('hack-squat','Pernas','hack','',['Hack squat','Hack squat'],['Quadricípites, glúteos','Quads, glutes'],['Coloca as costas e os ombros nas almofadas e os pés na plataforma, à largura dos ombros.|Destrava a máquina e desce até as coxas ficarem paralelas à plataforma.|Empurra a plataforma para voltares à posição inicial.','Place your back and shoulders against the pads and your feet on the platform, shoulder-width apart.|Unlock the machine and lower until your thighs are parallel to the platform.|Push the platform to return to the start.'],['Mantém as costas sempre encostadas à almofada.','Keep your back against the pad at all times.']);
+Y('hack-inverso','Pernas','hack','',['Hack squat inverso','Reverse hack squat'],['Glúteos, quadricípites','Glutes, quads'],['Vira-te de frente para a almofada, com o peito apoiado e os pés na plataforma.|Desce de forma controlada até as coxas ficarem paralelas.|Empurra com os pés para voltares à posição inicial.','Face the pad with your chest supported and your feet on the platform.|Lower under control until your thighs are parallel.|Push through your feet to return to the start.'],['Mantém o peito encostado durante todo o movimento.','Keep your chest against the pad throughout.']);
+Y('pendulum','Pernas','hack','',['Agachamento pêndulo','Pendulum squat'],['Quadricípites, glúteos','Quads, glutes'],['Coloca os ombros sob as almofadas e os pés na plataforma.|Desce em arco, dobrando bem os joelhos.|Empurra para subires pelo mesmo arco.','Place your shoulders under the pads and your feet on the platform.|Lower in an arc, bending your knees deeply.|Push up along the same arc.'],['A máquina permite uma grande amplitude com pouca carga na coluna.','The machine allows a big range of motion with little spinal load.']);
+Y('agach-smith-pes','Pernas','squat','n12',['Agachamento Smith com pés à frente','Smith squat with feet forward'],['Quadricípites, glúteos','Quads, glutes'],['Coloca-te debaixo da barra, com os pés um pouco à frente do corpo.|Destrava a barra e desce até as coxas ficarem paralelas ao chão.|Sobe empurrando o chão com todo o pé.','Stand under the bar with your feet a little in front of your body.|Unlock the bar and lower until your thighs are parallel to the floor.|Stand up by pushing the floor away with your whole foot.'],['Com os pés à frente, o trabalho passa mais para os quadricípites.','With your feet forward, more of the work goes to your quads.']);
+Y('agach-caixa','Pernas','squat','n12',['Agachamento na caixa','Box squat'],['Glúteos, quadricípites, isquiotibiais','Glutes, quads, hamstrings'],['Coloca uma caixa atrás de ti e a barra nas costas.|Desce levando a anca para trás até te sentares na caixa.|Sobe de forma explosiva, sem balançar.','Place a box behind you and the bar on your back.|Lower by sending your hips back until you sit on the box.|Stand up explosively, without rocking.'],['Não relaxes completamente na caixa.','Do not fully relax on the box.']);
+Y('agach-pausa','Pernas','squat','n12',['Agachamento com pausa','Pause squat'],['Quadricípites, glúteos, core','Quads, glutes, core'],['Desce com a barra nas costas até as coxas ficarem paralelas ao chão.|Faz uma pausa de 2 a 3 segundos em baixo, mantendo o corpo firme.|Sobe empurrando o chão com todo o pé.','Lower with the bar on your back until your thighs are parallel to the floor.|Pause for 2 to 3 seconds at the bottom, keeping your body tight.|Stand up by pushing the floor away with your whole foot.'],['Usa menos carga do que no agachamento normal.','Use less weight than in a regular squat.']);
+Y('agach-zercher','Pernas','front','f12',['Agachamento Zercher','Zercher squat'],['Quadricípites, glúteos, core','Quads, glutes, core'],['Apoia a barra na dobra dos cotovelos, junto ao abdómen.|Desce de forma controlada com o tronco direito.|Sobe empurrando o chão com todo o pé.','Hold the bar in the crooks of your elbows, against your abdomen.|Lower under control with an upright torso.|Stand up by pushing the floor away with your whole foot.'],['Usa uma almofada na barra para ficar mais confortável.','Use a pad on the bar for comfort.']);
+Y('sissy','Pernas','','',['Sissy squat','Sissy squat'],['Quadricípites','Quads'],['De pé, agarra-te a um apoio e levanta os calcanhares.|Inclina o corpo para trás e leva os joelhos para a frente.|Volta à posição inicial contraindo os quadricípites.','Standing, hold onto a support and raise your heels.|Lean your body back and push your knees forward.|Return to the start by contracting your quads.'],['É um exercício exigente para os joelhos: começa com pouca amplitude.','A demanding exercise for the knees: start with a small range.']);
+Y('avanco-smith','Pernas','lunge','',['Avanço na máquina Smith','Smith machine lunge'],['Quadricípites, glúteos','Quads, glutes'],['Coloca um pé à frente e o outro atrás, debaixo da barra.|Desce na vertical até o joelho de trás quase tocar no chão.|Sobe empurrando com o pé da frente.','Place one foot forward and the other back, under the bar.|Lower straight down until your back knee almost touches the floor.|Rise by pushing through your front foot.'],['A barra fixa ajuda a manter o equilíbrio.','The fixed bar helps you stay balanced.']);
+Y('avanco-frontal','Pernas','lunge','d',['Avanço frontal com halteres','Forward lunge with dumbbells'],['Quadricípites, glúteos, isquiotibiais','Quads, glutes, hamstrings'],['Em pé, com um haltere em cada mão, dá um passo em frente.|Desce até os dois joelhos ficarem a 90°.|Empurra com o pé da frente para voltares à posição inicial.','Standing with a dumbbell in each hand, step forward.|Lower until both knees are at 90°.|Push off your front foot to return to the start.'],['Dá um passo largo para proteger os joelhos.','Take a long step to protect your knees.']);
+Y('avanco-lateral','Pernas','','',['Avanço lateral','Side lunge'],['Glúteos, adutores, quadricípites','Glutes, adductors, quads'],['Em pé, dá um passo largo para o lado.|Dobra o joelho desse lado e leva a anca para trás, mantendo a outra perna esticada.|Empurra para voltares à posição inicial.','Standing, take a wide step to the side.|Bend that knee and send your hips back, keeping the other leg straight.|Push off to return to the start.'],['Mantém os pés a apontar para a frente.','Keep your feet pointing forward.']);
+Y('lcurl','Pernas','lcurl','',['Flexão de pernas deitado','Lying leg curl'],['Isquiotibiais','Hamstrings'],['Deita-te de barriga para baixo, com o rolo por cima dos calcanhares.|Dobra os joelhos, levando os calcanhares em direção aos glúteos.|Desce devagar até esticares as pernas.','Lie face down with the pad above your heels.|Bend your knees, bringing your heels towards your glutes.|Lower slowly until your legs are straight.'],['Não levantes a anca do banco.','Do not lift your hips off the bench.']);
+Y('nordic','Pernas','','',['Flexão nórdica','Nordic hamstring curl'],['Isquiotibiais','Hamstrings'],['Ajoelha-te com os tornozelos presos e o corpo direito.|Desce o tronco para a frente de forma lenta e controlada.|Usa as mãos para amortecer e empurra para voltares.','Kneel with your ankles secured and your body straight.|Lower your torso forward slowly and under control.|Catch yourself with your hands and push back up.'],['É um exercício muito exigente: começa com poucas repetições.','A very demanding exercise: start with few reps.']);
+Y('gemeos-pe-maq','Pernas','calfstand','',['Elevação de gémeos em pé na máquina','Standing calf raise machine'],['Gémeos (gastrocnémio)','Calves (gastrocnemius)'],['Coloca os ombros sob as almofadas e as pontas dos pés na plataforma.|Sobe os calcanhares o mais alto que conseguires.|Desce devagar até sentires o gémeo alongar.','Place your shoulders under the pads and the balls of your feet on the platform.|Raise your heels as high as you can.|Lower slowly until you feel your calves stretch.'],['Faz uma pausa em cima e em baixo.','Pause at the top and the bottom.']);
+Y('gemeos-prensa','Pernas','','',['Elevação de gémeos na prensa','Calf press on the leg press'],['Gémeos','Calves'],['Senta-te na prensa e coloca só as pontas dos pés na plataforma, com as pernas quase esticadas.|Empurra com as pontas dos pés, estendendo os tornozelos.|Volta devagar até sentires o gémeo alongar.','Sit in the leg press with just the balls of your feet on the platform and your legs almost straight.|Push through the balls of your feet, extending your ankles.|Return slowly until you feel your calves stretch.'],['Mantém os joelhos quase esticados mas nunca bloqueados.','Keep your knees almost straight but never locked.']);
+Y('adutores','Pernas','','',['Cadeira adutora','Hip adduction machine'],['Adutores','Adductors'],['Senta-te na máquina com as pernas abertas e apoiadas nas almofadas.|Junta as pernas contra a resistência.|Volta devagar à posição inicial.','Sit in the machine with your legs apart against the pads.|Bring your legs together against the resistance.|Return slowly to the start.'],['Controla o regresso: não deixes o peso bater.','Control the return: do not let the weight slam.']);
+Y('glute-kick-cabo','Pernas','glutekick','',['Extensão de anca no cabo (glúteo)','Cable glute kickback'],['Glúteos, isquiotibiais','Glutes, hamstrings'],['Prende a tornozeleira a um tornozelo e agarra-te à máquina, com o tronco ligeiramente inclinado.|Leva a perna esticada para trás, apertando o glúteo.|Volta devagar sem apoiar o pé no chão.','Strap the ankle cuff on one ankle and hold the machine, with your torso slightly forward.|Kick the straight leg back, squeezing your glute.|Return slowly without resting your foot on the floor.'],['Não arqueies a lombar para subir mais a perna.','Do not arch your lower back to lift the leg higher.']);
+Y('glute-kick-maq','Pernas','glutekick','',['Glute kickback na máquina','Glute kickback machine'],['Glúteos','Glutes'],['Apoia o peito e as mãos na máquina e coloca o pé na plataforma.|Empurra a plataforma para trás, apertando o glúteo.|Volta devagar até à posição inicial.','Rest your chest and hands on the machine and place your foot on the platform.|Push the platform back, squeezing your glute.|Return slowly to the start.'],['Mantém a anca estável e o abdómen contraído.','Keep your hips stable and your abs braced.']);
+Y('hip-thrust-maq','Pernas','hipthrust','',['Hip thrust na máquina','Hip thrust machine'],['Glúteos, isquiotibiais','Glutes, hamstrings'],['Apoia as costas no banco e coloca a almofada sobre a anca.|Empurra o chão com os pés e sobe a anca até alinhar o corpo.|Aperta os glúteos em cima e desce devagar.','Rest your back on the bench and place the pad across your hips.|Push the floor away with your feet and raise your hips until your body is aligned.|Squeeze your glutes at the top and lower slowly.'],['Mantém o queixo ligeiramente descaído.','Keep your chin slightly tucked.']);
+Y('hip-thrust-unil','Pernas','hipthrust','',['Hip thrust unilateral','Single-leg hip thrust'],['Glúteos, isquiotibiais','Glutes, hamstrings'],['Apoia as costas num banco e levanta uma perna do chão.|Empurra com o outro pé e sobe a anca.|Aperta o glúteo em cima e desce devagar.','Rest your back on a bench and lift one leg off the floor.|Push through the other foot and raise your hips.|Squeeze your glute at the top and lower slowly.'],['Mantém a anca nivelada, sem rodar.','Keep your hips level, without rotating.']);
+Y('pull-through','Pernas','rdl','',['Pull-through no cabo','Cable pull-through'],['Glúteos, isquiotibiais','Glutes, hamstrings'],['De costas para a roldana baixa, agarra a corda entre as pernas.|Leva a anca para trás, inclinando o tronco para a frente.|Estende a anca com força, apertando os glúteos.','Facing away from the low pulley, grip the rope between your legs.|Send your hips back, leaning your torso forward.|Drive your hips forward forcefully, squeezing your glutes.'],['O movimento vem da anca e não das costas.','The movement comes from your hips, not your back.']);
+Y('stiff-barra','Pernas','rdl','b12',['Stiff com barra','Barbell stiff-leg deadlift'],['Isquiotibiais, glúteos, lombar','Hamstrings, glutes, lower back'],['Em pé, com a barra à frente das coxas e os joelhos quase esticados.|Leva a anca para trás e desce a barra rente às pernas.|Sobe apertando os glúteos.','Standing with the bar in front of your thighs and your knees almost straight.|Send your hips back and lower the bar close to your legs.|Rise squeezing your glutes.'],['Mantém a coluna neutra durante todo o movimento.','Keep your spine neutral throughout.']);
+Y('stiff-unil','Pernas','','',['Stiff unilateral com haltere','Single-leg Romanian deadlift'],['Isquiotibiais, glúteos, estabilizadores','Hamstrings, glutes, stabilisers'],['Em pé numa perna, com um haltere na mão oposta.|Inclina o tronco para a frente enquanto levas a outra perna para trás.|Volta à posição inicial apertando o glúteo.','Standing on one leg with a dumbbell in the opposite hand.|Hinge your torso forward while sending the other leg back.|Return to the start squeezing your glute.'],['Fixa o olhar num ponto no chão para manteres o equilíbrio.','Fix your eyes on a point on the floor to keep your balance.']);
+/* Ombros */
+Y('press-smith','Ombros','ohpress','b10',['Press de ombros na máquina Smith','Smith machine shoulder press'],['Deltoides, tríceps','Deltoids, triceps'],['Senta-te ou fica em pé sob a barra, com as mãos um pouco mais largas do que os ombros.|Destrava a barra e empurra-a para cima até esticares os braços.|Desce de forma controlada até à altura do queixo.','Sit or stand under the bar with your hands slightly wider than your shoulders.|Unlock the bar and press it up until your arms are straight.|Lower under control to chin height.'],['Não arqueies demasiado as costas.','Do not over-arch your back.']);
+Y('press-landmine','Ombros','ohpress','b8',['Press landmine','Landmine press'],['Deltoide anterior, tríceps, peitoral superior','Front deltoid, triceps, upper chest'],['Segura a ponta da barra landmine junto ao ombro.|Empurra a barra para cima e para a frente até esticares o braço.|Volta devagar ao ombro.','Hold the end of the landmine bar at your shoulder.|Press the bar up and forward until your arm is straight.|Return slowly to your shoulder.'],['É uma boa opção para quem tem desconforto nos ombros.','A good option if you have shoulder discomfort.']);
+Y('press-sentado-barra','Ombros','seatohpress','b10',['Press de ombros sentado com barra','Seated barbell shoulder press'],['Deltoides, tríceps','Deltoids, triceps'],['Senta-te com as costas apoiadas e a barra à altura dos ombros.|Empurra a barra para cima até esticares os braços.|Desce devagar até ao queixo.','Sit with your back supported and the bar at shoulder height.|Press the bar up until your arms are straight.|Lower slowly to chin level.'],['O apoio nas costas protege a lombar.','The back support protects your lower back.']);
+Y('press-halt-neutro','Ombros','seatohpress','d',['Press de ombros com halteres (pegada neutra)','Neutral-grip dumbbell shoulder press'],['Deltoides, tríceps','Deltoids, triceps'],['Senta-te com os halteres à altura dos ombros e as palmas viradas uma para a outra.|Empurra os halteres para cima até esticares os braços.|Desce devagar.','Sit with the dumbbells at shoulder height and your palms facing each other.|Press the dumbbells up until your arms are straight.|Lower slowly.'],['A pegada neutra é mais amiga dos ombros.','The neutral grip is friendlier on the shoulders.']);
+Y('elev-lateral-maq','Ombros','','',['Elevação lateral na máquina','Lateral raise machine'],['Deltoide lateral','Side deltoid'],['Senta-te com os braços sob as almofadas e os cotovelos à altura dos ombros.|Sobe os braços para os lados até à altura dos ombros.|Desce devagar.','Sit with your arms under the pads and your elbows at shoulder height.|Raise your arms out to the sides to shoulder height.|Lower slowly.'],['Não encolhas os ombros ao subir.','Do not shrug as you raise.']);
+Y('elev-lateral-deitado','Ombros','','',['Elevação lateral deitado de lado','Side-lying lateral raise'],['Deltoide lateral','Side deltoid'],['Deita-te de lado num banco inclinado, com um haltere na mão de cima.|Sobe o braço esticado até ficar na vertical.|Desce devagar.','Lie on your side on an incline bench with a dumbbell in your top hand.|Raise your straight arm until it is vertical.|Lower slowly.'],['Usa pouca carga e controla a descida.','Use light weight and control the lowering.']);
+Y('elev-frontal-cabo','Ombros','frontraise','',['Elevação frontal no cabo','Cable front raise'],['Deltoide anterior','Front deltoid'],['De costas para a roldana baixa, agarra a pega entre as pernas.|Sobe o braço esticado até à altura do ombro.|Desce devagar.','Facing away from the low pulley, grip the handle between your legs.|Raise your straight arm to shoulder height.|Lower slowly.'],['O cabo mantém a tensão durante todo o movimento.','The cable keeps tension through the whole movement.']);
+Y('remada-alta-cabo','Ombros','uprightrow','',['Remada alta no cabo','Cable upright row'],['Deltoides, trapézio','Deltoids, trapezius'],['De frente para a roldana baixa, agarra a barra com as mãos à largura dos ombros.|Puxa a barra junto ao corpo até ao peito, com os cotovelos acima das mãos.|Desce de forma controlada.','Facing the low pulley, grip the bar with your hands shoulder-width apart.|Pull the bar up close to your body to chest height, with your elbows above your hands.|Lower under control.'],['Não subas além da altura do peito se os ombros incomodarem.','Do not go above chest height if your shoulders bother you.']);
+Y('y-raise','Ombros','','',['Elevação em Y','Y raise'],['Deltoide posterior, trapézio inferior','Rear deltoid, lower trapezius'],['Inclina o tronco ou deita-te num banco inclinado, com os braços a pender.|Sobe os braços em forma de Y, com os polegares virados para cima.|Desce devagar.','Hinge forward or lie on an incline bench with your arms hanging.|Raise your arms in a Y shape with your thumbs pointing up.|Lower slowly.'],['Usa halteres muito leves.','Use very light dumbbells.']);
+Y('elev-frontal-disco','Ombros','frontraise','b9',['Elevação frontal com disco','Plate front raise'],['Deltoide anterior','Front deltoid'],['Em pé, segura um disco com as duas mãos à frente das coxas.|Sobe o disco, com os braços quase esticados, até à altura dos olhos.|Desce de forma controlada.','Standing, hold a plate with both hands in front of your thighs.|Raise the plate, with almost-straight arms, to eye level.|Lower under control.'],['Não balances o tronco para ajudar a subir.','Do not swing your torso to help the lift.']);
+Y('press-unil-halt','Ombros','ohpress','d',['Press de ombros unilateral com haltere','Single-arm dumbbell press'],['Deltoides, tríceps, core','Deltoids, triceps, core'],['Em pé, com um haltere à altura do ombro e a outra mão livre.|Empurra o haltere para cima até esticares o braço.|Desce devagar até ao ombro.','Standing, with one dumbbell at shoulder height and your other hand free.|Press the dumbbell up until your arm is straight.|Lower slowly to your shoulder.'],['Contrai o abdómen para não inclinares o tronco.','Brace your abs so your torso does not lean.']);
+Y('posterior-maq','Ombros','seatrev','',['Elevação posterior na máquina','Rear delt machine (reverse pec deck)'],['Deltoide posterior, romboides','Rear deltoid, rhomboids'],['Senta-te virado para a máquina, com o peito apoiado.|Abre os braços para trás, juntando as omoplatas.|Volta devagar à posição inicial.','Sit facing the machine with your chest supported.|Open your arms backwards, squeezing your shoulder blades together.|Return slowly to the start.'],['Mantém os braços à altura dos ombros.','Keep your arms at shoulder height.']);
+Y('posterior-banco','Ombros','','',['Elevação posterior no banco inclinado','Incline bench rear delt raise'],['Deltoide posterior, romboides','Rear deltoid, rhomboids'],['Deita-te de barriga para baixo num banco inclinado, com um haltere em cada mão.|Abre os braços para os lados, até à altura dos ombros.|Desce devagar.','Lie face down on an incline bench with a dumbbell in each hand.|Open your arms out to the sides to shoulder height.|Lower slowly.'],['O banco evita o balanço do tronco.','The bench prevents torso swing.']);
+Y('crucifixo-inv-cabo','Ombros','','',['Crucifixo inverso no cabo','Reverse cable fly'],['Deltoide posterior','Rear deltoid'],['Em pé entre as roldanas altas, agarra os cabos opostos com cada mão.|Abre os braços para os lados, com os cotovelos ligeiramente fletidos.|Volta devagar.','Standing between the high pulleys, grab the opposite cables with each hand.|Open your arms out to the sides with your elbows slightly bent.|Return slowly.'],['Usa pouco peso e movimento limpo.','Use light weight and clean form.']);
+Y('handstand','Ombros','','',['Flexões de pino (handstand push-up)','Handstand push-up'],['Deltoides, tríceps, trapézio','Deltoids, triceps, trapezius'],['Faz o pino de costas para a parede, com as mãos à largura dos ombros.|Dobra os cotovelos e desce a cabeça em direção ao chão.|Empurra para voltares a esticar os braços.','Kick up into a handstand facing away from the wall, hands shoulder-width apart.|Bend your elbows and lower your head towards the floor.|Push up to straighten your arms again.'],['Começa com flexões em pique antes de tentares esta.','Start with pike push-ups before trying this.']);
+Y('face-pull-ajoelhado','Ombros','','',['Face pull ajoelhado','Kneeling face pull'],['Deltoide posterior, trapézio, romboides','Rear deltoid, trapezius, rhomboids'],['Ajoelha-te de frente para a roldana alta e agarra a corda.|Puxa a corda em direção ao rosto, abrindo os cotovelos.|Volta devagar com os braços esticados.','Kneel facing the high pulley and grab the rope.|Pull the rope towards your face, flaring your elbows.|Return slowly with your arms straight.'],['Mantém o tronco direito e o peso leve.','Keep your torso upright and the weight light.']);
+/* Braços */
+Y('curl-maq','Braços','preacher','',['Curl de bíceps na máquina','Biceps curl machine'],['Bíceps, braquial','Biceps, brachialis'],['Senta-te com os braços apoiados na almofada e agarra as pegas.|Dobra os cotovelos, subindo as pegas até aos ombros.|Desce devagar até esticares os braços.','Sit with your arms resting on the pad and grip the handles.|Bend your elbows, curling the handles up to your shoulders.|Lower slowly until your arms are straight.'],['Ajusta o banco para os cotovelos ficarem alinhados com o eixo da máquina.','Adjust the seat so your elbows line up with the machine axis.']);
+Y('curl-alto-cabo','Braços','','',['Curl alto no cabo (duplo bíceps)','High cable curl (double biceps)'],['Bíceps','Biceps'],['Em pé entre as roldanas altas, agarra um cabo em cada mão com os braços abertos.|Dobra os cotovelos, levando as mãos à cabeça.|Volta devagar até esticares os braços.','Standing between the high pulleys, grip a handle in each hand with your arms out wide.|Bend your elbows, bringing your hands towards your head.|Return slowly until your arms are straight.'],['Mantém os cotovelos à altura dos ombros.','Keep your elbows at shoulder height.']);
+Y('curl-corda','Braços','curl','',['Curl martelo com corda no cabo','Rope hammer curl'],['Braquial, braquiorradial, bíceps','Brachialis, brachioradialis, biceps'],['De frente para a roldana baixa, agarra a corda com as palmas viradas uma para a outra.|Dobra os cotovelos, subindo a corda até aos ombros.|Desce devagar.','Facing the low pulley, grip the rope with your palms facing each other.|Bend your elbows, curling the rope up to your shoulders.|Lower slowly.'],['Mantém os cotovelos junto ao tronco.','Keep your elbows close to your torso.']);
+Y('curl-ez','Braços','curl','b6',['Curl com barra EZ','EZ-bar curl'],['Bíceps, braquial','Biceps, brachialis'],['Em pé, segura a barra EZ pelas partes inclinadas, com os braços esticados.|Dobra os cotovelos, subindo a barra até aos ombros.|Desce devagar.','Standing, hold the EZ bar by the angled grips with your arms straight.|Bend your elbows, curling the bar up to your shoulders.|Lower slowly.'],['A barra EZ é mais confortável para os pulsos.','The EZ bar is more comfortable on the wrists.']);
+Y('curl-ez-scott','Braços','preacher','b6',['Curl Scott com barra EZ','EZ-bar preacher curl'],['Bíceps (cabeça curta)','Biceps (short head)'],['Apoia os braços na almofada inclinada e agarra a barra EZ.|Sobe a barra até aos ombros.|Desce devagar, sem esticar totalmente os cotovelos.','Rest your arms on the angled pad and grip the EZ bar.|Curl the bar up to your shoulders.|Lower slowly, without fully locking your elbows.'],['Não deixes os ombros subirem da almofada.','Do not let your shoulders rise off the pad.']);
+Y('curl-bayesian','Braços','','',['Curl Bayesian no cabo','Bayesian cable curl'],['Bíceps (cabeça longa)','Biceps (long head)'],['De costas para a roldana baixa, agarra a pega com o braço esticado para trás.|Dobra o cotovelo, subindo a mão até ao ombro.|Desce devagar.','Facing away from the low pulley, grip the handle with your arm extended behind you.|Bend your elbow, curling your hand up to your shoulder.|Lower slowly.'],['O braço atrás do corpo alonga mais o bíceps.','The arm behind your body stretches the biceps more.']);
+Y('curl-arrastado','Braços','curl','b6',['Curl arrastado (drag curl)','Drag curl'],['Bíceps','Biceps'],['Em pé, segura a barra com as palmas viradas para a frente.|Sobe a barra rente ao corpo, levando os cotovelos para trás.|Desce devagar.','Standing, hold the bar with your palms facing forward.|Raise the bar close to your body, driving your elbows back.|Lower slowly.'],['A barra deve "arrastar" pelo tronco.','The bar should "drag" up your torso.']);
+Y('curl-zottman','Braços','curl','d',['Curl Zottman','Zottman curl'],['Bíceps, braquiorradial, antebraços','Biceps, brachioradialis, forearms'],['Sobe os halteres com as palmas viradas para cima.|Em cima, roda as palmas para baixo.|Desce devagar com as palmas viradas para baixo.','Curl the dumbbells up with your palms facing up.|At the top, rotate your palms to face down.|Lower slowly with your palms facing down.'],['Usa pouca carga: a descida trabalha os antebraços.','Use light weight: the lowering works the forearms.']);
+Y('curl-pulso','Braços','','',['Curl de punho','Wrist curl'],['Flexores do antebraço','Forearm flexors'],['Senta-te e apoia os antebraços nas coxas, com as palmas viradas para cima.|Dobra os pulsos, subindo a barra.|Desce devagar até esticares os pulsos.','Sit and rest your forearms on your thighs with your palms facing up.|Curl your wrists, raising the bar.|Lower slowly until your wrists are extended.'],['Usa pouca carga e muitas repetições.','Use light weight and higher reps.']);
+Y('curl-pulso-inv','Braços','','',['Curl de punho invertido','Reverse wrist curl'],['Extensores do antebraço','Forearm extensors'],['Senta-te e apoia os antebraços nas coxas, com as palmas viradas para baixo.|Sobe os pulsos, levantando a barra.|Desce devagar.','Sit and rest your forearms on your thighs with your palms facing down.|Raise your wrists, lifting the bar.|Lower slowly.'],['A carga deve ser bem leve.','The load should be quite light.']);
+Y('curl-martelo-cruzado','Braços','','',['Curl martelo cruzado','Cross-body hammer curl'],['Braquial, bíceps','Brachialis, biceps'],['Em pé, com um haltere em cada mão e as palmas viradas uma para a outra.|Sobe um haltere em direção ao ombro oposto.|Desce e repete com o outro braço.','Standing with a dumbbell in each hand and your palms facing each other.|Curl one dumbbell towards your opposite shoulder.|Lower and repeat with the other arm.'],['Mantém o cotovelo junto ao corpo.','Keep your elbow close to your body.']);
+Y('pushdown-unil','Braços','pushdown','',['Extensão de tríceps unilateral no cabo','Single-arm cable pushdown'],['Tríceps','Triceps'],['De frente para a roldana alta, agarra a pega com uma mão e o cotovelo junto ao corpo.|Empurra a pega para baixo até esticares o braço.|Volta devagar até o cotovelo ficar a 90°.','Facing the high pulley, grip the handle with one hand and your elbow tucked in.|Push the handle down until your arm is straight.|Return slowly until your elbow is at 90°.'],['Mantém o cotovelo fixo, sem o afastares.','Keep your elbow fixed, without flaring it.']);
+Y('pushdown-v','Braços','pushdown','',['Extensão de tríceps com pega em V','V-bar triceps pushdown'],['Tríceps','Triceps'],['De frente para a roldana alta, agarra a pega em V com os cotovelos junto ao corpo.|Empurra para baixo até esticares os braços.|Volta devagar até os cotovelos ficarem a 90°.','Facing the high pulley, grip the V-bar with your elbows tucked in.|Push down until your arms are straight.|Return slowly until your elbows are at 90°.'],['Não inclines o corpo sobre a pega.','Do not lean your body over the handle.']);
+Y('triceps-maq','Braços','dipmach','',['Extensão de tríceps na máquina','Triceps extension machine'],['Tríceps','Triceps'],['Senta-te com os cotovelos apoiados e agarra as pegas.|Estende os braços, empurrando as pegas para baixo.|Volta devagar.','Sit with your elbows supported and grip the handles.|Extend your arms, pushing the handles down.|Return slowly.'],['Mantém os cotovelos fixos na almofada.','Keep your elbows fixed on the pad.']);
+Y('fundos-maq-triceps','Braços','dipmach','',['Fundos na máquina (tríceps)','Dip machine (triceps)'],['Tríceps, peitoral','Triceps, chest'],['Senta-te com o tronco direito e agarra as pegas junto aos ombros.|Empurra as pegas para baixo até esticares os braços.|Volta devagar.','Sit with an upright torso and grip the handles by your shoulders.|Push the handles down until your arms are straight.|Return slowly.'],['Mantém o tronco direito para focar o tríceps.','Keep your torso upright to target the triceps.']);
+Y('jm-press','Braços','','',['JM press','JM press'],['Tríceps','Triceps'],['Deita-te no banco e segura a barra com as mãos um pouco mais juntas do que os ombros.|Dobra os cotovelos, levando a barra em direção à parte alta do peito.|Estende os braços para voltar ao início.','Lie on the bench and hold the bar with your hands slightly closer than shoulder width.|Bend your elbows, lowering the bar towards your upper chest.|Extend your arms to return to the start.'],['É um híbrido entre o supino fechado e o press francês.','A hybrid between the close-grip bench press and the skull crusher.']);
+Y('ext-cabo-deitado','Braços','skull','',['Extensão de tríceps deitado no cabo','Lying cable triceps extension'],['Tríceps','Triceps'],['Deita-te num banco com a roldana baixa atrás da cabeça e agarra a barra.|Dobra os cotovelos, levando a barra em direção à testa.|Estende os braços para voltar ao início.','Lie on a bench with the low pulley behind your head and grip the bar.|Bend your elbows, bringing the bar towards your forehead.|Extend your arms to return to the start.'],['Mantém os cotovelos apontados para o teto.','Keep your elbows pointing at the ceiling.']);
+Y('kickback-cabo','Braços','kickback','',['Kickback de tríceps no cabo','Cable triceps kickback'],['Tríceps','Triceps'],['Inclina o tronco para a frente e agarra a pega da roldana baixa com o cotovelo junto ao corpo.|Estende o antebraço para trás até esticares o braço.|Volta devagar a 90°.','Lean your torso forward and grip the low pulley handle with your elbow tucked in.|Extend your forearm backwards until your arm is straight.|Return slowly to 90°.'],['O cabo mantém a tensão durante todo o movimento.','The cable keeps tension through the whole movement.']);
+Y('flexoes-fechadas','Braços','pushup','',['Flexões com as mãos juntas','Close-hand push-ups'],['Tríceps, peitoral','Triceps, chest'],['Apoia as mãos no chão, bem juntas, debaixo do peito.|Desce o peito até às mãos, com os cotovelos junto ao corpo.|Empurra o chão até esticares os braços.','Place your hands on the floor, close together under your chest.|Lower your chest to your hands with your elbows close to your body.|Push the floor away until your arms are straight.'],['Se for difícil, faz com os joelhos no chão.','If it is too hard, do them on your knees.']);
+Y('tate-press','Braços','','',['Tate press','Tate press'],['Tríceps','Triceps'],['Deita-te no banco com um haltere em cada mão e os braços esticados.|Dobra os cotovelos, levando os halteres em direção ao peito.|Estende os braços para voltar ao início.','Lie on the bench with a dumbbell in each hand and your arms straight.|Bend your elbows, bringing the dumbbells towards your chest.|Extend your arms to return to the start.'],['Os cotovelos ficam abertos e os halteres de cabeça para baixo.','Your elbows flare out and the dumbbells point towards your chest.']);
+Y('curl-concentrado-cabo','Braços','','',['Curl concentrado no cabo','Cable concentration curl'],['Bíceps','Biceps'],['Senta-te de frente para a roldana baixa e apoia o cotovelo na coxa.|Sobe a pega até ao ombro, apertando o bíceps.|Desce devagar.','Sit facing the low pulley and rest your elbow on your thigh.|Curl the handle up to your shoulder, squeezing your biceps.|Lower slowly.'],['Mantém o braço fixo: só o antebraço se mexe.','Keep your upper arm still: only the forearm moves.']);
+Y('ext-triceps-banda','Braços','pushdown','',['Extensão de tríceps com banda','Band triceps pushdown'],['Tríceps','Triceps'],['Prende a banda elástica num ponto alto e agarra-a com os cotovelos junto ao corpo.|Empurra a banda para baixo até esticares os braços.|Volta devagar.','Anchor the resistance band high and grip it with your elbows tucked in.|Push the band down until your arms are straight.|Return slowly.'],['É uma boa opção para treinar em casa.','A good option for training at home.']);
+/* Core */
+Y('crunch-maq','Core','crunchmach','',['Abdominais na máquina','Ab crunch machine'],['Reto abdominal','Rectus abdominis'],['Senta-te com os pés apoiados e agarra as pegas junto à cabeça.|Dobra o tronco para a frente, contraindo o abdómen.|Volta devagar à posição inicial.','Sit with your feet braced and grip the handles near your head.|Curl your torso forward, contracting your abs.|Return slowly to the start.'],['O movimento vem do abdómen e não dos braços.','The movement comes from your abs, not your arms.']);
+Y('rotacao-maq','Core','','',['Rotação de tronco na máquina','Rotary torso machine'],['Oblíquos','Obliques'],['Senta-te na máquina, com a anca fixa e o peito apoiado nas almofadas.|Roda o tronco para um lado, contra a resistência.|Volta ao centro e repete do outro lado.','Sit in the machine with your hips fixed and your chest against the pads.|Rotate your torso to one side against the resistance.|Return to the centre and repeat on the other side.'],['Roda só o tronco, mantendo a anca imóvel.','Rotate only your torso, keeping your hips still.']);
+Y('woodchop-cabo','Core','','',['Lenhador nos cabos (woodchopper)','Cable woodchopper'],['Oblíquos, core','Obliques, core'],['De lado para a roldana alta, agarra a pega com as duas mãos.|Puxa a pega em diagonal, de cima para baixo, rodando o tronco.|Volta devagar à posição inicial.','Stand sideways to the high pulley and grip the handle with both hands.|Pull the handle diagonally down across your body, rotating your torso.|Return slowly to the start.'],['Roda a partir do tronco e dos pés, não só dos braços.','Rotate from your torso and feet, not just your arms.']);
+Y('elev-joelhos-barra','Core','hangleg','',['Elevação de joelhos na barra','Hanging knee raise'],['Abdominais inferiores, flexores da anca','Lower abs, hip flexors'],['Fica pendurado numa barra com os braços esticados.|Sobe os joelhos em direção ao peito.|Desce devagar.','Hang from a bar with straight arms.|Raise your knees towards your chest.|Lower slowly.'],['Evita balançar o corpo.','Avoid swinging your body.']);
+Y('elev-joelhos-cadeira','Core','hangleg','',['Elevação de joelhos na cadeira romana','Captain\'s chair knee raise'],['Abdominais inferiores','Lower abs'],['Apoia os antebraços nas almofadas e as costas no encosto.|Sobe os joelhos em direção ao peito.|Desce devagar, sem balançar.','Rest your forearms on the pads and your back against the support.|Raise your knees towards your chest.|Lower slowly, without swinging.'],['Contrai o abdómen para levantar a anca no fim.','Brace your abs to curl your pelvis up at the end.']);
+Y('crunch-declinado','Core','','',['Abdominais no banco declinado','Decline sit-up'],['Reto abdominal, flexores da anca','Rectus abdominis, hip flexors'],['Deita-te num banco declinado com os pés presos.|Sobe o tronco até ficares sentado.|Desce devagar.','Lie on a decline bench with your feet secured.|Raise your torso until you are sitting.|Lower slowly.'],['Não puxes o pescoço com as mãos.','Do not pull on your neck with your hands.']);
+Y('crunch-lateral','Core','','',['Crunch lateral (oblíquos)','Oblique crunch'],['Oblíquos','Obliques'],['Deita-te de lado, com os joelhos fletidos e a mão atrás da cabeça.|Sobe o tronco de lado, aproximando o cotovelo da anca.|Desce devagar e repete.','Lie on your side with your knees bent and one hand behind your head.|Lift your torso sideways, bringing your elbow towards your hip.|Lower slowly and repeat.'],['O movimento é curto e controlado.','The movement is short and controlled.']);
+Y('v-ups','Core','','',['V-ups','V-ups'],['Reto abdominal, flexores da anca','Rectus abdominis, hip flexors'],['Deita-te de costas com os braços e as pernas esticados.|Sobe o tronco e as pernas ao mesmo tempo, formando um V.|Desce devagar sem tocar no chão.','Lie on your back with your arms and legs extended.|Lift your torso and legs at the same time, forming a V.|Lower slowly without touching the floor.'],['Se for difícil, dobra os joelhos.','If it is too hard, bend your knees.']);
+Y('bear-crawl','Core','','',['Bear crawl','Bear crawl'],['Core, ombros, quadricípites','Core, shoulders, quads'],['Põe-te de quatro apoios e levanta os joelhos um pouco do chão.|Avança, movendo a mão e o pé opostos ao mesmo tempo.|Mantém a anca baixa e as costas direitas.','Get on all fours and lift your knees slightly off the floor.|Crawl forward, moving the opposite hand and foot together.|Keep your hips low and your back flat.'],['Mantém os joelhos sempre próximos do chão.','Keep your knees hovering close to the floor.']);
+Y('rollout-barra','Core','wheel','b11',['Rollout com barra','Barbell rollout'],['Reto abdominal, ombros, core','Rectus abdominis, shoulders, core'],['De joelhos, agarra a barra com discos pequenos.|Rola a barra para a frente, mantendo o corpo em linha reta.|Volta à posição inicial, contraindo o abdómen.','Kneeling, grip a barbell loaded with small plates.|Roll the bar forward, keeping your body in a straight line.|Return to the start, bracing your abs.'],['Só vai até onde mantiveres a lombar direita.','Only go as far as you can keep your lower back straight.']);
+Y('toes-to-bar','Core','hangleg','',['Toes to bar','Toes to bar'],['Abdominais, flexores da anca, antebraços','Abs, hip flexors, forearms'],['Fica pendurado numa barra com os braços esticados.|Sobe as pernas esticadas até as pontas dos pés tocarem na barra.|Desce de forma controlada.','Hang from a bar with straight arms.|Raise your straight legs until your toes touch the bar.|Lower under control.'],['Começa com elevações de joelhos até ganhares força.','Start with knee raises until you build strength.']);
+Y('dragon-flag','Core','','',['Dragon flag','Dragon flag'],['Reto abdominal, core','Rectus abdominis, core'],['Deita-te num banco e agarra o banco atrás da cabeça.|Sobe o corpo todo, apoiado nos ombros, em linha reta.|Desce devagar, sem dobrar a anca.','Lie on a bench and grip it behind your head.|Raise your whole body in a straight line, resting on your shoulders.|Lower slowly without bending at the hips.'],['É um exercício avançado: começa com as pernas fletidas.','An advanced exercise: start with your knees bent.']);
+Y('l-sit','Core','','',['L-sit','L-sit'],['Abdominais, flexores da anca, tríceps','Abs, hip flexors, triceps'],['Apoia as mãos em barras ou no chão e levanta o corpo.|Mantém as pernas esticadas e paralelas ao chão.|Aguenta a posição durante o tempo definido.','Rest your hands on bars or the floor and lift your body.|Keep your legs straight and parallel to the floor.|Hold the position for the set time.'],['Se for difícil, mantém os joelhos fletidos.','If it is too hard, keep your knees bent.']);
+Y('prancha-perna','Core','','',['Prancha com elevação de perna','Plank with leg lift'],['Core, glúteos','Core, glutes'],['Fica em posição de prancha, com o corpo em linha reta.|Levanta uma perna do chão sem rodar a anca.|Volta a pousá-la e alterna.','Hold a plank position with your body in a straight line.|Lift one leg off the floor without rotating your hips.|Lower it and alternate.'],['Aperta o glúteo da perna que sobe.','Squeeze the glute of the lifting leg.']);
+EXS=EXS.concat(NEWX2);
+
 /* ---------- estado ---------- */
 var KEY='gymlog.v1';
 var S={workouts:[],templates:[],plans:[],schedule:{},runs:[],run:{ref:null,plan:null},custom:[],settings:{rest:90},active:null};
 function load(){
+  S=freshS();
   try{var r=localStorage.getItem(KEY);if(r){var o=JSON.parse(r);S.workouts=o.workouts||[];S.runs=Array.isArray(o.runs)?o.runs:[];S.run=Object.assign({ref:null,plan:null},o.run||{});S.plans=Array.isArray(o.plans)?o.plans:[];S.schedule=(o.schedule&&typeof o.schedule==='object')?o.schedule:{};S.templates=o.templates||[];if(!Array.isArray(o.plans)&&S.templates.length){S.plans=S.templates.map(tplToPlan);S.templates=[]};S.custom=o.custom||[];S.active=o.active||null;S.settings=Object.assign({rest:90},o.settings||{})}}catch(e){}
   sortW();
 }
 var saveTimer=null;
-function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){toast('Não foi possível guardar neste browser.')}}
+function save(){if(!curId)return;try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){toast('Não foi possível guardar neste browser.')}}
 function saveSoon(){clearTimeout(saveTimer);saveTimer=setTimeout(save,350)}
 function sortW(){S.workouts.sort(function(a,b){return new Date(a.date)-new Date(b.date)})}
 function allEx(){return EXS.concat(S.custom.map(function(c){return {id:c.id,name:c.name,group:c.group,muscles:c.group,custom:true}}))}
@@ -1022,7 +1349,92 @@ function treinoHTML(){
 var WDP=['Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado','Domingo'],WDE=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
 function todayIdx(){return (new Date().getDay()+6)%7}
 function planById(id){return S.plans.filter(function(x){return x.id===id})[0]}
-function planNames(p){return p.items.map(function(it){return exNameL(it.exId)}).join(', ')}
+function planNames(p){return p.items.map(function(it){return it.kind==='cardio'?cName(it.m)+(num(it.min)>0?' ('+num(it.min)+' min)':''):exNameL(it.exId)}).join(', ')}
+/* ---------- cardio (passadeira, bicicleta, elíptica, remo) ---------- */
+var CARDIO={
+ treadmill:{n:['Passadeira','Treadmill'],f:[['min','Tempo (min)','Time (min)'],['speed','Velocidade (km/h)','Speed (km/h)'],['incline','Inclinação (%)','Incline (%)']],d:{min:10,speed:6,incline:1}},
+ bike:{n:['Bicicleta','Bike'],f:[['min','Tempo (min)','Time (min)'],['level','Resistência (nível)','Resistance (level)'],['rpm','Cadência (rpm)','Cadence (rpm)']],d:{min:15,level:6,rpm:80}},
+ elliptical:{n:['Elíptica','Elliptical'],f:[['min','Tempo (min)','Time (min)'],['level','Resistência (nível)','Resistance (level)'],['rpm','Cadência (rpm)','Cadence (rpm)']],d:{min:15,level:6,rpm:120}},
+ rower:{n:['Remo','Rower'],f:[['min','Tempo (min)','Time (min)'],['level','Resistência (nível)','Resistance (level)'],['spm','Remadas/min','Strokes/min']],d:{min:10,level:5,spm:24}}
+};
+var CROLES=[['','Normal','Normal'],['warm','Aquecimento','Warm-up'],['main','Principal','Main'],['cool','Arrefecimento','Cool-down']];
+function cName(m){var c=CARDIO[m];return c?TT(c.n[0],c.n[1]):'?'}
+function roleName(r){var x=CROLES.filter(function(a){return a[0]===(r||'')})[0];return x&&x[0]?TT(x[1],x[2]):''}
+function cSummary(it){
+  var c=CARDIO[it.m];if(!c)return '';
+  var p=[];
+  if(num(it.min)>0)p.push(num(it.min)+' min');
+  if(it.m==='treadmill'){
+    if(num(it.speed)>0)p.push(fmtSpd(num(it.speed))+' km/h');
+    if(it.incline!==undefined&&it.incline!==''&&it.incline!==null)p.push(num(it.incline)+'%');
+  }else{
+    if(num(it.level)>0)p.push(TT('nível ','level ')+num(it.level));
+    if(it.m==='rower'){if(num(it.spm)>0)p.push(num(it.spm)+' spm')}
+    else if(num(it.rpm)>0)p.push(num(it.rpm)+' rpm');
+  }
+  return p.join(' · ');
+}
+function cDefaults(m){var o={};var d=CARDIO[m].d;Object.keys(d).forEach(function(k){o[k]=String(d[k])});return o}
+function cNums(it){var o={m:it.m,role:it.role||''};CARDIO[it.m].f.forEach(function(f){o[f[0]]=num(it[f[0]])});return o}
+function planRowHTML(it,i){
+  var ctl='<span class="pbtns"><button class="icon sm" data-act="plan-up" data-i="'+i+'" aria-label="Subir">↑</button><button class="icon sm" data-act="plan-down" data-i="'+i+'" aria-label="Descer">↓</button><button class="icon sm" data-act="plan-rm" data-i="'+i+'" aria-label="Remover">'+ICON.trash+'</button></span>';
+  if(it.kind==='cardio'){
+    var c=CARDIO[it.m];
+    var f=c.f.map(function(x){return '<label>'+TT(x[1],x[2])+'<input inputmode="decimal" data-f="pc" data-i="'+i+'" data-k="'+x[0]+'" value="'+esc(it[x[0]]==null?'':it[x[0]])+'"></label>'}).join('');
+    return '<div class="prow cardiorow"><div class="ptop"><b>'+esc(cName(it.m))+'</b>'+ctl+'</div><label class="field mini"><span>'+TT('Fase','Phase')+'</span><select data-f="pcrole" data-i="'+i+'">'+CROLES.map(function(r){return '<option value="'+r[0]+'"'+((it.role||'')===r[0]?' selected':'')+'>'+TT(r[1],r[2])+'</option>'}).join('')+'</select></label><div class="pin">'+f+'</div></div>';
+  }
+  return '<div class="prow"><div class="ptop"><b>'+esc(exNameL(it.exId))+'</b>'+ctl+'</div><div class="pin"><label>Séries<input inputmode="numeric" data-f="psets" data-i="'+i+'" value="'+esc(it.sets)+'"></label><label>Reps<input data-f="preps" data-i="'+i+'" value="'+esc(it.reps)+'" placeholder="8-12"></label></div></div>';
+}
+function cardioCardHTML(e,ei){
+  var c=CARDIO[e.m],role=roleName(e.role);
+  var fields=c.f.map(function(x){return '<label>'+TT(x[1],x[2])+'<input inputmode="decimal" data-f="cd" data-ei="'+ei+'" data-k="'+x[0]+'" value="'+esc(e.a[x[0]]==null?'':e.a[x[0]])+'" placeholder="'+esc(e.t[x[0]]==null?'':e.t[x[0]])+'"></label>'}).join('');
+  return '<section class="card cardio'+(e.done?' done':'')+'"><div class="exhead"><div><span class="exname static">'+esc(cName(e.m))+'</span>'+(role?'<span class="role">'+role+'</span>':'')+'<p class="last">'+TT('Alvo: ','Target: ')+esc(cSummary(Object.assign({m:e.m},e.t)))+'</p></div><button class="icon" data-act="rm-ex" data-ei="'+ei+'" aria-label="Remover exercício">'+ICON.trash+'</button></div><div class="cfields">'+fields+'</div><p class="cest" id="cest'+ei+'">'+cEstimate(e)+'</p><div class="exacts"><button class="btn small" data-act="c-timer" data-ei="'+ei+'">⏱ '+TT('Temporizador','Timer')+'</button>'+(e.m==='treadmill'?'<button class="btn small" data-act="c-torun" data-ei="'+ei+'">'+TT('Registar em Corrida','Log as run')+'</button>':'')+'<button class="btn small primary" data-act="c-done" data-ei="'+ei+'">'+(e.done?TT('Desfazer','Undo'):TT('Feito','Done'))+'</button></div></section>';
+}
+function cEstimate(e){
+  if(e.m!=='treadmill')return '';
+  var km=num(e.a.speed)*num(e.a.min)/60;
+  return km>0?TT('Distância estimada: ','Estimated distance: ')+fmtKm(km)+' km':'';
+}
+function cardioInput(t,f){
+  if(f==='pc'&&planDraft){planDraft.items[+t.dataset.i][t.dataset.k]=t.value;return true}
+  if(f==='pcrole'&&planDraft){planDraft.items[+t.dataset.i].role=t.value;return true}
+  if(f==='cd'&&S.active){
+    var e=S.active.exs[+t.dataset.ei];if(!e||e.kind!=='cardio')return true;
+    e.a[t.dataset.k]=t.value;saveSoon();
+    var el=$('#cest'+t.dataset.ei);if(el)el.textContent=cEstimate(e);
+    return true;
+  }
+  return false;
+}
+function cardioAction(act,d){
+  switch(act){
+    case 'plan-add-cardio':modal={type:'cardiopick','for':'plan'};renderModal();return true;
+    case 'add-cardio':modal={type:'cardiopick','for':'active'};renderModal();return true;
+    case 'cardio-pick':
+      if(modal&&modal.for==='plan'&&planDraft){
+        var it=Object.assign({kind:'cardio',m:d.m,role:planDraft.items.length?'':'warm'},cDefaults(d.m));
+        planDraft.items.push(it);modal={type:'plan'};renderModal();
+      }else if(S.active){
+        S.active.exs.push({kind:'cardio',m:d.m,role:'',t:cDefaults(d.m),a:cDefaults(d.m),done:false});
+        save();modal=null;renderModal();renderApp();
+      }
+      return true;
+    case 'c-done':var e1=S.active&&S.active.exs[+d.ei];if(e1){e1.done=!e1.done;save();renderApp()}return true;
+    case 'c-timer':
+      var e2=S.active&&S.active.exs[+d.ei];if(!e2)return true;
+      var mins=num(e2.a.min)||num(e2.t.min)||10;
+      rest={endAt:Date.now()+mins*60000,total:mins*60000,done:false,label:cName(e2.m)+(roleName(e2.role)?' · '+roleName(e2.role):'')};renderRest();return true;
+    case 'c-torun':
+      var e3=S.active&&S.active.exs[+d.ei];if(!e3)return true;
+      var mn=num(e3.a.min),sp=num(e3.a.speed);
+      if(!(mn>0&&sp>0)){toast(TT('Indica o tempo e a velocidade.','Enter the time and speed.'));return true}
+      var now=new Date();
+      S.runs.push({id:uid(),date:new Date(now.getFullYear(),now.getMonth(),now.getDate(),12,0,0).toISOString(),km:Math.round(sp*mn/60*100)/100,sec:Math.round(mn*60)});
+      save();toast(TT('Corrida registada.','Run logged.'));return true;
+  }
+  return false;
+}
+
 function nEx(n){return n+(n===1?' exercício':' exercícios')}
 function todayHTML(){
   var p=planById(S.schedule[todayIdx()]);
@@ -1048,7 +1460,7 @@ var planDraft=null;
 function startFromPlan(id){
   if(S.active){toast('Termina ou descarta o treino atual primeiro.');return}
   var p=planById(id);if(!p)return;
-  S.active={id:uid(),start:new Date().toISOString(),name:p.name,exs:p.items.map(function(it){var n=Math.max(1,parseInt(it.sets,10)||3);return {exId:it.exId,name:exName(it.exId),sets:newSets(n),plan:{sets:n,reps:it.reps||''}}})};
+  S.active={id:uid(),start:new Date().toISOString(),name:p.name,exs:p.items.map(function(it){if(it.kind==='cardio'){var tv=cDefaults(it.m);CARDIO[it.m].f.forEach(function(f){if(it[f[0]]!=null)tv[f[0]]=String(it[f[0]])});return {kind:'cardio',m:it.m,role:it.role||'',t:tv,a:Object.assign({},tv),done:false}}var n=Math.max(1,parseInt(it.sets,10)||3);return {exId:it.exId,name:exName(it.exId),sets:newSets(n),plan:{sets:n,reps:it.reps||''}}})};
   save();tab='treino';modal=null;renderModal();renderApp();window.scrollTo(0,0);
 }
 function planFromWorkout(){}
@@ -1341,11 +1753,12 @@ function activeHTML(){
   var h='<header class="hdr"><div class="grow"><input class="title-in" data-f="aname" value="'+esc(a.name)+'" aria-label="Nome do treino"><p class="sub">Duração <b id="elapsed">'+fmtDur(Date.now()-new Date(a.start))+'</b></p></div><button class="icon" data-act="settings" aria-label="Ajustes">'+ICON.gear+'</button></header>';
   if(!a.exs.length)h+='<p class="hint">Adiciona o primeiro exercício para começares.</p>';
   a.exs.forEach(function(e,i){h+=exCardHTML(e,i)});
-  h+='<button class="btn ghost big" data-act="add-ex">+ Adicionar exercício</button>';
+  h+='<div class="addrow"><button class="btn ghost" data-act="add-ex">+ Adicionar exercício</button><button class="btn ghost" data-act="add-cardio">'+TT('+ Adicionar cardio','+ Add cardio')+'</button></div>';
   h+='<div class="endrow"><button class="btn primary" data-act="finish">Terminar treino</button><button class="btn danger-ghost" data-act="cancel-active">Descartar</button></div>';
   return h;
 }
 function exCardHTML(e,ei){
+  if(e.kind==='cardio')return cardioCardHTML(e,ei);
   var last=lastSets(e.exId);
   var h='<section class="card"><div class="exhead"><div><button class="exname" data-act="ex-detail" data-id="'+esc(e.exId)+'">'+esc(exName(e.exId,e.name))+'</button><p class="last">'+(last?'Última vez: '+last.map(fmtSet).join(' · '):'Primeira vez')+'</p>'+(e.plan&&e.plan.reps?'<p class="last">Plano: '+e.plan.sets+' × '+esc(e.plan.reps)+'</p>':'')+'</div><button class="icon" data-act="rm-ex" data-ei="'+ei+'" aria-label="Remover exercício">'+ICON.trash+'</button></div>';
   h+='<div class="sethead"><span>Série</span><span>Anterior</span><span>kg</span><span>Reps</span><span></span></div>';
@@ -1410,6 +1823,7 @@ function historicoHTML(){
     if(open){
       h+='<div class="hbody">';
       w.exs.forEach(function(e){h+='<p class="hex"><b>'+esc(exName(e.exId,e.name))+'</b><span>'+e.sets.map(fmtSet).join(' · ')+'</span></p>'});
+      (w.cardio||[]).forEach(function(c){h+='<p class="hex"><b>'+esc(cName(c.m))+(roleName(c.role)?' · '+esc(roleName(c.role)):'')+'</b><span>'+esc(cSummary(c))+'</span></p>'});
       if(w.prs&&w.prs.length){h+='<ul class="prl">'+w.prs.map(function(p){return '<li><b>'+esc(p.name)+'</b>: '+esc(p.text)+'</li>'}).join('')+'</ul>'}
       h+='<div class="rowbtns"><button class="btn small primary" data-act="hist-repeat" data-id="'+esc(w.id)+'">Repetir treino</button><button class="btn small danger-ghost" data-act="hist-del" data-id="'+esc(w.id)+'">Apagar</button></div></div>';
     }
@@ -1504,6 +1918,7 @@ function renderPickList(){var el=$('#pklist');if(el)el.innerHTML=listHTML(pickQ,
 
 /* ---------- modais ---------- */
 function closeModal(){
+  if(modal&&modal.type==='cardiopick'&&modal.for==='plan'){modal={type:'plan'};renderModal();return}
   if(modal&&modal.type==='picker'&&modal.for==='plan'){modal={type:'plan'};renderModal();return}
   if(modal&&modal.type==='detail'&&modal.back){modal=modal.back;renderModal();return}
   if(modal&&modal.type==='confirm'&&modal.res){var r=modal.res;modal=null;renderModal();r(false);return}
@@ -1516,8 +1931,9 @@ function detailBody(x){
     return '<p>Exercício criado por ti ('+esc(x.group)+'). Não tem ilustração.</p><div class="rowbtns"><button class="btn small danger-ghost" data-act="del-custom" data-id="'+esc(x.id)+'">Apagar exercício</button></div>';
   }
   if(x.frames){
-    h+='<div class="frames"><div class="frame">'+figSVG(x,0)+'<span>'+esc((x.labels||[])[0]||'Início')+'</span></div><div class="frame">'+figSVG(x,1)+'<span>'+esc((x.labels||[])[1]||'Fim')+'</span></div></div>';
-    h+='<p class="note" style="margin-top:-6px">Ilustrações esquemáticas, só para perceberes a posição.</p>';
+    h+='<div class="animbox"><svg class="fig" id="animsvg" viewBox="0 -34 200 180" role="img" aria-label="'+esc(x.name)+'"></svg><div class="animctl"><span id="animlab" class="animlab"></span><span class="animbtns"><button class="btn small" data-act="anim-toggle" id="animbtn">'+TT('Pausar','Pause')+'</button><button class="btn small" data-act="anim-speed" id="animspd">1×</button></span></div></div>';
+    h+='<h4>'+TT('Posições','Positions')+'</h4><div class="frames"><div class="frame">'+figSVG(x,0)+'<span>'+esc((x.labels||[])[0]||'Início')+'</span></div><div class="frame">'+figSVG(x,1)+'<span>'+esc((x.labels||[])[1]||'Fim')+'</span></div></div>';
+    h+='<p class="note" style="margin-top:-6px">Ilustrações esquemáticas em movimento: a linha a tracejado mostra o percurso e o vermelho o músculo que trabalha.</p>';
   }else{
     h+='<p class="note">Este exercício ainda não tem ilustração.</p>';
   }
@@ -1528,6 +1944,7 @@ function detailBody(x){
   return h;
 }
 function renderModal(){
+  stopAnim();
   var el=$('#modal');
   if(!modal){el.innerHTML='';document.body.style.overflow='';return}
   document.body.style.overflow='hidden';
@@ -1540,23 +1957,26 @@ function renderModal(){
     h=sheet('Novo exercício','<label class="field"><span>Nome</span><input id="nx-name" maxlength="60" placeholder="Ex.: Remada na máquina"></label><label class="field"><span>Grupo muscular</span><select id="nx-group">'+GROUPS.map(function(g){return '<option>'+g+'</option>'}).join('')+'</select></label><button class="btn primary big" data-act="save-newex">Guardar exercício</button>');
   }
   else if(m.type==='settings'){
-    h=sheet('Ajustes','<div class="rowbtns" style="margin:0 0 14px"><button class="btn small" data-act="lock-now">Bloquear agora</button></div><label class="field"><span>Idioma / Language</span><select data-f="lang"><option value="pt"'+(LANG==='pt'?' selected':'')+'>Português</option><option value="en"'+(LANG==='en'?' selected':'')+'>English</option></select></label><label class="field"><span>Tempo de descanso entre séries</span><select data-f="restsec">'+[45,60,90,120,150,180,240].map(function(s){return '<option value="'+s+'"'+(S.settings.rest===s?' selected':'')+'>'+s+' s</option>'}).join('')+'</select></label>'+
+    h=sheet('Ajustes','<p class="note" style="margin:0 0 8px">Conta: <b>'+esc(A&&A.name?A.name:'')+'</b></p><div class="rowbtns" style="margin:0 0 14px"><button class="btn small" data-act="lock-now">Bloquear agora</button><button class="btn small" data-act="switch-acct">Trocar de conta</button></div><label class="field"><span>Idioma / Language</span><select data-f="lang"><option value="pt"'+(LANG==='pt'?' selected':'')+'>Português</option><option value="en"'+(LANG==='en'?' selected':'')+'>English</option></select></label><label class="field"><span>Tempo de descanso entre séries</span><select data-f="restsec">'+[45,60,90,120,150,180,240].map(function(s){return '<option value="'+s+'"'+(S.settings.rest===s?' selected':'')+'>'+s+' s</option>'}).join('')+'</select></label>'+
       '<h4>Cópia de segurança</h4><p class="note" style="margin:2px 0 10px">Os dados ficam guardados neste dispositivo e neste browser. Exporta de vez em quando para não os perderes.</p>'+
       '<div class="rowbtns"><button class="btn small" data-act="export-json">Exportar (JSON)</button><button class="btn small" data-act="export-csv">Exportar (CSV)</button></div>'+
       '<h4>Importar</h4><label class="field" style="margin-top:6px"><span>Ficheiro JSON exportado antes (junta aos dados atuais)</span><input type="file" id="imp-file" accept=".json,application/json"></label>'+
       '<label class="field"><span>Ou cola aqui o conteúdo do JSON</span><textarea id="imp-text" spellcheck="false"></textarea></label><button class="btn small" data-act="import-text">Importar texto colado</button>'+
-      '<h4>Ícone no iPhone</h4><p class="note" style="margin:2px 0 10px">No Safari: Partilhar, depois Adicionar ao ecrã principal.</p><h4>Apagar tudo</h4><button class="btn small danger-ghost" data-act="wipe" style="padding-left:0">Apagar todos os dados da app</button>');
+      '<h4>Ícone no iPhone</h4><p class="note" style="margin:2px 0 10px">No Safari: Partilhar, depois Adicionar ao ecrã principal.</p><h4>Apagar tudo</h4><button class="btn small danger-ghost" data-act="wipe" style="padding-left:0">Apagar todos os dados da app</button><br><button class="btn small danger-ghost" data-act="del-acct" style="padding-left:0">Apagar esta conta</button>');
   }
   else if(m.type==='summary'){
     var w=m.w,v=volOf(w);
-    h=sheet('Treino guardado','<div class="stats"><div class="stat"><b>'+(w.dur||0)+'</b><span>minutos</span></div><div class="stat"><b>'+w.exs.reduce(function(n,e){return n+e.sets.length},0)+'</b><span>séries</span></div><div class="stat"><b>'+Math.round(v).toLocaleString(LOC)+'</b><span>kg de volume</span></div></div>'+
+    h=sheet('Treino guardado','<div class="stats"><div class="stat"><b>'+(w.dur||0)+'</b><span>minutos</span></div><div class="stat"><b>'+w.exs.reduce(function(n,e){return n+e.sets.length},0)+'</b><span>séries</span></div><div class="stat"><b>'+Math.round(v).toLocaleString(LOC)+'</b><span>kg de volume</span></div></div>'+(w.cardio&&w.cardio.length?'<p class="note" style="margin:0 0 8px">Cardio: '+w.cardio.length+TT(' bloco(s) · ',' block(s) · ')+Math.round(w.cardio.reduce(function(n,c){return n+num(c.min)},0))+' min</p>':'')+
       (w.prs&&w.prs.length?'<h4>Novos recordes</h4><ul class="prl">'+w.prs.map(function(p){return '<li><b>'+esc(p.name)+'</b>: '+esc(p.text)+'</li>'}).join('')+'</ul>':'')+
       '<label class="field"><span>Guardar como plano</span><input id="tpl-name" value="'+esc(w.name)+'" maxlength="60"></label><div class="rowbtns"><button class="btn small primary" data-act="save-tpl">Guardar plano</button><button class="btn small" data-act="modal-close">Fechar</button></div>');
   }
   else if(m.type==='plan'&&planDraft){
     var pd=planDraft;
-    var prow=pd.items.map(function(it,i){return '<div class="prow"><div class="ptop"><b>'+esc(exNameL(it.exId))+'</b><span class="pbtns"><button class="icon sm" data-act="plan-up" data-i="'+i+'" aria-label="Subir">↑</button><button class="icon sm" data-act="plan-down" data-i="'+i+'" aria-label="Descer">↓</button><button class="icon sm" data-act="plan-rm" data-i="'+i+'" aria-label="Remover">'+ICON.trash+'</button></span></div><div class="pin"><label>Séries<input inputmode="numeric" data-f="psets" data-i="'+i+'" value="'+esc(it.sets)+'"></label><label>Reps<input data-f="preps" data-i="'+i+'" value="'+esc(it.reps)+'" placeholder="8-12"></label></div></div>'}).join('');
-    h=sheet(pd.id?'Editar plano':'Novo plano','<label class="field"><span>Nome do plano</span><input data-f="pname" value="'+esc(pd.name)+'" maxlength="40" placeholder="Ex.: Dia de pernas"></label>'+(prow||'<p class="hint">Ainda sem exercícios. Adiciona o primeiro.</p>')+'<button class="btn ghost big" data-act="plan-add-ex">+ Adicionar exercício</button><button class="btn primary big" data-act="plan-save">Guardar plano</button>'+(pd.id?'<button class="btn danger-ghost" data-act="plan-del" data-id="'+esc(pd.id)+'">Apagar plano</button>':''));
+    var prow=pd.items.map(planRowHTML).join('');
+    h=sheet(pd.id?'Editar plano':'Novo plano','<label class="field"><span>Nome do plano</span><input data-f="pname" value="'+esc(pd.name)+'" maxlength="40" placeholder="Ex.: Dia de pernas"></label>'+(prow||'<p class="hint">Ainda sem exercícios. Adiciona o primeiro.</p>')+'<div class="addrow"><button class="btn ghost" data-act="plan-add-ex">+ Adicionar exercício</button><button class="btn ghost" data-act="plan-add-cardio">'+TT('+ Adicionar cardio','+ Add cardio')+'</button></div><button class="btn primary big" data-act="plan-save">Guardar plano</button>'+(pd.id?'<button class="btn danger-ghost" data-act="plan-del" data-id="'+esc(pd.id)+'">Apagar plano</button>':''));
+  }
+  else if(m.type==='cardiopick'){
+    h=sheet(TT('Escolher cardio','Choose cardio'),Object.keys(CARDIO).map(function(k){return '<button class="itembtn" style="margin-bottom:8px" data-act="cardio-pick" data-m="'+k+'"><span class="tx"><b>'+esc(cName(k))+'</b><span class="meta">'+esc(cSummary(Object.assign({m:k},cDefaults(k))))+'</span></span><span class="chev">›</span></button>'}).join(''));
   }
   else if(m.type==='chooseplan'){
     h=sheet('Escolher plano',(S.plans.length?S.plans.map(function(p){return '<button class="itembtn" style="margin-bottom:8px" data-act="start-plan" data-id="'+esc(p.id)+'"><span class="tx"><b>'+esc(p.name)+'</b><span class="meta">'+nEx(p.items.length)+'</span></span><span class="chev">›</span></button>'}).join(''):'<p class="hint">Ainda não tens planos. Cria o primeiro, por exemplo "Dia de pernas".</p><button class="btn primary big" data-act="go-plans">Criar plano</button>'));
@@ -1569,6 +1989,7 @@ function renderModal(){
     h=sheet(m.title,'<p class="note" style="margin:0 0 8px">'+esc(m.note||'')+'</p><label class="field"><span>Conteúdo</span><textarea id="txt-out" readonly spellcheck="false">'+esc(m.text)+'</textarea></label><button class="btn primary" data-act="copy-text">Copiar</button>');
   }
   el.innerHTML=h;
+  if(m.type==='detail'){var xa=exById(m.id);if(xa&&xa.frames)startAnim(xa)}
 }
 function ask(msg,ok){return new Promise(function(res){modal={type:'confirm',msg:msg,ok:ok,res:res};renderModal()})}
 function toast(msg){
@@ -1588,7 +2009,7 @@ function renderRest(){
   var el=$('#restbar');
   if(!rest){el.innerHTML='';return}
   var frac=rest.done?1:Math.max(0,Math.min(1,(rest.endAt-Date.now())/rest.total));
-  el.innerHTML='<div class="rest'+(rest.done?' over':'')+'" role="timer"><div class="rowr"><svg class="ring" viewBox="0 0 54 54" aria-hidden="true"><circle class="trk" cx="27" cy="27" r="22"/><circle class="prg" id="rprg" cx="27" cy="27" r="22" stroke-dasharray="'+RC+'" stroke-dashoffset="'+(RC*(1-frac)).toFixed(1)+'"/></svg><div class="t"><span class="lbl">'+(rest.done?'Descanso terminado':'Descanso')+'</span><span id="rt">'+(rest.done?'Próxima série':fmtDur(rest.endAt-Date.now()+500))+'</span></div>'+(rest.done?'':'<button data-act="rest-add" data-s="-15" aria-label="Menos 15 segundos">−15</button><button data-act="rest-add" data-s="15" aria-label="Mais 15 segundos">+15</button>')+'<button data-act="rest-skip">'+(rest.done?'Fechar':'Saltar')+'</button></div></div>';
+  el.innerHTML='<div class="rest'+(rest.done?' over':'')+'" role="timer"><div class="rowr"><svg class="ring" viewBox="0 0 54 54" aria-hidden="true"><circle class="trk" cx="27" cy="27" r="22"/><circle class="prg" id="rprg" cx="27" cy="27" r="22" stroke-dasharray="'+RC+'" stroke-dashoffset="'+(RC*(1-frac)).toFixed(1)+'"/></svg><div class="t"><span class="lbl">'+(rest.done?(rest.label?TT('Tempo terminado','Time is up'):'Descanso terminado'):(rest.label||'Descanso'))+'</span><span id="rt">'+(rest.done?(rest.label?'✓':'Próxima série'):fmtDur(rest.endAt-Date.now()+500))+'</span></div>'+(rest.done?'':'<button data-act="rest-add" data-s="-15" aria-label="Menos 15 segundos">−15</button><button data-act="rest-add" data-s="15" aria-label="Mais 15 segundos">+15</button>')+'<button data-act="rest-skip">'+(rest.done?'Fechar':'Saltar')+'</button></div></div>';
 }
 function tick(){
   if(rest){
@@ -1615,8 +2036,9 @@ function bestsBefore(){
 }
 function finish(){
   var a=S.active;
-  var exs=a.exs.map(function(e){return {exId:e.exId,name:exName(e.exId,e.name),sets:e.sets.filter(function(s){return s.done&&num(s.reps)>0}).map(function(s){return {kg:num(s.kg),reps:num(s.reps)}})}}).filter(function(e){return e.sets.length});
-  if(!exs.length){toast('Marca pelo menos uma série como feita.');return}
+  var cardio=a.exs.filter(function(e){return e.kind==='cardio'&&e.done}).map(function(e){return cNums({m:e.m,role:e.role,min:e.a.min,speed:e.a.speed,incline:e.a.incline,level:e.a.level,rpm:e.a.rpm,spm:e.a.spm})});
+  var exs=a.exs.filter(function(e){return e.kind!=='cardio'}).map(function(e){return {exId:e.exId,name:exName(e.exId,e.name),sets:e.sets.filter(function(s){return s.done&&num(s.reps)>0}).map(function(s){return {kg:num(s.kg),reps:num(s.reps)}})}}).filter(function(e){return e.sets.length});
+  if(!exs.length&&!cardio.length){toast('Marca pelo menos uma série como feita.');return}
   var best=bestsBefore(),prs=[];
   exs.forEach(function(e){
     var b=best[e.exId];if(!b)return;
@@ -1627,7 +2049,7 @@ function finish(){
       else if(b.rm>0&&mr>b.rm+.001)prs.push({name:e.name,text:'1RM estimado de '+fmtKg(round1(mr))+' kg'});
     }else if(b.reps>0&&mreps>b.reps)prs.push({name:e.name,text:mreps+' repetições (antes: '+b.reps+')'});
   });
-  var w={id:a.id,date:a.start,name:a.name||'Treino',dur:Math.max(1,Math.round((Date.now()-new Date(a.start))/60000)),exs:exs,prs:prs};
+  var w={id:a.id,date:a.start,name:a.name||'Treino',dur:Math.max(1,Math.round((Date.now()-new Date(a.start))/60000)),exs:exs,cardio:cardio,prs:prs};
   S.workouts.push(w);sortW();S.active=null;rest=null;renderRest();save();
   tab='treino';renderApp();
   modal={type:'summary',w:w};renderModal();
@@ -1674,14 +2096,21 @@ document.addEventListener('click',function(e){
   if(!el)return;
   var act=el.dataset.act,d=el.dataset;
   if(act==='overlay'){if(e.target===el)closeModal();return}
-  if(runAction(act,d))return;
+  if(runAction(act,d)||cardioAction(act,d))return;
   switch(act){
     case 'lang':setLang(d.l);break;
+    case 'anim-toggle':anim.playing=!anim.playing;var ab=$('#animbtn');if(ab)ab.textContent=anim.playing?TT('Pausar','Pause'):TT('Reproduzir','Play');break;
+    case 'anim-speed':anim.slow=!anim.slow;var asp=$('#animspd');if(asp)asp.textContent=anim.slow?TT('0,5×','0.5×'):'1×';break;
+    case 'pick-acct':var pa=ACC.filter(function(x){return x.id===d.id})[0];if(pa){A=pa;LK.mode='login';LK.pin='';LK.first='';LK.fails=0;LK.busy=false;renderLock()}break;
+    case 'new-acct':A={id:null,name:'',salt:'',hash:''};LK.mode='name';LK.pin='';LK.first='';renderLock();break;
+    case 'acct-back':A=null;LK.mode=ACC.length?'choose':'name';LK.pin='';LK.first='';LK.busy=false;renderLock();break;
+    case 'switch-acct':modal=null;renderModal();LK.show=true;LK.mode='choose';LK.pin='';LK.first='';LK.busy=false;LK.lift=false;renderLock();break;
+    case 'del-acct':ask('Apagar esta conta e todos os dados dela? Não dá para desfazer.','Apagar').then(function(ok){if(ok)removeAccount(curId)});break;
     case 'go-plans':tab='planos';renderApp();window.scrollTo(0,0);break;
     case 'start-plan':startFromPlan(d.id);break;
     case 'choose-plan':modal={type:'chooseplan'};renderModal();break;
     case 'new-plan':planDraft={id:null,name:'',items:[]};modal={type:'plan'};renderModal();break;
-    case 'edit-plan':var ep=planById(d.id);if(ep){planDraft={id:ep.id,name:ep.name,items:ep.items.map(function(it){return {exId:it.exId,sets:String(it.sets||3),reps:it.reps||''}})};modal={type:'plan'};renderModal()}break;
+    case 'edit-plan':var ep=planById(d.id);if(ep){planDraft={id:ep.id,name:ep.name,items:ep.items.map(function(it){if(it.kind==='cardio'){var o={kind:'cardio',m:it.m,role:it.role||''};CARDIO[it.m].f.forEach(function(f){o[f[0]]=String(it[f[0]]==null?'':it[f[0]])});return o}return {exId:it.exId,sets:String(it.sets||3),reps:it.reps||''}})};modal={type:'plan'};renderModal()}break;
     case 'plan-add-ex':pickQ='';pickGroup='all';modal={type:'picker','for':'plan'};renderModal();break;
     case 'plan-up':var iu=+d.i;if(iu>0){var tu=planDraft.items[iu];planDraft.items[iu]=planDraft.items[iu-1];planDraft.items[iu-1]=tu;renderModal()}break;
     case 'plan-down':var idn=+d.i;if(idn<planDraft.items.length-1){var td2=planDraft.items[idn];planDraft.items[idn]=planDraft.items[idn+1];planDraft.items[idn+1]=td2;renderModal()}break;
@@ -1690,7 +2119,7 @@ document.addEventListener('click',function(e){
       var pn=(planDraft.name||'').trim();
       if(!pn){toast('Escreve o nome do plano.');break}
       if(!planDraft.items.length){toast('Adiciona pelo menos um exercício.');break}
-      var pitems=planDraft.items.map(function(it){return {exId:it.exId,sets:Math.min(10,Math.max(1,parseInt(it.sets,10)||3)),reps:String(it.reps||'').trim()}});
+      var pitems=planDraft.items.map(function(it){if(it.kind==='cardio'){var co=cNums(it);co.kind='cardio';if(!(co.min>0))co.min=CARDIO[it.m].d.min;return co}return {exId:it.exId,sets:Math.min(10,Math.max(1,parseInt(it.sets,10)||3)),reps:String(it.reps||'').trim()}});
       if(planDraft.id){var pe=planById(planDraft.id);if(pe){pe.name=pn;pe.items=pitems}}else S.plans.push({id:uid(),name:pn,items:pitems});
       save();modal=null;renderModal();renderApp();toast('Plano guardado.');break;
     case 'plan-del':ask('Apagar este plano?','Apagar').then(function(ok){if(ok){S.plans=S.plans.filter(function(x){return x.id!==d.id});Object.keys(S.schedule).forEach(function(k){if(S.schedule[k]===d.id)delete S.schedule[k]});save();modal=null;renderModal();renderApp()}});break;
@@ -1728,7 +2157,7 @@ document.addEventListener('click',function(e){
     case 'export-csv':exportFile('treinos-'+new Date().toISOString().slice(0,10)+'.csv',csvData());break;
     case 'import-text':doImport(($('#imp-text').value||'').trim());break;
     case 'wipe':ask('Apagar todos os treinos, modelos e exercícios criados? Não dá para desfazer.','Apagar tudo').then(function(ok){if(ok){S={workouts:[],templates:[],plans:[],schedule:{},runs:[],run:{ref:null,plan:null},custom:[],settings:S.settings,active:null};rest=null;renderRest();save();modal=null;renderModal();renderApp();toast('Dados apagados.')}});break;
-    case 'save-tpl':var tn=($('#tpl-name').value||'').trim()||'Plano';var sw=modal.w;S.plans.push({id:uid(),name:tn,items:sw.exs.map(function(x){return {exId:x.exId,sets:Math.max(1,x.sets.length),reps:''}})});save();modal=null;renderModal();renderApp();toast('Plano guardado.');break;
+    case 'save-tpl':var tn=($('#tpl-name').value||'').trim()||'Plano';var sw=modal.w;S.plans.push({id:uid(),name:tn,items:sw.exs.map(function(x){return {exId:x.exId,sets:Math.max(1,x.sets.length),reps:''}}).concat((sw.cardio||[]).map(function(c){var o={kind:'cardio',m:c.m,role:c.role||''};CARDIO[c.m].f.forEach(function(f){o[f[0]]=c[f[0]]});return o}))});save();modal=null;renderModal();renderApp();toast('Plano guardado.');break;
     case 'rest-add':if(rest&&!rest.done){rest.endAt+=(+d.s)*1000;rest.total=Math.max(rest.total,rest.endAt-Date.now());renderRest()}break;
     case 'rest-skip':rest=null;renderRest();break;
     case 'modal-close':closeModal();break;
@@ -1748,7 +2177,7 @@ function toggleSet(ei,si){
 }
 document.addEventListener('input',function(e){
   var t=e.target,f=t.dataset&&t.dataset.f;if(!f)return;
-  if(runInput(t,f)){}
+  if(runInput(t,f)||cardioInput(t,f)){}
   else if(f==='pname'&&planDraft){planDraft.name=t.value}
   else if(f==='psets'&&planDraft){planDraft.items[+t.dataset.i].sets=t.value}
   else if(f==='preps'&&planDraft){planDraft.items[+t.dataset.i].reps=t.value}
@@ -1764,6 +2193,7 @@ document.addEventListener('change',function(e){
   else if(f==='restsec'){S.settings.rest=+t.value;save()}
   else if(f==='sched'){if(t.value)S.schedule[t.dataset.d]=t.value;else delete S.schedule[t.dataset.d];save();renderApp()}
   else if(f==='rbucket'){runBucket=t.value;renderApp()}
+  else if(f==='pcrole'){cardioInput(t,f)}
   else if(f==='lang'){setLang(t.value)}
   else if(t.id==='imp-file'&&t.files&&t.files[0]){var r=new FileReader();r.onload=function(){doImport(String(r.result))};r.onerror=function(){toast('Não foi possível ler o ficheiro.')};r.readAsText(t.files[0])}
 });
@@ -1784,6 +2214,51 @@ document.addEventListener('visibilitychange',function(){
   setTimeout(function(){try{window.scrollTo(0,0)}catch(e){}},80);
 });
 
+/* ---------- contas ---------- */
+var ACCKEY='gymlog.accounts',LANGKEY='gymlog.lang',ACC=[],curId=null;
+function freshS(){return {workouts:[],templates:[],plans:[],schedule:{},runs:[],run:{ref:null,plan:null},custom:[],settings:{rest:90},active:null}}
+function saveAccounts(){try{localStorage.setItem(ACCKEY,JSON.stringify(ACC))}catch(e){}}
+function loadAccounts(){
+  var raw=null;
+  try{raw=localStorage.getItem(ACCKEY)}catch(e){}
+  if(raw!==null){try{ACC=JSON.parse(raw)}catch(e){ACC=[]}}
+  else{
+    ACC=[];
+    try{
+      var la=localStorage.getItem('gymlog.auth');
+      if(la){
+        var o=JSON.parse(la);
+        if(o&&o.hash&&o.salt){
+          var id=uid(),ld=localStorage.getItem('gymlog.v1'),ok=true;
+          if(ld){
+            localStorage.setItem('gymlog.v1.'+id,ld);ok=localStorage.getItem('gymlog.v1.'+id)===ld;
+            try{if(JSON.parse(ld).settings.lang==='en')localStorage.setItem(LANGKEY,'en')}catch(e2){}
+          }
+          if(ok){
+            ACC=[{id:id,name:o.name||'DL',salt:o.salt,hash:o.hash}];saveAccounts();
+            localStorage.removeItem('gymlog.auth');localStorage.removeItem('gymlog.v1');
+          }
+        }
+      }
+    }catch(e){}
+  }
+  if(!Array.isArray(ACC))ACC=[];
+  ACC=ACC.filter(function(a){return a&&a.id&&a.hash&&a.salt&&a.name});
+}
+function initLang(){var l=null;try{l=localStorage.getItem(LANGKEY)}catch(e){}LANG=l==='en'?'en':'pt';LOC=LANG==='en'?'en-GB':'pt-PT'}
+function avColor(n){var h=0;for(var i=0;i<n.length;i++)h=(h*31+n.charCodeAt(i))>>>0;return ['#E0202B','#2F6FD6','#1F9A6B','#B3141E','#1B4A94','#157A56'][h%6]}
+function resetUI(){
+  tab='treino';exQ='';exGroup='all';pickQ='';pickGroup='all';modal=null;openHist={};progEx='';progMetric='peso';rest=null;planDraft=null;
+  runView='log';runBucket='all';rWeek=0;refDraft=null;runDraft={date:todayISODate(),km:'',h:'',m:'',s:''};
+  renderModal();renderRest();
+}
+function removeAccount(id){
+  try{localStorage.removeItem('gymlog.v1.'+id)}catch(e){}
+  ACC=ACC.filter(function(a){return a.id!==id});saveAccounts();
+  if(curId===id){curId=null;KEY='gymlog.v1.none';S=freshS()}
+  A=null;rest=null;renderRest();modal=null;renderModal();
+  LK={show:true,mode:ACC.length?'choose':'name',pin:'',first:'',fails:0,until:0,busy:false,lift:false};renderLock();
+}
 /* ---------- login / bloqueio ---------- */
 var AKEY='gymlog.auth',A=null;
 var LK={show:true,mode:'login',pin:'',first:'',fails:0,until:0,busy:false,lift:false};
@@ -1823,17 +2298,19 @@ function renderLock(msg,isErr){
   el.style.display='flex';el.classList.toggle('lift',!!LK.lift);el.setAttribute('aria-label',LANG==='en'?'Sign in':'Entrar');
   var brand='<div class="lk-top"><div class="lk-brand"><i></i>TREINO</div><div class="lk-lang" role="group" aria-label="Language">'+['pt','en'].map(function(l){return '<button data-act="lang" data-l="'+l+'" aria-pressed="'+(LANG===l)+'">'+l.toUpperCase()+'</button>'}).join('')+'</div></div>',h='';
   if(LK.mode==='name'){
-    h=brand+'<div class="lk-mid"><h1 class="lk-t">Bem-vindo</h1><p class="lk-s">Vamos criar o teu acesso. Como te devo chamar?</p><input id="lk-name" class="lk-in" maxlength="24" autocomplete="off" autocapitalize="words" placeholder="O teu nome" aria-label="O teu nome"><button class="btn primary lk-btn" data-act="lk-name-go">Continuar</button></div><div class="lk-bot"></div>';
+    h=brand+'<div class="lk-mid"><h1 class="lk-t">'+(ACC.length?'Nova conta':'Bem-vindo')+'</h1><p class="lk-s">'+(ACC.length?'Como se chama esta conta?':'Vamos criar o teu acesso. Como te devo chamar?')+'</p><input id="lk-name" class="lk-in" maxlength="24" autocomplete="off" autocapitalize="words" placeholder="O teu nome" aria-label="O teu nome"><p class="lk-m" id="lk-msg" role="status"></p><button class="btn primary lk-btn" data-act="lk-name-go">Continuar</button>'+(ACC.length?'<button class="lk-link" data-act="acct-back">Cancelar</button>':'')+'</div><div class="lk-bot"></div>';
+  }else if(LK.mode==='choose'){
+    h=brand+'<div class="lk-mid"><h1 class="lk-t">Quem vai treinar?</h1><p class="lk-s">Escolhe a tua conta.</p><div class="acctlist">'+ACC.map(function(a){return '<button class="acct" data-act="pick-acct" data-id="'+esc(a.id)+'"><span class="av" style="background:'+avColor(a.name)+'">'+esc(a.name.charAt(0).toUpperCase())+'</span><span class="an">'+esc(a.name)+'</span><span class="chev">›</span></button>'}).join('')+'</div><button class="btn lk-btn" style="margin-top:14px" data-act="new-acct">+ Nova conta</button></div><div class="lk-bot"></div>';
   }else if(LK.mode==='forgot'){
-    h=brand+'<div class="lk-mid"><h1 class="lk-t">Repor acesso</h1><p class="lk-warn">O PIN só existe neste dispositivo e não dá para o recuperar. Para criares um novo, é preciso apagar todos os treinos guardados na app.</p><button class="btn danger lk-btn" data-act="forgot-do">Apagar tudo e repor</button><button class="btn lk-btn" style="margin-top:10px" data-act="forgot-back">Voltar</button></div><div class="lk-bot"></div>';
+    h=brand+'<div class="lk-mid"><h1 class="lk-t">Repor acesso</h1><p class="lk-warn">O PIN só existe neste dispositivo e não dá para o recuperar. Para criares um novo, é preciso apagar esta conta e todos os treinos guardados nela.</p><button class="btn danger lk-btn" data-act="forgot-do">Apagar esta conta</button><button class="btn lk-btn" style="margin-top:10px" data-act="forgot-back">Voltar</button></div><div class="lk-bot"></div>';
   }else{
     var title=LK.mode==='login'?'Olá, '+esc(A&&A.name?A.name:''):LK.mode==='setup'?'Cria o teu PIN':'Repete o PIN';
     var sub=LK.mode==='login'?'Carrega a barra com o teu PIN.':LK.mode==='setup'?'4 dígitos para entrares na app.':'Escreve o mesmo PIN outra vez.';
-    h=brand+'<div class="lk-mid"><h1 class="lk-t">'+title+'</h1><p class="lk-s">'+sub+'</p>'+bellSVG()+'<p class="lk-m'+(isErr?' err':'')+'" id="lk-msg" role="status">'+esc(msg||'')+'</p></div><div class="lk-bot">'+padHTML()+(LK.mode==='login'?'<button class="lk-link" data-act="forgot">Esqueci o PIN</button>':'')+'</div>';
+    h=brand+'<div class="lk-mid"><h1 class="lk-t">'+title+'</h1><p class="lk-s">'+sub+'</p>'+bellSVG()+'<p class="lk-m'+(isErr?' err':'')+'" id="lk-msg" role="status">'+esc(msg||'')+'</p></div><div class="lk-bot">'+padHTML()+(LK.mode==='login'?'<div class="lk-links"><button class="lk-link" data-act="forgot">Esqueci o PIN</button><button class="lk-link" data-act="switch-acct">Trocar de conta</button></div>':(ACC.length?'<button class="lk-link" data-act="acct-back">Cancelar</button>':''))+'</div>';
   }
   el.innerHTML='<span class="lk-ref-v" aria-hidden="true">範馬刃牙・拳願阿修羅</span><span class="lk-ref-b" aria-hidden="true">Baki Hanma · Kengan Ashura</span>'+h;
   if(LK.mode==='name'){var ni=$('#lk-name');if(ni)setTimeout(function(){try{ni.focus()}catch(e){}},50)}
-  else if(LK.mode!=='forgot')updatePlates();
+  else if(LK.mode==='login'||LK.mode==='setup'||LK.mode==='confirm')updatePlates();
 }
 function updatePlates(){
   var n=LK.pin.length;
@@ -1850,13 +2327,13 @@ function shakeBell(){
   setTimeout(function(){var x=$('#bell');if(x)x.classList.remove('shake')},450);
 }
 function pressDigit(d){
-  if(!LK.show||LK.busy||Date.now()<LK.until||LK.mode==='name'||LK.mode==='forgot')return;
+  if(!LK.show||LK.busy||Date.now()<LK.until||LK.mode==='name'||LK.mode==='forgot'||LK.mode==='choose')return;
   if(LK.pin.length>=4)return;
   LK.pin+=d;updatePlates();setMsg('');
   if(LK.pin.length===4){LK.busy=true;setTimeout(submitPin,280)}
 }
 function delDigit(){
-  if(!LK.show||LK.busy||LK.mode==='name'||LK.mode==='forgot')return;
+  if(!LK.show||LK.busy||LK.mode==='name'||LK.mode==='forgot'||LK.mode==='choose')return;
   LK.pin=LK.pin.slice(0,-1);updatePlates();
 }
 function wrong(msg){
@@ -1871,7 +2348,7 @@ function submitPin(){
   if(LK.mode==='confirm'){
     if(pin!==LK.first){LK.first='';LK.mode='setup';wrong('Os PINs não coincidem. Tenta outra vez.');setTimeout(function(){if(LK.show&&LK.mode==='setup')renderLock('Cria um PIN novo.')},620);return}
     var salt=uid();
-    hashPin(pin,salt).then(function(h){A={name:A&&A.name||'',salt:salt,hash:h};saveAuth();unlockOK()});
+    hashPin(pin,salt).then(function(h){var nid=uid();A={id:nid,name:A&&A.name||'',salt:salt,hash:h};ACC.push(A);saveAccounts();curId=nid;KEY='gymlog.v1.'+nid;load();save();resetUI();unlockOK()});
     return;
   }
   hashPin(pin,A.salt).then(function(h){
@@ -1884,31 +2361,31 @@ function submitPin(){
   });
 }
 function unlockOK(){
+  if(A&&A.id&&curId!==A.id){curId=A.id;KEY='gymlog.v1.'+curId;load();resetUI()}
   LK.lift=true;var el=$('#lock');if(el)el.classList.add('lift');
   setTimeout(function(){LK.show=false;LK.lift=false;LK.pin='';LK.first='';LK.busy=false;renderLock();renderApp();window.scrollTo(0,0)},780);
 }
 function nameGo(){
   var v=(($('#lk-name')||{}).value||'').trim();
   if(!v){var ni=$('#lk-name');if(ni){ni.focus()}return}
-  A={name:v,salt:'',hash:''};LK.mode='setup';LK.pin='';renderLock();
+  if(ACC.some(function(a){return a.name.toLowerCase()===v.toLowerCase()})){setMsg('Já existe uma conta com esse nome.',true);return}
+  A={id:null,name:v,salt:'',hash:''};LK.mode='setup';LK.pin='';renderLock();
 }
-function lockNow(){
+function lockNow(m){
   if(!A)return;
-  LK.show=true;LK.mode='login';LK.pin='';LK.busy=false;LK.lift=false;renderLock();
+  LK.show=true;LK.mode=m||'login';LK.pin='';LK.busy=false;LK.lift=false;renderLock();
 }
-function resetAll(){
-  try{localStorage.removeItem(AKEY);localStorage.removeItem(KEY)}catch(e){}
-  S={workouts:[],templates:[],plans:[],schedule:{},runs:[],run:{ref:null,plan:null},custom:[],settings:{rest:90},active:null};rest=null;renderRest();
-  A=null;LK={show:true,mode:'name',pin:'',first:'',fails:0,until:0,busy:false,lift:false};renderLock();
-}
+function resetAll(){if(A&&A.id)removeAccount(A.id);else{A=null;LK={show:true,mode:ACC.length?'choose':'name',pin:'',first:'',fails:0,until:0,busy:false,lift:false};renderLock()}}
 function initLock(){
-  loadAuth();
-  LK.show=true;LK.mode=A?'login':'name';renderLock();
+  LK.show=true;
+  if(!ACC.length){A=null;LK.mode='name'}else if(ACC.length===1){A=ACC[0];LK.mode='login'}else{A=null;LK.mode='choose'}
+  renderLock();
 }
 
-load();
-LANG=S.settings.lang==='en'?'en':'pt';LOC=LANG==='en'?'en-GB':'pt-PT';buildDict();startTranslator();
+loadAccounts();
+initLang();buildDict();startTranslator();
 try{if(navigator.storage&&navigator.storage.persist)navigator.storage.persist()}catch(e){}
+if(window.__GYMDEBUG){window.__gym={EXS:EXS,figInner:figInner,lerpPose:lerpPose,joints:joints,phaseU:phaseU,TP:TP}}
 renderApp();
 initLock();
 if(LANG==='en'){document.documentElement.lang='en';var tb0=document.querySelector('.tabbar');if(tb0)tb0.setAttribute('aria-label','Sections');trNode(document.body)}
