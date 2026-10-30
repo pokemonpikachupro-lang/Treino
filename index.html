@@ -376,6 +376,9 @@ body{min-height:100vh;min-height:100dvh}
 .card.cardio.done{background:var(--okbg);box-shadow:inset 0 0 0 1px var(--okline)}
 .exname.static{font-family:var(--fd);font-weight:700;font-size:24px}
 .role{display:inline-block;margin-left:8px;font-size:12px;font-weight:600;background:var(--navy2);color:#fff;border-radius:8px;padding:1px 8px;vertical-align:4px}
+
+.unitbtn{min-height:26px;padding:0 10px;border-radius:13px;border:1px solid var(--plate);color:var(--plate);font-weight:700;font-size:13px;background:rgba(224,32,43,.12)}
+.unitbtn:active{background:var(--plate);color:#fff}
 </style>
 </head>
 <body>
@@ -1077,7 +1080,7 @@ var EN={
  'Início (braços esticados)':'Start (arms straight)','Fim (barra no abdómen)':'End (bar at abdomen)','Início (suspenso)':'Start (hanging)','Fim (queixo acima da barra)':'End (chin over the bar)',
  'Início (barra no chão)':'Start (bar on the floor)','Fim (de pé)':'End (standing)','Início (de pé)':'Start (standing)','Calcanhares no chão':'Heels on the floor',
  'Halteres nos ombros':'Dumbbells at shoulders','Cotovelos fletidos':'Elbows bent','Posição correta':'Correct position','Erro: anca demasiado alta':'Mistake: hips too high',
- 'Corrida':'Running','Quem vai treinar?':'Who is training?','Escolhe a tua conta.':'Choose your account.','+ Nova conta':'+ New account','Nova conta':'New account','Como se chama esta conta?':'What should this account be called?','Trocar de conta':'Switch account','Conta:':'Account:','Apagar esta conta':'Delete this account','Apagar esta conta e todos os dados dela? Não dá para desfazer.':'Delete this account and all its data? This cannot be undone.','Já existe uma conta com esse nome.':'An account with that name already exists.','O PIN só existe neste dispositivo e não dá para o recuperar. Para criares um novo, é preciso apagar esta conta e todos os treinos guardados nela.':'The PIN only exists on this device and cannot be recovered. To create a new one, this account and all the workouts saved in it must be deleted.','Substituir':'Replace','Terminar':'End','Ilustrações esquemáticas em movimento: a linha a tracejado mostra o percurso e o vermelho o músculo que trabalha.':'Schematic illustrations in motion: the dashed line shows the path and the red shows the working muscle.','Mãos em baixo':'Hands low','Mãos à frente do peito':'Hands in front of chest','Mãos em cima':'Hands high','Joelhos fletidos':'Knees bent','Pernas quase esticadas':'Legs almost straight','Perna junto ao corpo':'Leg by your body','Perna esticada para trás':'Leg extended back','Braço fletido':'Arm bent','Tronco fletido':'Torso flexed','Tronco inclinado':'Torso leaning forward','Tronco em extensão':'Torso extended','Tronco em baixo':'Torso low','Tronco alinhado':'Torso aligned','Posição inicial':'Start position','Posição final':'End position',
+ 'Corrida':'Running','Quem vai treinar?':'Who is training?','Escolhe a tua conta.':'Choose your account.','+ Nova conta':'+ New account','Nova conta':'New account','Como se chama esta conta?':'What should this account be called?','Trocar de conta':'Switch account','Conta:':'Account:','Apagar esta conta':'Delete this account','Apagar esta conta e todos os dados dela? Não dá para desfazer.':'Delete this account and all its data? This cannot be undone.','Já existe uma conta com esse nome.':'An account with that name already exists.','O PIN só existe neste dispositivo e não dá para o recuperar. Para criares um novo, é preciso apagar esta conta e todos os treinos guardados nela.':'The PIN only exists on this device and cannot be recovered. To create a new one, this account and all the workouts saved in it must be deleted.','Substituir':'Replace','Terminar':'End','Ilustrações esquemáticas em movimento: a linha a tracejado mostra o percurso e o vermelho o músculo que trabalha.':'Schematic illustrations in motion: the dashed line shows the path and the red shows the working muscle.','Mãos em baixo':'Hands low','Mãos à frente do peito':'Hands in front of chest','Mãos em cima':'Hands high','Joelhos fletidos':'Knees bent','Pernas quase esticadas':'Legs almost straight','Perna junto ao corpo':'Leg by your body','Perna esticada para trás':'Leg extended back','Braço fletido':'Arm bent','Tronco fletido':'Torso flexed','Tronco inclinado':'Torso leaning forward','Tronco em extensão':'Torso extended','Tronco em baixo':'Torso low','Tronco alinhado':'Torso aligned','Unidade de peso':'Weight unit','Unidade de peso preferida':'Preferred weight unit','lb de volume':'lb of volume','Cada exercício lembra a unidade que usaste da última vez. Toca em kg ou lb no cabeçalho do exercício para trocar.':'Each exercise remembers the unit you used last time. Tap kg or lb in the exercise header to switch.','Posição inicial':'Start position','Posição final':'End position',
  'Planos':'Plans','Planeia os treinos e escolhe o plano de cada dia da semana.':'Plan your workouts and choose a plan for each day of the week.','Semana':'Week','Hoje':'Today','Sem plano (descanso)':'No plan (rest day)','Os teus planos':'Your plans','+ Novo plano':'+ New plan','Editar':'Edit','Novo plano':'New plan','Editar plano':'Edit plan','Nome do plano':'Plan name','Ex.: Dia de pernas':'e.g. Leg day','Séries':'Sets','Ainda sem exercícios. Adiciona o primeiro.':'No exercises yet. Add the first one.','Guardar plano':'Save plan','Apagar plano':'Delete plan','Subir':'Move up','Descer':'Move down','Escreve o nome do plano.':'Enter the plan name.','Adiciona pelo menos um exercício.':'Add at least one exercise.','Plano guardado.':'Plan saved.','Apagar este plano?':'Delete this plan?','Criar plano':'Create plan','Gerir planos':'Manage plans','Guardar como plano':'Save as plan','Escolher plano':'Choose a plan','Começar este plano':'Start this plan',
  'Ainda não tens planos. Cria o primeiro, por exemplo "Dia de pernas".':'You have no plans yet. Create the first one, for example "Leg day".',
  'Cria planos no separador Planos para treinares por dia (por exemplo, dia de pernas) ou guarda um treino terminado como plano.':'Create plans in the Plans tab to train by day (for example, leg day) or save a finished workout as a plan.'
@@ -1093,13 +1096,13 @@ var RULES=[
  [/^(\d+) treinos?$/,function(m){return m[1]+(m[1]==='1'?' workout':' workouts')}],
  [/^Treino de (.+)$/,function(m){return (WD[m[1]]||m[1])+' workout'}],
  [/^Última vez: (.*)$/,function(m){return 'Last time: '+m[1]}],
- [/^Peso em kg, série (\d+)$/,function(m){return 'Weight in kg, set '+m[1]}],
+ [/^Peso em (kg|lb), série (\d+)$/,function(m){return 'Weight in '+m[1]+', set '+m[2]}],
  [/^Repetições, série (\d+)$/,function(m){return 'Reps, set '+m[1]}],
  [/^(.+) · meu$/,function(m){return trText(m[1])+' · mine'}],
  [/^Pontos verdes: novo máximo \((.+)\)(\.?)$/,function(m){return 'Green dots: new best ('+m[1]+')'+m[2]}],
  [/^1RM est\. (.*)$/,function(m){return 'Est. 1RM '+m[1]}],
- [/^: peso máximo de (.+) kg$/,function(m){return ': max weight of '+dotNum(m[1])+' kg'}],
- [/^: 1RM estimado de (.+) kg$/,function(m){return ': estimated 1RM of '+dotNum(m[1])+' kg'}],
+ [/^: peso máximo de (.+) (kg|lb)$/,function(m){return ': max weight of '+dotNum(m[1])+' '+m[2]}],
+ [/^: 1RM estimado de (.+) (kg|lb)$/,function(m){return ': estimated 1RM of '+dotNum(m[1])+' '+m[2]}],
  [/^: (\d+) repetições \(antes: (\d+)\)$/,function(m){return ': '+m[1]+' reps (before: '+m[2]+')'}],
  [/^(\d+) treinos? importados?\.$/,function(m){return m[1]+(m[1]==='1'?' workout imported.':' workouts imported.')}],
  [/^Exercício criado por ti \((.+)\)\. Não tem ilustração\.$/,function(m){return 'Exercise you created ('+trText(m[1])+'). No illustration.'}],
@@ -1291,7 +1294,7 @@ var KEY='gymlog.v1';
 var S={workouts:[],templates:[],plans:[],schedule:{},runs:[],run:{ref:null,plan:null},custom:[],settings:{rest:90},active:null};
 function load(){
   S=freshS();
-  try{var r=localStorage.getItem(KEY);if(r){var o=JSON.parse(r);S.workouts=o.workouts||[];S.runs=Array.isArray(o.runs)?o.runs:[];S.run=Object.assign({ref:null,plan:null},o.run||{});S.plans=Array.isArray(o.plans)?o.plans:[];S.schedule=(o.schedule&&typeof o.schedule==='object')?o.schedule:{};S.templates=o.templates||[];if(!Array.isArray(o.plans)&&S.templates.length){S.plans=S.templates.map(tplToPlan);S.templates=[]};S.custom=o.custom||[];S.active=o.active||null;S.settings=Object.assign({rest:90},o.settings||{})}}catch(e){}
+  try{var r=localStorage.getItem(KEY);if(r){var o=JSON.parse(r);S.workouts=o.workouts||[];S.units=(o.units&&typeof o.units==='object')?o.units:{};S.runs=Array.isArray(o.runs)?o.runs:[];S.run=Object.assign({ref:null,plan:null},o.run||{});S.plans=Array.isArray(o.plans)?o.plans:[];S.schedule=(o.schedule&&typeof o.schedule==='object')?o.schedule:{};S.templates=o.templates||[];if(!Array.isArray(o.plans)&&S.templates.length){S.plans=S.templates.map(tplToPlan);S.templates=[]};S.custom=o.custom||[];S.active=o.active||null;S.settings=Object.assign({rest:90},o.settings||{})}}catch(e){}
   sortW();
 }
 var saveTimer=null;
@@ -1307,13 +1310,17 @@ function lastSets(exId){
   for(var i=S.workouts.length-1;i>=0;i--){var e=S.workouts[i].exs.filter(function(x){return x.exId===exId})[0];if(e&&e.sets.length)return e.sets}
   return null;
 }
-function fmtSet(s){return s.kg>0?fmtKg(s.kg)+'×'+s.reps:s.reps+' reps'}
+var LB=0.45359237;
+function toU(kg,u){return u==='lb'?kg/LB:kg}
+function PU(){return (S.settings&&S.settings.unit)==='lb'?'lb':'kg'}
+function unitFor(id){return (S.units&&S.units[id])||PU()}
+function fmtSet(s){return s.kg>0?(s.u==='lb'&&s.w>0?fmtKg(s.w)+' lb':fmtKg(s.kg))+'×'+s.reps:s.reps+' reps'}
 function fmtDur(ms){var t=Math.max(0,Math.floor(ms/1000)),h=Math.floor(t/3600),m=Math.floor(t%3600/60),s=t%60;return (h?h+':'+String(m).padStart(2,'0'):m)+':'+String(s).padStart(2,'0')}
 function fmtDate(iso){return new Date(iso).toLocaleDateString(LOC,{weekday:'short',day:'numeric',month:'short'})}
 function ago(iso){var d=Math.round((Date.now()-new Date(iso))/864e5);return d<=0?'hoje':d===1?'ontem':'há '+d+' dias'}
 function prevFor(ei,si){
-  var ex=S.active.exs[ei],last=lastSets(ex.exId);
-  if(last&&last.length)return last[Math.min(si,last.length-1)];
+  var ex=S.active.exs[ei],last=lastSets(ex.exId),u=ex.u||unitFor(ex.exId);
+  if(last&&last.length){var q=last[Math.min(si,last.length-1)];if(!(q.kg>0))return q;return {kg:(q.u===u&&q.w>0)?q.w:round1(toU(q.kg,u)),reps:q.reps}}
   for(var k=si-1;k>=0;k--){var p=ex.sets[k];if(p&&num(p.reps)>0)return {kg:num(p.kg),reps:num(p.reps)}}
   return null;
 }
@@ -1759,14 +1766,14 @@ function activeHTML(){
 }
 function exCardHTML(e,ei){
   if(e.kind==='cardio')return cardioCardHTML(e,ei);
-  var last=lastSets(e.exId);
+  var last=lastSets(e.exId),u=e.u||(e.u=unitFor(e.exId));
   var h='<section class="card"><div class="exhead"><div><button class="exname" data-act="ex-detail" data-id="'+esc(e.exId)+'">'+esc(exName(e.exId,e.name))+'</button><p class="last">'+(last?'Última vez: '+last.map(fmtSet).join(' · '):'Primeira vez')+'</p>'+(e.plan&&e.plan.reps?'<p class="last">Plano: '+e.plan.sets+' × '+esc(e.plan.reps)+'</p>':'')+'</div><button class="icon" data-act="rm-ex" data-ei="'+ei+'" aria-label="Remover exercício">'+ICON.trash+'</button></div>';
-  h+='<div class="sethead"><span>Série</span><span>Anterior</span><span>kg</span><span>Reps</span><span></span></div>';
+  h+='<div class="sethead"><span>Série</span><span>Anterior</span><span><button class="unitbtn" data-act="unit-toggle" data-ei="'+ei+'" aria-label="Unidade de peso">'+u+'</button></span><span>Reps</span><span></span></div>';
   e.sets.forEach(function(s,si){
     var pv=prevFor(ei,si);
     h+='<div class="setrow'+(s.done?' done':'')+'"><span class="sn">'+(si+1)+'</span>'+
       '<button class="prev" data-act="fillprev" data-ei="'+ei+'" data-si="'+si+'" aria-label="Usar valores anteriores">'+(pv?fmtSet(pv):'–')+'</button>'+
-      '<input class="num" inputmode="decimal" data-f="kg" data-ei="'+ei+'" data-si="'+si+'" value="'+esc(s.kg)+'" placeholder="'+(pv&&pv.kg>0?fmtKg(pv.kg):'kg')+'" aria-label="Peso em kg, série '+(si+1)+'">'+
+      '<input class="num" inputmode="decimal" data-f="kg" data-ei="'+ei+'" data-si="'+si+'" value="'+esc(s.kg)+'" placeholder="'+(pv&&pv.kg>0?fmtKg(pv.kg):u)+'" aria-label="Peso em '+u+', série '+(si+1)+'">'+
       '<input class="num" inputmode="numeric" data-f="reps" data-ei="'+ei+'" data-si="'+si+'" value="'+esc(s.reps)+'" placeholder="'+(pv?pv.reps:'reps')+'" aria-label="Repetições, série '+(si+1)+'">'+
       '<button class="chk" data-act="toggle" data-ei="'+ei+'" data-si="'+si+'" aria-pressed="'+(s.done?'true':'false')+'" aria-label="Série feita">'+ICON.check+'</button></div>';
   });
@@ -1819,7 +1826,7 @@ function historicoHTML(){
   if(!S.workouts.length)return h+'<p class="empty">Ainda não tens treinos guardados.<br>Termina um treino para ele aparecer aqui.</p>';
   S.workouts.slice().reverse().forEach(function(w){
     var open=!!openHist[w.id],v=volOf(w);
-    h+='<article class="hcard"><button class="hmain" data-act="hist-toggle" data-id="'+esc(w.id)+'" aria-expanded="'+open+'"><span><b>'+esc(w.name)+(w.prs&&w.prs.length?'<span class="pill">'+w.prs.length+' PR</span>':'')+'</b><span class="meta">'+esc(fmtDate(w.date))+' · '+(w.dur||0)+' min'+(v>0?' · '+Math.round(v).toLocaleString(LOC)+' kg':'')+'</span></span><span class="chev">'+(open?'⌃':'⌄')+'</span></button>';
+    h+='<article class="hcard"><button class="hmain" data-act="hist-toggle" data-id="'+esc(w.id)+'" aria-expanded="'+open+'"><span><b>'+esc(w.name)+(w.prs&&w.prs.length?'<span class="pill">'+w.prs.length+' PR</span>':'')+'</b><span class="meta">'+esc(fmtDate(w.date))+' · '+(w.dur||0)+' min'+(v>0?' · '+Math.round(toU(v,PU())).toLocaleString(LOC)+' '+PU():'')+'</span></span><span class="chev">'+(open?'⌃':'⌄')+'</span></button>';
     if(open){
       h+='<div class="hbody">';
       w.exs.forEach(function(e){h+='<p class="hex"><b>'+esc(exName(e.exId,e.name))+'</b><span>'+e.sets.map(fmtSet).join(' · ')+'</span></p>'});
@@ -1846,7 +1853,7 @@ function series(exId,m){
   S.workouts.forEach(function(w){
     var e=w.exs.filter(function(x){return x.exId===exId})[0];
     if(!e)return;
-    var v=metricVal(e,m);
+    var v=metricVal(e,m);if(m!=='reps')v=toU(v,unitFor(exId));
     if(v>0)pts.push({t:new Date(w.date).getTime(),v:v});
   });
   var mx=0;pts.forEach(function(p,i){p.pr=i>0&&p.v>mx;if(p.v>mx)mx=p.v});
@@ -1878,7 +1885,7 @@ function progressoHTML(){
   var used=usedExIds();
   if(!used.length)return h+'<p class="empty">O gráfico e os recordes aparecem depois do teu primeiro treino guardado.</p>';
   if(!progEx||!used.some(function(u){return u.id===progEx}))progEx=used[0].id;
-  var units={peso:'kg',rm:'kg',vol:'kg',reps:'reps'},labels={peso:'Peso máximo',rm:'1RM estimado',vol:'Volume total',reps:'Repetições (melhor série)'};
+  var eu=unitFor(progEx),units={peso:eu,rm:eu,vol:eu,reps:'reps'},labels={peso:'Peso máximo',rm:'1RM estimado',vol:'Volume total',reps:'Repetições (melhor série)'};
   h+='<label class="field"><span>Exercício</span><select data-f="progex">'+used.map(function(u){return '<option value="'+esc(u.id)+'"'+(u.id===progEx?' selected':'')+'>'+esc(u.name)+'</option>'}).join('')+'</select></label>';
   h+='<label class="field"><span>Medida</span><select data-f="progmetric">'+Object.keys(labels).map(function(k){return '<option value="'+k+'"'+(k===progMetric?' selected':'')+'>'+labels[k]+'</option>'}).join('')+'</select></label>';
   var pts=series(progEx,progMetric);
@@ -1894,7 +1901,7 @@ function progressoHTML(){
       if(s.kg===0&&s.reps>bestReps)bestReps=s.reps;
     })})});
     var v='',sm='';
-    if(bestKg>0){v=fmtKg(bestKg)+' kg × '+bestRepsAt;sm='1RM est. '+fmtKg(round1(bestRm))+' kg · '+fmtDate(bestDate)}
+    if(bestKg>0){var ru=unitFor(u.id);v=fmtKg(round1(toU(bestKg,ru)))+' '+ru+' × '+bestRepsAt;sm='1RM est. '+fmtKg(round1(toU(bestRm,ru)))+' '+ru+' · '+fmtDate(bestDate)}
     else if(bestReps>0){v=bestReps+' reps';sm='Peso corporal'}
     else return;
     any=true;
@@ -1957,7 +1964,7 @@ function renderModal(){
     h=sheet('Novo exercício','<label class="field"><span>Nome</span><input id="nx-name" maxlength="60" placeholder="Ex.: Remada na máquina"></label><label class="field"><span>Grupo muscular</span><select id="nx-group">'+GROUPS.map(function(g){return '<option>'+g+'</option>'}).join('')+'</select></label><button class="btn primary big" data-act="save-newex">Guardar exercício</button>');
   }
   else if(m.type==='settings'){
-    h=sheet('Ajustes','<p class="note" style="margin:0 0 8px">Conta: <b>'+esc(A&&A.name?A.name:'')+'</b></p><div class="rowbtns" style="margin:0 0 14px"><button class="btn small" data-act="lock-now">Bloquear agora</button><button class="btn small" data-act="switch-acct">Trocar de conta</button></div><label class="field"><span>Idioma / Language</span><select data-f="lang"><option value="pt"'+(LANG==='pt'?' selected':'')+'>Português</option><option value="en"'+(LANG==='en'?' selected':'')+'>English</option></select></label><label class="field"><span>Tempo de descanso entre séries</span><select data-f="restsec">'+[45,60,90,120,150,180,240].map(function(s){return '<option value="'+s+'"'+(S.settings.rest===s?' selected':'')+'>'+s+' s</option>'}).join('')+'</select></label>'+
+    h=sheet('Ajustes','<p class="note" style="margin:0 0 8px">Conta: <b>'+esc(A&&A.name?A.name:'')+'</b></p><div class="rowbtns" style="margin:0 0 14px"><button class="btn small" data-act="lock-now">Bloquear agora</button><button class="btn small" data-act="switch-acct">Trocar de conta</button></div><label class="field"><span>Idioma / Language</span><select data-f="lang"><option value="pt"'+(LANG==='pt'?' selected':'')+'>Português</option><option value="en"'+(LANG==='en'?' selected':'')+'>English</option></select></label><label class="field"><span>Unidade de peso preferida</span><select data-f="unit"><option value="kg"'+(PU()==='kg'?' selected':'')+'>kg</option><option value="lb"'+(PU()==='lb'?' selected':'')+'>lb</option></select></label><p class="note" style="margin:-6px 0 12px">Cada exercício lembra a unidade que usaste da última vez. Toca em kg ou lb no cabeçalho do exercício para trocar.</p><label class="field"><span>Tempo de descanso entre séries</span><select data-f="restsec">'+[45,60,90,120,150,180,240].map(function(s){return '<option value="'+s+'"'+(S.settings.rest===s?' selected':'')+'>'+s+' s</option>'}).join('')+'</select></label>'+
       '<h4>Cópia de segurança</h4><p class="note" style="margin:2px 0 10px">Os dados ficam guardados neste dispositivo e neste browser. Exporta de vez em quando para não os perderes.</p>'+
       '<div class="rowbtns"><button class="btn small" data-act="export-json">Exportar (JSON)</button><button class="btn small" data-act="export-csv">Exportar (CSV)</button></div>'+
       '<h4>Importar</h4><label class="field" style="margin-top:6px"><span>Ficheiro JSON exportado antes (junta aos dados atuais)</span><input type="file" id="imp-file" accept=".json,application/json"></label>'+
@@ -1966,7 +1973,7 @@ function renderModal(){
   }
   else if(m.type==='summary'){
     var w=m.w,v=volOf(w);
-    h=sheet('Treino guardado','<div class="stats"><div class="stat"><b>'+(w.dur||0)+'</b><span>minutos</span></div><div class="stat"><b>'+w.exs.reduce(function(n,e){return n+e.sets.length},0)+'</b><span>séries</span></div><div class="stat"><b>'+Math.round(v).toLocaleString(LOC)+'</b><span>kg de volume</span></div></div>'+(w.cardio&&w.cardio.length?'<p class="note" style="margin:0 0 8px">Cardio: '+w.cardio.length+TT(' bloco(s) · ',' block(s) · ')+Math.round(w.cardio.reduce(function(n,c){return n+num(c.min)},0))+' min</p>':'')+
+    h=sheet('Treino guardado','<div class="stats"><div class="stat"><b>'+(w.dur||0)+'</b><span>minutos</span></div><div class="stat"><b>'+w.exs.reduce(function(n,e){return n+e.sets.length},0)+'</b><span>séries</span></div><div class="stat"><b>'+Math.round(toU(v,PU())).toLocaleString(LOC)+'</b><span>'+(PU()==='lb'?'lb de volume':'kg de volume')+'</span></div></div>'+(w.cardio&&w.cardio.length?'<p class="note" style="margin:0 0 8px">Cardio: '+w.cardio.length+TT(' bloco(s) · ',' block(s) · ')+Math.round(w.cardio.reduce(function(n,c){return n+num(c.min)},0))+' min</p>':'')+
       (w.prs&&w.prs.length?'<h4>Novos recordes</h4><ul class="prl">'+w.prs.map(function(p){return '<li><b>'+esc(p.name)+'</b>: '+esc(p.text)+'</li>'}).join('')+'</ul>':'')+
       '<label class="field"><span>Guardar como plano</span><input id="tpl-name" value="'+esc(w.name)+'" maxlength="60"></label><div class="rowbtns"><button class="btn small primary" data-act="save-tpl">Guardar plano</button><button class="btn small" data-act="modal-close">Fechar</button></div>');
   }
@@ -2037,7 +2044,7 @@ function bestsBefore(){
 function finish(){
   var a=S.active;
   var cardio=a.exs.filter(function(e){return e.kind==='cardio'&&e.done}).map(function(e){return cNums({m:e.m,role:e.role,min:e.a.min,speed:e.a.speed,incline:e.a.incline,level:e.a.level,rpm:e.a.rpm,spm:e.a.spm})});
-  var exs=a.exs.filter(function(e){return e.kind!=='cardio'}).map(function(e){return {exId:e.exId,name:exName(e.exId,e.name),sets:e.sets.filter(function(s){return s.done&&num(s.reps)>0}).map(function(s){return {kg:num(s.kg),reps:num(s.reps)}})}}).filter(function(e){return e.sets.length});
+  var exs=a.exs.filter(function(e){return e.kind!=='cardio'}).map(function(e){return {exId:e.exId,name:exName(e.exId,e.name),u:(e.u||unitFor(e.exId)),sets:e.sets.filter(function(s){return s.done&&num(s.reps)>0}).map(function(s){var u=e.u||unitFor(e.exId),w=num(s.kg),o={kg:u==='lb'?Math.round(w*LB*1000)/1000:w,reps:num(s.reps)};if(u==='lb'&&w>0){o.u='lb';o.w=w}return o})}}).filter(function(e){return e.sets.length});
   if(!exs.length&&!cardio.length){toast('Marca pelo menos uma série como feita.');return}
   var best=bestsBefore(),prs=[];
   exs.forEach(function(e){
@@ -2045,8 +2052,8 @@ function finish(){
     var mk=0,mr=0,mreps=0;
     e.sets.forEach(function(s){if(s.kg>mk)mk=s.kg;if(s.kg>0){var r=est1rm(s.kg,s.reps);if(r>mr)mr=r}if(s.kg===0&&s.reps>mreps)mreps=s.reps});
     if(mk>0){
-      if(b.kg>0&&mk>b.kg)prs.push({name:e.name,text:'peso máximo de '+fmtKg(mk)+' kg'});
-      else if(b.rm>0&&mr>b.rm+.001)prs.push({name:e.name,text:'1RM estimado de '+fmtKg(round1(mr))+' kg'});
+      if(b.kg>0&&mk>b.kg)prs.push({name:e.name,text:'peso máximo de '+fmtKg(round1(toU(mk,e.u||'kg')))+' '+(e.u||'kg')});
+      else if(b.rm>0&&mr>b.rm+.001)prs.push({name:e.name,text:'1RM estimado de '+fmtKg(round1(toU(mr,e.u||'kg')))+' '+(e.u||'kg')});
     }else if(b.reps>0&&mreps>b.reps)prs.push({name:e.name,text:mreps+' repetições (antes: '+b.reps+')'});
   });
   var w={id:a.id,date:a.start,name:a.name||'Treino',dur:Math.max(1,Math.round((Date.now()-new Date(a.start))/60000)),exs:exs,cardio:cardio,prs:prs};
@@ -2056,10 +2063,10 @@ function finish(){
 }
 
 /* ---------- exportar / importar ---------- */
-function payload(){return JSON.stringify({app:'gymlog',version:1,exportedAt:new Date().toISOString(),workouts:S.workouts,templates:S.templates,plans:S.plans,schedule:S.schedule,runs:S.runs,run:S.run,custom:S.custom,settings:S.settings},null,1)}
+function payload(){return JSON.stringify({app:'gymlog',version:1,exportedAt:new Date().toISOString(),workouts:S.workouts,templates:S.templates,plans:S.plans,schedule:S.schedule,units:S.units,runs:S.runs,run:S.run,custom:S.custom,settings:S.settings},null,1)}
 function csvData(){
-  var rows=[['data','treino','exercicio','serie','kg','reps']];
-  S.workouts.forEach(function(w){w.exs.forEach(function(e){e.sets.forEach(function(s,i){rows.push([w.date.slice(0,10),w.name,exName(e.exId,e.name),i+1,String(s.kg).replace('.',','),s.reps])})})});
+  var rows=[['data','treino','exercicio','serie','kg','reps','peso_introduzido','unidade']];
+  S.workouts.forEach(function(w){w.exs.forEach(function(e){e.sets.forEach(function(s,i){rows.push([w.date.slice(0,10),w.name,exName(e.exId,e.name),i+1,String(s.kg).replace('.',','),s.reps,String(s.w>0?s.w:s.kg).replace('.',','),s.u||'kg'])})})});
   return '\ufeff'+rows.map(function(r){return r.map(function(c){c=String(c);return /[";\n,]/.test(c)?'"'+c.replace(/"/g,'""')+'"':c}).join(';')}).join('\n');
 }
 function exportFile(name,data){
@@ -2080,6 +2087,7 @@ function mergeData(o){
   if(o.schedule&&typeof o.schedule==='object'&&!Object.keys(S.schedule).length)S.schedule=o.schedule;
   var rn={};S.runs.forEach(function(x){rn[x.id]=1});(o.runs||[]).forEach(function(x){if(x&&x.id&&x.km>0&&x.sec>0&&x.date&&!rn[x.id]){S.runs.push(x);rn[x.id]=1}});
   if(o.run&&typeof o.run==='object'&&!S.run.plan&&!S.run.ref)S.run=Object.assign({ref:null,plan:null},o.run);
+  if(o.units&&typeof o.units==='object'){if(!S.units)S.units={};Object.keys(o.units).forEach(function(k){if(!S.units[k])S.units[k]=o.units[k]})}
   var c={};S.custom.forEach(function(x){c[x.id]=1});(o.custom||[]).forEach(function(x){if(x&&x.id&&x.name&&!c[x.id]){S.custom.push(x);c[x.id]=1}});
   sortW();save();return n;
 }
@@ -2099,6 +2107,7 @@ document.addEventListener('click',function(e){
   if(runAction(act,d)||cardioAction(act,d))return;
   switch(act){
     case 'lang':setLang(d.l);break;
+    case 'unit-toggle':var ue=S.active&&S.active.exs[+d.ei];if(ue&&ue.kind!=='cardio'){var nu=(ue.u||unitFor(ue.exId))==='kg'?'lb':'kg';ue.u=nu;if(!S.units)S.units={};S.units[ue.exId]=nu;save();renderApp()}break;
     case 'anim-toggle':anim.playing=!anim.playing;var ab=$('#animbtn');if(ab)ab.textContent=anim.playing?TT('Pausar','Pause'):TT('Reproduzir','Play');break;
     case 'anim-speed':anim.slow=!anim.slow;var asp=$('#animspd');if(asp)asp.textContent=anim.slow?TT('0,5×','0.5×'):'1×';break;
     case 'pick-acct':var pa=ACC.filter(function(x){return x.id===d.id})[0];if(pa){A=pa;LK.mode='login';LK.pin='';LK.first='';LK.fails=0;LK.busy=false;renderLock()}break;
@@ -2191,6 +2200,7 @@ document.addEventListener('change',function(e){
   if(f==='progex'){progEx=t.value;renderApp()}
   else if(f==='progmetric'){progMetric=t.value;renderApp()}
   else if(f==='restsec'){S.settings.rest=+t.value;save()}
+  else if(f==='unit'){S.settings.unit=t.value==='lb'?'lb':'kg';save();renderApp()}
   else if(f==='sched'){if(t.value)S.schedule[t.dataset.d]=t.value;else delete S.schedule[t.dataset.d];save();renderApp()}
   else if(f==='rbucket'){runBucket=t.value;renderApp()}
   else if(f==='pcrole'){cardioInput(t,f)}
@@ -2216,7 +2226,7 @@ document.addEventListener('visibilitychange',function(){
 
 /* ---------- contas ---------- */
 var ACCKEY='gymlog.accounts',LANGKEY='gymlog.lang',ACC=[],curId=null;
-function freshS(){return {workouts:[],templates:[],plans:[],schedule:{},runs:[],run:{ref:null,plan:null},custom:[],settings:{rest:90},active:null}}
+function freshS(){return {units:{},workouts:[],templates:[],plans:[],schedule:{},runs:[],run:{ref:null,plan:null},custom:[],settings:{rest:90},active:null}}
 function saveAccounts(){try{localStorage.setItem(ACCKEY,JSON.stringify(ACC))}catch(e){}}
 function loadAccounts(){
   var raw=null;
